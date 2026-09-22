@@ -31,6 +31,21 @@ public final class Companion {
         void diagnostic(String message);
     }
 
+    /** SPEC 5.8: the host's wake mechanism, if its platform defines one.
+     * Called after a `wake` occurrence is durably admitted with no READY
+     * session (SPEC 15.1), from the ordered executor; the handler owns the
+     * coalescing, the 60-second and 10-second bounds, and the target
+     * re-check the section requires. */
+    public interface WakeHandler {
+        void wake(String pairingId);
+    }
+
+    private volatile WakeHandler wakeHandler;
+
+    /** Install the SPEC 5.8 wake mechanism; null (the default) means the
+     * platform defines none and `offline.wake` must not be granted. */
+    public void setWakeHandler(WakeHandler handler) { this.wakeHandler = handler; }
+
     /** SPEC 14.4 admission outcomes visible to the host. */
     public enum Admission {
         QUEUED, DELIVERED_LIVE, DROPPED_OFFLINE, NOT_PRESENTED, INVALID_CONTEXT, QUEUE_FULL,
@@ -223,6 +238,12 @@ public final class Companion {
                     generation++;
                     listener.queueChanged();
                     if (ready) engine.kick();
+                    else if (policy.equals("wake")) {
+                        // SPEC 15.1: persisted, and only then the profile's
+                        // wake mechanism (SPEC 5.8), when the host has one.
+                        WakeHandler w = wakeHandler;
+                        if (w != null) w.wake(pairingId);
+                    }
                     return Admission.QUEUED;
                 case QUEUE_FULL:
                     diagnostic("queue full (1601 queue-full)");

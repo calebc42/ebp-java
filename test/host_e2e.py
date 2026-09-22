@@ -19,7 +19,13 @@ Scenarios, in order:
      process halts; the relaunched Companion still holds the record, the
      peer redials, replay delivers it, and the screen reads "Flag: on";
   5. Emacs revision floors outlive an erased Companion store: after wiping
-     the Companion's store the republished revision is above the old one.
+     the Companion's store the republished revision is above the old one;
+  6. `loopback-unix` (SPEC 5.3): the runner binds a filesystem Unix socket
+     in a private directory, Emacs dials it, READY, one durable activation
+     round-trips, and a relaunched runner rebinds the same path;
+  7. `emacs-unix` (SPEC 5.6): Emacs binds the socket, the runner dials it,
+     READY; the Emacs listener is torn down and rebound, and the runner's
+     jittered redial re-establishes the session without a restart.
 """
 import json
 import os
@@ -61,31 +67,42 @@ def check(cond, what):
 class Runner:
     """HostRunner over pipes: commands in, `REPLY`/`EVENT` lines out."""
 
-    def __init__(self, workdir, port):
+    def __init__(self, workdir, port=None, socket_path=None, dial=None):
+        if socket_path is not None:
+            transport = ["--socket", str(socket_path)]
+        elif dial is not None:
+            transport = ["--dial", str(dial)]
+        else:
+            transport = ["--port", str(port)]
+        classpath = os.pathsep.join([str(ROOT / "build" / "classes"), str(ROOT / "build" / "host-classes")])
         self.proc = subprocess.Popen(
-            [JAVA, "-cp", str(ROOT / "build" / "classes"),
-             "com.calebc42.ebp.companion.host.HostRunner", "--dir", str(workdir), "--port", str(port)],
+            [JAVA, "-cp", classpath,
+             "com.calebc42.ebp.companion.host.HostRunner", "--dir", str(workdir)] + transport,
             stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1)
         self.lines = queue.Queue()
         self.events = []
         threading.Thread(target=self._pump, daemon=True).start()
         self.port = None
+        self.address = None
         self.pairing = None
         deadline = time.time() + 20
-        while time.time() < deadline and (self.port is None or self.pairing is None):
+        while time.time() < deadline and (self.address is None or self.pairing is None):
             try:
                 line = self.lines.get(timeout=1)
             except queue.Empty:
                 continue
             if line.startswith("PORT="):
                 self.port = int(line[5:])
+                self.address = f"port {self.port}"
+            elif line.startswith("SOCKET=") or line.startswith("DIAL="):
+                self.address = line
             elif line.startswith("PAIRING="):
                 self.pairing = line[8:]
             else:
                 self._note(line)
-        if self.port is None:
-            raise Failed("HostRunner did not report a port")
-        log(f"runner up on port {self.port}")
+        if self.address is None:
+            raise Failed("HostRunner did not report a transport")
+        log(f"runner up on {self.address}")
 
     def _pump(self):
         for line in self.proc.stdout:
@@ -155,10 +172,15 @@ class Runner:
 class Peer:
     """The real ebp.el endpoint in a batch Emacs."""
 
-    def __init__(self, workdir, port, pairing, token, peer_log):
+    def __init__(self, workdir, port, pairing, token, peer_log, transport="tcp", socket_path=None):
         self.stop_file = workdir / f"stop-{int(time.time() * 1000)}"
-        env = dict(os.environ, EBPM1_DIR=str(workdir / "emacs"), EBPM1_PORT=str(port), EBPM1_PAIRING=pairing,
-                   EBPM1_TOKEN=token, EBPM1_STOP_FILE=str(self.stop_file), EBPM1_LOG=str(peer_log))
+        env = dict(os.environ, EBPM1_DIR=str(workdir / "emacs"), EBPM1_PAIRING=pairing,
+                   EBPM1_TOKEN=token, EBPM1_STOP_FILE=str(self.stop_file), EBPM1_LOG=str(peer_log),
+                   EBPM1_TRANSPORT=transport)
+        if port is not None:
+            env["EBPM1_PORT"] = str(port)
+        if socket_path is not None:
+            env["EBPM1_SOCKET"] = str(socket_path)
         self.log = peer_log
         self.proc = subprocess.Popen(
             [EMACS, "-Q", "--batch", "-L", EBP_EL, "-L", str(ROOT / "lisp"), "-l", str(ROOT / "test" / "host-e2e.el")],
@@ -300,6 +322,70 @@ def main():
         status = poll("republished after erase", lambda: (lambda s: s if s.get("surfaces", {}).get("app:milestone", {}).get("present") else None)(runner.cmd("status")))
         rev3 = status["surfaces"]["app:milestone"]["revision"]
         check(rev3 > rev2, f"Emacs did not reuse an old revision after the companion store was erased ({rev2} -> {rev3})")
+
+        # 6. loopback-unix: the Companion binds a private Unix socket, Emacs dials.
+        peer.stop()
+        runner.quit()
+        sockdir = workdir / "run"
+        sockdir.mkdir(mode=0o700)
+        sock = sockdir / "companion.sock"
+        unix_dir = workdir / "companion-unix"
+        runner = Runner(unix_dir, socket_path=sock)
+        check(runner.address == f"SOCKET={sock}", "runner bound the requested socket path")
+        check(sock.exists() and (sock.stat().st_mode & 0o777) == 0o600, "socket file is 0600")
+        check(runner.cmd("status")["transport"] == {"profile": "loopback-unix", "address": str(sock)},
+              "status names the loopback-unix profile")
+        unix_pairing = json.loads((unix_dir / "pairing.json").read_text())
+        peer_unix_log = workdir / "peer-unix.log"
+        peer = Peer(workdir / "unix", None, runner.pairing, unix_pairing["token"], peer_unix_log,
+                    transport="unix", socket_path=sock)
+        status = poll("READY over loopback-unix",
+                      lambda: (lambda s: s if s.get("session") == "READY"
+                               and s.get("surfaces", {}).get("app:milestone", {}).get("present") else None)(runner.cmd("status")))
+        check("transport unix" in peer.log_text(), "peer dialed the Unix socket")
+        reply = runner.cmd("tap-id app:milestone set-on")
+        check(reply.get("admission") == "QUEUED", "activation over loopback-unix admitted durably")
+        poll("Flag: on over loopback-unix", lambda: screen(runner)[1] == ["EBP milestone", "Flag: on"] or None)
+        # Relaunch the runner on the same path: a stale socket of ours is unlinked and rebound.
+        runner.quit()
+        runner = Runner(unix_dir, socket_path=sock)
+        status = poll("READY again after the listener relaunch",
+                      lambda: (lambda s: s if s.get("session") == "READY" else None)(runner.cmd("status")), timeout=60)
+        check(status["queued_events"] == 0, "no stranded records after the relaunch")
+        peer.stop(timeout=10)
+        runner.quit()
+        check(not sock.exists(), "runner unlinked its socket on quit")
+
+        # 7. emacs-unix: Emacs binds the socket, the Companion dials with jittered redial.
+        esock = sockdir / "emacs.sock"
+        dial_dir = workdir / "companion-dial"
+        # Provision the pairing by starting the runner once against a path
+        # nothing listens on yet; it keeps redialing until Emacs binds.
+        runner = Runner(dial_dir, dial=esock)
+        check(runner.address == f"DIAL={esock}", "runner is dialing the Emacs socket path")
+        check(runner.cmd("status")["transport"]["profile"] == "emacs-unix", "status names the emacs-unix profile")
+        dial_pairing = json.loads((dial_dir / "pairing.json").read_text())
+        peer_listen_log = workdir / "peer-listen.log"
+        peer = Peer(workdir / "listen", None, runner.pairing, dial_pairing["token"], peer_listen_log,
+                    transport="listen", socket_path=esock)
+        status = poll("READY over emacs-unix",
+                      lambda: (lambda s: s if s.get("session") == "READY"
+                               and s.get("surfaces", {}).get("app:milestone", {}).get("present") else None)(runner.cmd("status")), timeout=60)
+        check("transport listen" in peer.log_text(), "peer bound the Emacs socket")
+        reply = runner.cmd("tap-id app:milestone set-off")
+        check(reply.get("admission") == "QUEUED", "activation over emacs-unix admitted durably")
+        poll("Flag: off over emacs-unix", lambda: screen(runner)[1] == ["EBP milestone", "Flag: off"] or None)
+        # Tear the listener down (Emacs exits) and bring it back: the dialer's
+        # SPEC 5.7 redial re-establishes the session with no runner restart.
+        peer.stop(timeout=10)
+        check(not esock.exists(), "Emacs unlinked its socket on close")
+        status = poll("session closed after the listener left",
+                      lambda: (lambda s: s if s["session"] in ("none", "CLOSED") else None)(runner.cmd("status")))
+        peer = Peer(workdir / "listen", None, runner.pairing, dial_pairing["token"], peer_listen_log,
+                    transport="listen", socket_path=esock)
+        status = poll("READY again after the Emacs listener returned",
+                      lambda: (lambda s: s if s.get("session") == "READY" else None)(runner.cmd("status")), timeout=90)
+        check(peer.log_text().count("state ready") >= 2, "the redial reached READY a second time")
         ok = True
     except Failed as e:
         log(f"FAIL {e}")

@@ -26,8 +26,9 @@ same `goldens/wire` fixtures verify both.
 | `.../auth` | Pairing token codec, nonces, HMAC-SHA256 proofs with constant-time comparison (SPEC 9) |
 | `.../store` | The transactional durable-store SPI, a rollback-capable memory store, and a versioned atomic-replace file store |
 | `.../engine` | Per-connection session engine, surface store (SPEC 13), durable queue and replay pump (SPEC 15), document validator (SPEC 16/17), action pipeline (SPEC 14), presentation flattening, the JNI bundle, failpoints, and the generated contract vocabulary |
-| `.../host` | Loopback listener (SPEC 5.2), pairing provisioning, the JVM host runner, a software rasterizer |
-| `android/` | The Android host (`org.gnu.emacs.EmacsEbpHost`), the SQLite store, and the `android.graphics` rasterizer; compiled only inside the Emacs tree |
+| `.../host` | Loopback listener (SPEC 5.2), the transport-neutral stream session, the SPEC 5.7 pre-authentication pool, pairing provisioning |
+| `src/host/java/.../host` | The JDK 17 host tier, never vendored: the JVM host runner, a software rasterizer, the desktop `loopback-unix` listener (SPEC 5.3) and `emacs-unix` dialer (SPEC 5.6) |
+| `android/` | The Android hosts (`org.gnu.emacs.EmacsEbpHost` in the Emacs process, `org.gnu.emacs.EbpAgentHost` in the `:agent` process), the `loopback-unix` listener over `LocalServerSocket`, the SQLite store, and the `android.graphics` rasterizer; compiled only inside the Emacs tree |
 | `lisp/` | `ebpm1-app.el` (the milestone application over ebp.el) and `ebpm1-android.el` (the Emacs renderer for Android) |
 | `test/` | JUnit suites, the ERT suite, the host end-to-end harness |
 | `tools/` | Vocabulary generator, source vendoring into the Emacs tree, test-dependency fetch |
@@ -46,11 +47,14 @@ The host runner alone:
 
 ```sh
 ./build.sh
-java -cp build/classes com.calebc42.ebp.companion.host.HostRunner --dir /tmp/companion --port 8765
+java -cp build/classes:build/host-classes com.calebc42.ebp.companion.host.HostRunner --dir /tmp/companion --port 8765
+java -cp build/classes:build/host-classes com.calebc42.ebp.companion.host.HostRunner --dir /tmp/companion --socket "$XDG_RUNTIME_DIR/ebp/companion.sock"   # SPEC 5.3: bind
+java -cp build/classes:build/host-classes com.calebc42.ebp.companion.host.HostRunner --dir /tmp/companion --dial "$XDG_RUNTIME_DIR/ebp/ebp.sock"           # SPEC 5.6: dial Emacs
 ```
 
-It prints `PORT=` and `PAIRING=`, writes the pairing token to
-`/tmp/companion/pairing.json` (mode 0600), and reads commands on stdin:
+It prints `PORT=`, `SOCKET=`, or `DIAL=` and then `PAIRING=`, writes the
+pairing token to `/tmp/companion/pairing.json` (mode 0600), and reads
+commands on stdin:
 `status`, `snapshot SURFACE`, `tap SURFACE PATH`, `tap-id SURFACE NODE-ID`,
 `failpoint NAME`, `close-transport`, `quit`.
 
@@ -87,7 +91,9 @@ the tests in this repository; anything else is not advertised.
 | SPEC 14.2 builtins | `view.switch` and `companion.settings.open` only |
 | SPEC 14.4 `event.action` delivery, results, `queued_at_ms` discriminator | Yes |
 | SPEC 15 durable queue: queue_seq FIFO, dedupe, TTL with rollback-proof effective clock, capacity, EventId non-reuse, single-flight pump, replay summary, SYNCING barrier | Yes |
-| SPEC 15.1 `wake` policy | Not advertised (`offline.wake` never granted) |
+| SPEC 15.1 `wake` policy | `Companion.setWakeHandler` runs the host's SPEC 5.8 mechanism after a durable `wake` admission with no session; `offline.wake` is granted only by the Android `:agent` host when a bound-service target is configured (device gates pending), never by the JVM runner or the in-process host |
+| SPEC 5.2 `loopback-tcp`, SPEC 5.3 `loopback-unix` (listener), SPEC 5.6 `emacs-unix` (dialer) | Yes: TCP in the core; Unix-domain on the JDK 17 host tier (`UnixDomainServer`, `UnixDomainDialer`) and on Android (`LocalSocketServer`, peer-UID check); exercised by `test/host_e2e.py` scenarios 6 and 7 |
+| SPEC 5.7 pre-authentication pool: bound, 10 s deadline, newest-wins eviction | Yes (`PreauthPool`, shared by every listener; `PreauthPoolTest`) |
 | SPEC 16 node walk, identity, depth/count limits, universal attribute typing, strict `members`, unknown-type degrade | Yes |
 | SPEC 17 node types | `text`, `column`, `button` (stateless), `canvas` (five op shapes).  Core Node Set members `row`, `box`, `spacer`, `divider`, `text_input` are **not** implemented |
 | SPEC 18-21 optional modules, SPEC 20 device report | Not advertised |

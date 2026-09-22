@@ -15,4 +15,5 @@ exec java -Debp.dir="$EBP_DIR" -cp build/classes:build/test-classes:lib/junit-4.
   com.calebc42.ebp.companion.WireConformanceTest \
   com.calebc42.ebp.companion.ValidatorTest \
   com.calebc42.ebp.companion.EngineTest \
-  com.calebc42.ebp.companion.RecoveryTest
+  com.calebc42.ebp.companion.RecoveryTest \
+  com.calebc42.ebp.companion.PreauthPoolTest

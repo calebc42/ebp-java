@@ -1,11 +1,15 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // The JVM host runner: the same Companion core the Android host embeds,
-// listening on loopback with a file-backed store, driven by a line control
-// protocol on stdin so a real ebp.el peer and the kill matrix can be
-// exercised without a device.  Output lines are `PORT=<n>` once, then one
-// JSON object per line prefixed `EVENT ` (host notifications) or `REPLY `
-// (command replies).  A tripped failpoint halts the process immediately,
-// which is the deterministic process death the acceptance matrix needs.
+// with a file-backed store, driven by a line control protocol on stdin so
+// a real ebp.el peer and the kill matrix can be exercised without a
+// device.  Three transports: `--port N` binds loopback TCP (SPEC 5.2),
+// `--socket PATH` binds a Unix-domain socket (SPEC 5.3), `--dial PATH`
+// dials an Emacs that binds one (SPEC 5.6).  Output lines are one of
+// `PORT=<n>`, `SOCKET=<path>`, `DIAL=<path>` once, then `PAIRING=<id>`,
+// then one JSON object per line prefixed `EVENT ` (host notifications) or
+// `REPLY ` (command replies).  A tripped failpoint halts the process
+// immediately, which is the deterministic process death the acceptance
+// matrix needs.
 package com.calebc42.ebp.companion.host;
 
 import com.calebc42.ebp.companion.auth.Auth;
@@ -20,14 +24,13 @@ import com.calebc42.ebp.companion.engine.Presentation;
 import com.calebc42.ebp.companion.json.Json;
 import com.calebc42.ebp.companion.rpc.SessionState;
 import com.calebc42.ebp.companion.store.FileStore;
-import com.calebc42.ebp.companion.store.StoreException;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -43,6 +46,7 @@ public final class HostRunner {
     }
 
     private static final PrintStream OUT = new PrintStream(System.out, true);
+    private static final String USAGE = "usage: HostRunner --dir DIR [--port N | --socket PATH | --dial PATH]";
 
     private static synchronized void emit(String prefix, Json.Obj o) {
         OUT.println(prefix + " " + Json.write(o));
@@ -51,12 +55,16 @@ public final class HostRunner {
     public static void main(String[] args) throws Exception {
         File dir = null;
         int port = 0;
+        String socket = null, dial = null;
+        int transports = 0;
         for (int i = 0; i < args.length; i++) {
             if (args[i].equals("--dir") && i + 1 < args.length) dir = new File(args[++i]);
-            else if (args[i].equals("--port") && i + 1 < args.length) port = Integer.parseInt(args[++i]);
-            else { System.err.println("usage: HostRunner --dir DIR [--port N]"); System.exit(2); }
+            else if (args[i].equals("--port") && i + 1 < args.length) { port = Integer.parseInt(args[++i]); transports++; }
+            else if (args[i].equals("--socket") && i + 1 < args.length) { socket = args[++i]; transports++; }
+            else if (args[i].equals("--dial") && i + 1 < args.length) { dial = args[++i]; transports++; }
+            else { System.err.println(USAGE); System.exit(2); }
         }
-        if (dir == null) { System.err.println("usage: HostRunner --dir DIR [--port N]"); System.exit(2); }
+        if (dir == null || transports > 1) { System.err.println(USAGE); System.exit(2); }
         final PairingFile pairing = PairingFile.loadOrCreate(new File(dir, "pairing.json"), Auth.SECURE_RANDOM);
         final FileStore store = new FileStore(new File(dir, "store"));
         final ExecutorService executor = LoopbackServer.newOrderedExecutor();
@@ -82,9 +90,27 @@ public final class HostRunner {
                 Runtime.getRuntime().halt(3);
             }
         };
-        final LoopbackServer server = new LoopbackServer(companion, executor, trip);
-        int bound = server.start(port);
-        OUT.println("PORT=" + bound);
+        final HostTransport transport;
+        if (socket != null) {
+            UnixDomainServer server = new UnixDomainServer(companion, executor, trip);
+            server.start(Paths.get(socket));
+            OUT.println("SOCKET=" + server.path());
+            transport = server;
+        } else if (dial != null) {
+            UnixDomainDialer dialer = new UnixDomainDialer(companion, executor, trip);
+            dialer.start(Paths.get(dial));
+            OUT.println("DIAL=" + dialer.path());
+            transport = dialer;
+        } else {
+            final LoopbackServer server = new LoopbackServer(companion, executor, trip);
+            final int bound = server.start(port);
+            OUT.println("PORT=" + bound);
+            transport = new HostTransport() {
+                @Override public String profile() { return "loopback-tcp"; }
+                @Override public String address() { return Integer.toString(bound); }
+                @Override public void stop() { server.stop(); }
+            };
+        }
         OUT.println("PAIRING=" + pairing.pairingId);
         // The token is written to the pairing file only; the peer reads it
         // out of band (the test harness owns the directory).
@@ -97,7 +123,7 @@ public final class HostRunner {
             try {
                 if (cmd[0].equals("quit")) break;
                 if (cmd[0].equals("status")) {
-                    emit("REPLY", status(companion, server, pairing.pairingId));
+                    emit("REPLY", status(companion, transport, pairing.pairingId));
                 } else if (cmd[0].equals("snapshot") && cmd.length == 2) {
                     Future<Json.Obj> f = executor.submit(new java.util.concurrent.Callable<Json.Obj>() {
                         @Override public Json.Obj call() {
@@ -167,24 +193,23 @@ public final class HostRunner {
                 emit("REPLY", new Json.Obj().put("error", String.valueOf(c)));
             }
         }
-        server.stop();
+        transport.stop();
         executor.shutdown();
         store.close();
         System.exit(0);
     }
 
-    static Json.Obj status(Companion companion, LoopbackServer server, String pairingId) {
+    static Json.Obj status(Companion companion, HostTransport transport, String pairingId) {
         CompanionEngine e = companion.currentEngine();
-        Json.Obj o = new Json.Obj().put("running", true).put("port", server.port())
+        Json.Obj o = new Json.Obj().put("running", true)
+            .put("transport", new Json.Obj().put("profile", transport.profile()).put("address", transport.address()))
             .put("session", e == null ? "none" : e.state().name()).put("pairing_id", pairingId)
             .put("queued_events", companion.queuedCount(pairingId)).put("in_flight", companion.inFlight(pairingId))
             .put("pump_paused", e != null && e.pumpPaused()).put("generation", companion.generation())
             .put("surfaces", companion.welcomeSurfaces(pairingId));
+        if ("loopback-tcp".equals(transport.profile())) o.put("port", Integer.parseInt(transport.address()));
         String err = companion.lastError();
         if (err != null) o.put("last_error", err);
         return o;
     }
-
-    /** Guard against an unused-import warning for StoreException in --release 7 builds. */
-    static Class<?> touch() { return StoreException.class; }
 }

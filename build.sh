@@ -14,6 +14,15 @@ find src/main/java -name '*.java' > build/main-sources.txt
 javac --release 7 -Xlint:all -d build/classes @build/main-sources.txt > build/main-javac.log 2>&1 || { cat build/main-javac.log; exit 1; }
 if grep -Ev "$FILTER" build/main-javac.log | grep -q .; then grep -Ev "$FILTER" build/main-javac.log; echo "core build has warnings"; exit 1; fi
 test -f build/classes/com/calebc42/ebp/companion/engine/Companion.class
+# The host tier: the JVM runner and the desktop Unix-domain transports
+# (SPEC 5.3 listener, SPEC 5.6 dialer), which need JDK 16+ APIs and are
+# never vendored into the Emacs tree.  Compiled against the core.
+rm -rf build/host-classes
+mkdir -p build/host-classes
+find src/host/java -name '*.java' > build/host-sources.txt
+javac --release 17 -Xlint:all -d build/host-classes -cp build/classes @build/host-sources.txt > build/host-javac.log 2>&1 || { cat build/host-javac.log; exit 1; }
+if grep -Ev "$FILTER" build/host-javac.log | grep -q .; then grep -Ev "$FILTER" build/host-javac.log; echo "host build has warnings"; exit 1; fi
+test -f build/host-classes/com/calebc42/ebp/companion/host/HostRunner.class
 if [ "${1:-}" = "test" ]; then
   find src/test/java -name '*.java' > build/test-sources.txt
   javac --release 7 -Xlint:all -d build/test-classes \
