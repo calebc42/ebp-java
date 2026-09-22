@@ -1,0 +1,999 @@
+make: Entering directory '/home/calebc42/workspace/emacs/emacs'
+MAKE='make' ./config.status
+config.status: creating src/verbose.mk
+config.status: creating src/emacs-module.h
+config.status: creating Makefile
+config.status: creating lib/gnulib.mk
+config.status: creating ./doc/man/emacs.1
+config.status: creating lib/Makefile
+config.status: creating lib-src/Makefile
+config.status: creating oldXMenu/Makefile
+config.status: creating src/Makefile
+config.status: creating lwlib/Makefile
+config.status: creating nextstep/Makefile
+config.status: creating nt/Makefile
+config.status: creating doc/emacs/Makefile
+config.status: creating doc/misc/Makefile
+config.status: creating doc/lispintro/Makefile
+config.status: creating doc/lispref/Makefile
+config.status: creating lisp/Makefile
+config.status: creating leim/Makefile
+config.status: creating test/Makefile
+config.status: creating test/manual/noverlay/Makefile
+config.status: creating test/infra/Makefile
+config.status: creating admin/charsets/Makefile
+config.status: creating admin/unidata/Makefile
+config.status: creating admin/grammars/Makefile
+config.status: creating java/Makefile
+config.status: creating cross/Makefile
+config.status: creating java/AndroidManifest.xml
+config.status: creating src/config.h
+config.status: src/config.h is unchanged
+config.status: linking lib/_Noreturn.h to cross/lib/_Noreturn.h
+config.status: linking lib/acl-errno-valid.c to cross/lib/acl-errno-valid.c
+config.status: linking lib/acl-internal.c to cross/lib/acl-internal.c
+config.status: linking lib/acl-internal.h to cross/lib/acl-internal.h
+config.status: linking lib/acl.h to cross/lib/acl.h
+config.status: linking lib/acl_entries.c to cross/lib/acl_entries.c
+config.status: linking lib/alloca.in.h to cross/lib/alloca.in.h
+config.status: linking lib/allocator.c to cross/lib/allocator.c
+config.status: linking lib/allocator.h to cross/lib/allocator.h
+config.status: linking lib/arg-nonnull.h to cross/lib/arg-nonnull.h
+config.status: linking lib/assert.in.h to cross/lib/assert.in.h
+config.status: linking lib/at-func.c to cross/lib/at-func.c
+config.status: linking lib/attribute.h to cross/lib/attribute.h
+config.status: linking lib/binary-io.c to cross/lib/binary-io.c
+config.status: linking lib/binary-io.h to cross/lib/binary-io.h
+config.status: linking lib/boot-time-aux.h to cross/lib/boot-time-aux.h
+config.status: linking lib/boot-time.c to cross/lib/boot-time.c
+config.status: linking lib/boot-time.h to cross/lib/boot-time.h
+config.status: linking lib/byteswap.c to cross/lib/byteswap.c
+config.status: linking lib/byteswap.in.h to cross/lib/byteswap.in.h
+config.status: linking lib/c++defs.h to cross/lib/c++defs.h
+config.status: linking lib/c-ctype.c to cross/lib/c-ctype.c
+config.status: linking lib/c-ctype.h to cross/lib/c-ctype.h
+config.status: linking lib/c-strcase.h to cross/lib/c-strcase.h
+config.status: linking lib/c-strcasecmp.c to cross/lib/c-strcasecmp.c
+config.status: linking lib/c-strncasecmp.c to cross/lib/c-strncasecmp.c
+config.status: linking lib/canonicalize-lgpl.c to cross/lib/canonicalize-lgpl.c
+config.status: linking lib/careadlinkat.c to cross/lib/careadlinkat.c
+config.status: linking lib/careadlinkat.h to cross/lib/careadlinkat.h
+config.status: linking lib/cdefs.h to cross/lib/cdefs.h
+config.status: linking lib/cloexec.c to cross/lib/cloexec.c
+config.status: linking lib/cloexec.h to cross/lib/cloexec.h
+config.status: linking lib/close-stream.c to cross/lib/close-stream.c
+config.status: linking lib/close-stream.h to cross/lib/close-stream.h
+config.status: linking lib/copy-file-range.c to cross/lib/copy-file-range.c
+config.status: linking lib/diffseq.h to cross/lib/diffseq.h
+config.status: linking lib/dirent-private.h to cross/lib/dirent-private.h
+config.status: linking lib/dirent.in.h to cross/lib/dirent.in.h
+config.status: linking lib/dirfd.c to cross/lib/dirfd.c
+config.status: linking lib/dtoastr.c to cross/lib/dtoastr.c
+config.status: linking lib/dtotimespec.c to cross/lib/dtotimespec.c
+config.status: linking lib/dup2.c to cross/lib/dup2.c
+config.status: linking lib/dynarray.h to cross/lib/dynarray.h
+config.status: linking lib/endian.c to cross/lib/endian.c
+config.status: linking lib/endian.in.h to cross/lib/endian.in.h
+config.status: linking lib/errno.in.h to cross/lib/errno.in.h
+config.status: linking lib/euidaccess.c to cross/lib/euidaccess.c
+config.status: linking lib/execinfo.c to cross/lib/execinfo.c
+config.status: linking lib/execinfo.in.h to cross/lib/execinfo.in.h
+config.status: linking lib/faccessat.c to cross/lib/faccessat.c
+config.status: linking lib/fchmodat.c to cross/lib/fchmodat.c
+config.status: linking lib/fcntl.c to cross/lib/fcntl.c
+config.status: linking lib/fcntl.in.h to cross/lib/fcntl.in.h
+config.status: linking lib/fdopendir.c to cross/lib/fdopendir.c
+config.status: linking lib/file-has-acl.c to cross/lib/file-has-acl.c
+config.status: linking lib/filemode.c to cross/lib/filemode.c
+config.status: linking lib/filemode.h to cross/lib/filemode.h
+config.status: linking lib/filename.h to cross/lib/filename.h
+config.status: linking lib/filevercmp.c to cross/lib/filevercmp.c
+config.status: linking lib/filevercmp.h to cross/lib/filevercmp.h
+config.status: linking lib/flexmember.h to cross/lib/flexmember.h
+config.status: linking lib/fpending.c to cross/lib/fpending.c
+config.status: linking lib/fpending.h to cross/lib/fpending.h
+config.status: linking lib/free.c to cross/lib/free.c
+config.status: linking lib/fseterr.c to cross/lib/fseterr.c
+config.status: linking lib/fseterr.h to cross/lib/fseterr.h
+config.status: linking lib/fstatat.c to cross/lib/fstatat.c
+config.status: linking lib/fsusage.c to cross/lib/fsusage.c
+config.status: linking lib/fsusage.h to cross/lib/fsusage.h
+config.status: linking lib/fsync.c to cross/lib/fsync.c
+config.status: linking lib/ftoastr.c to cross/lib/ftoastr.c
+config.status: linking lib/ftoastr.h to cross/lib/ftoastr.h
+config.status: linking lib/futimens.c to cross/lib/futimens.c
+config.status: linking lib/get-permissions.c to cross/lib/get-permissions.c
+config.status: linking lib/getdelim.c to cross/lib/getdelim.c
+config.status: linking lib/getdtablesize.c to cross/lib/getdtablesize.c
+config.status: linking lib/getgroups.c to cross/lib/getgroups.c
+config.status: linking lib/getline.c to cross/lib/getline.c
+config.status: linking lib/getloadavg.c to cross/lib/getloadavg.c
+config.status: linking lib/getopt-cdefs.in.h to cross/lib/getopt-cdefs.in.h
+config.status: linking lib/getopt-core.h to cross/lib/getopt-core.h
+config.status: linking lib/getopt-ext.h to cross/lib/getopt-ext.h
+config.status: linking lib/getopt-pfx-core.h to cross/lib/getopt-pfx-core.h
+config.status: linking lib/getopt-pfx-ext.h to cross/lib/getopt-pfx-ext.h
+config.status: linking lib/getopt.c to cross/lib/getopt.c
+config.status: linking lib/getopt.in.h to cross/lib/getopt.in.h
+config.status: linking lib/getopt1.c to cross/lib/getopt1.c
+config.status: linking lib/getopt_int.h to cross/lib/getopt_int.h
+config.status: linking lib/getrandom.c to cross/lib/getrandom.c
+config.status: linking lib/gettext.h to cross/lib/gettext.h
+config.status: linking lib/gettime.c to cross/lib/gettime.c
+config.status: linking lib/gettimeofday.c to cross/lib/gettimeofday.c
+config.status: linking lib/group-member.c to cross/lib/group-member.c
+config.status: linking lib/idx.h to cross/lib/idx.h
+config.status: linking lib/ieee754.in.h to cross/lib/ieee754.in.h
+config.status: linking lib/ignore-value.h to cross/lib/ignore-value.h
+config.status: linking lib/intprops-internal.h to cross/lib/intprops-internal.h
+config.status: linking lib/intprops.h to cross/lib/intprops.h
+config.status: linking lib/inttypes.in.h to cross/lib/inttypes.in.h
+config.status: linking lib/issymlink.c to cross/lib/issymlink.c
+config.status: linking lib/issymlink.h to cross/lib/issymlink.h
+config.status: linking lib/issymlinkat.c to cross/lib/issymlinkat.c
+config.status: linking lib/issymlinkat.h to cross/lib/issymlinkat.h
+config.status: linking lib/lchmod.c to cross/lib/lchmod.c
+config.status: linking lib/libc-config.h to cross/lib/libc-config.h
+config.status: linking lib/limits.in.h to cross/lib/limits.in.h
+config.status: linking lib/lstat.c to cross/lib/lstat.c
+config.status: linking lib/malloc.c to cross/lib/malloc.c
+config.status: linking lib/malloc/dynarray-skeleton.c to cross/lib/malloc/dynarray-skeleton.c
+config.status: linking lib/malloc/dynarray.h to cross/lib/malloc/dynarray.h
+config.status: linking lib/malloc/dynarray_at_failure.c to cross/lib/malloc/dynarray_at_failure.c
+config.status: linking lib/malloc/dynarray_emplace_enlarge.c to cross/lib/malloc/dynarray_emplace_enlarge.c
+config.status: linking lib/malloc/dynarray_finalize.c to cross/lib/malloc/dynarray_finalize.c
+config.status: linking lib/malloc/dynarray_resize.c to cross/lib/malloc/dynarray_resize.c
+config.status: linking lib/malloc/dynarray_resize_clear.c to cross/lib/malloc/dynarray_resize_clear.c
+config.status: linking lib/malloc/scratch_buffer.h to cross/lib/malloc/scratch_buffer.h
+config.status: linking lib/malloc/scratch_buffer_grow.c to cross/lib/malloc/scratch_buffer_grow.c
+config.status: linking lib/malloc/scratch_buffer_grow_preserve.c to cross/lib/malloc/scratch_buffer_grow_preserve.c
+config.status: linking lib/malloc/scratch_buffer_set_array_size.c to cross/lib/malloc/scratch_buffer_set_array_size.c
+config.status: linking lib/md5-stream.c to cross/lib/md5-stream.c
+config.status: linking lib/md5.c to cross/lib/md5.c
+config.status: linking lib/md5.h to cross/lib/md5.h
+config.status: linking lib/memeq.c to cross/lib/memeq.c
+config.status: linking lib/memmem.c to cross/lib/memmem.c
+config.status: linking lib/mempcpy.c to cross/lib/mempcpy.c
+config.status: linking lib/memrchr.c to cross/lib/memrchr.c
+config.status: linking lib/memset_explicit.c to cross/lib/memset_explicit.c
+config.status: linking lib/min-eloop-threshold.h to cross/lib/min-eloop-threshold.h
+config.status: linking lib/mini-gmp-gnulib.c to cross/lib/mini-gmp-gnulib.c
+config.status: linking lib/mini-gmp.c to cross/lib/mini-gmp.c
+config.status: linking lib/mini-gmp.h to cross/lib/mini-gmp.h
+config.status: linking lib/minmax.h to cross/lib/minmax.h
+config.status: linking lib/mkostemp.c to cross/lib/mkostemp.c
+config.status: linking lib/mktime-internal.h to cross/lib/mktime-internal.h
+config.status: linking lib/mktime.c to cross/lib/mktime.c
+config.status: linking lib/nanosleep.c to cross/lib/nanosleep.c
+config.status: linking lib/nproc.c to cross/lib/nproc.c
+config.status: linking lib/nproc.h to cross/lib/nproc.h
+config.status: linking lib/nstrftime.c to cross/lib/nstrftime.c
+config.status: linking lib/open.c to cross/lib/open.c
+config.status: linking lib/openat-priv.h to cross/lib/openat-priv.h
+config.status: linking lib/openat-proc.c to cross/lib/openat-proc.c
+config.status: linking lib/openat.h to cross/lib/openat.h
+config.status: linking lib/pathmax.h to cross/lib/pathmax.h
+config.status: linking lib/pipe2.c to cross/lib/pipe2.c
+config.status: linking lib/pselect.c to cross/lib/pselect.c
+config.status: linking lib/pthread_sigmask.c to cross/lib/pthread_sigmask.c
+config.status: linking lib/qcopy-acl.c to cross/lib/qcopy-acl.c
+config.status: linking lib/rawmemchr.c to cross/lib/rawmemchr.c
+config.status: linking lib/readlink.c to cross/lib/readlink.c
+config.status: linking lib/readlinkat.c to cross/lib/readlinkat.c
+config.status: linking lib/readutmp.h to cross/lib/readutmp.h
+config.status: linking lib/realloc.c to cross/lib/realloc.c
+config.status: linking lib/regcomp.c to cross/lib/regcomp.c
+config.status: linking lib/regex.c to cross/lib/regex.c
+config.status: linking lib/regex.h to cross/lib/regex.h
+config.status: linking lib/regex_internal.c to cross/lib/regex_internal.c
+config.status: linking lib/regex_internal.h to cross/lib/regex_internal.h
+config.status: linking lib/regexec.c to cross/lib/regexec.c
+config.status: linking lib/root-uid.h to cross/lib/root-uid.h
+config.status: linking lib/scratch_buffer.h to cross/lib/scratch_buffer.h
+config.status: linking lib/set-permissions.c to cross/lib/set-permissions.c
+config.status: linking lib/sha1.c to cross/lib/sha1.c
+config.status: linking lib/sha1.h to cross/lib/sha1.h
+config.status: linking lib/sha256.c to cross/lib/sha256.c
+config.status: linking lib/sha256.h to cross/lib/sha256.h
+config.status: linking lib/sha3.c to cross/lib/sha3.c
+config.status: linking lib/sha3.h to cross/lib/sha3.h
+config.status: linking lib/sha512.c to cross/lib/sha512.c
+config.status: linking lib/sha512.h to cross/lib/sha512.h
+config.status: linking lib/sig2str.c to cross/lib/sig2str.c
+config.status: linking lib/sig2str.h to cross/lib/sig2str.h
+config.status: linking lib/sigdescr_np.c to cross/lib/sigdescr_np.c
+config.status: linking lib/signal.in.h to cross/lib/signal.in.h
+config.status: linking lib/stat-time.c to cross/lib/stat-time.c
+config.status: linking lib/stat-time.h to cross/lib/stat-time.h
+config.status: linking lib/stdbit.in.h to cross/lib/stdbit.in.h
+config.status: linking lib/stdc_bit_width.c to cross/lib/stdc_bit_width.c
+config.status: linking lib/stdc_count_ones.c to cross/lib/stdc_count_ones.c
+config.status: linking lib/stdc_leading_zeros.c to cross/lib/stdc_leading_zeros.c
+config.status: linking lib/stdc_memreverse8u.c to cross/lib/stdc_memreverse8u.c
+config.status: linking lib/stdc_trailing_zeros.c to cross/lib/stdc_trailing_zeros.c
+config.status: linking lib/stdckdint.in.h to cross/lib/stdckdint.in.h
+config.status: linking lib/stdcountof.in.h to cross/lib/stdcountof.in.h
+config.status: linking lib/stddef.in.h to cross/lib/stddef.in.h
+config.status: linking lib/stdint.in.h to cross/lib/stdint.in.h
+config.status: linking lib/stdio-consolesafe.c to cross/lib/stdio-consolesafe.c
+config.status: linking lib/stdio-impl.h to cross/lib/stdio-impl.h
+config.status: linking lib/stdio.in.h to cross/lib/stdio.in.h
+config.status: linking lib/stdlib.c to cross/lib/stdlib.c
+config.status: linking lib/stdlib.in.h to cross/lib/stdlib.in.h
+config.status: linking lib/stpcpy.c to cross/lib/stpcpy.c
+config.status: linking lib/str-two-way.h to cross/lib/str-two-way.h
+config.status: linking lib/streq.c to cross/lib/streq.c
+config.status: linking lib/strftime.c to cross/lib/strftime.c
+config.status: linking lib/strftime.h to cross/lib/strftime.h
+config.status: linking lib/string.in.h to cross/lib/string.in.h
+config.status: linking lib/strnlen.c to cross/lib/strnlen.c
+config.status: linking lib/strnul.c to cross/lib/strnul.c
+config.status: linking lib/strtoimax.c to cross/lib/strtoimax.c
+config.status: linking lib/strtol.c to cross/lib/strtol.c
+config.status: linking lib/strtoll.c to cross/lib/strtoll.c
+config.status: linking lib/symlink.c to cross/lib/symlink.c
+config.status: linking lib/sys-limits.h to cross/lib/sys-limits.h
+config.status: linking lib/sys_random.in.h to cross/lib/sys_random.in.h
+config.status: linking lib/sys_select.in.h to cross/lib/sys_select.in.h
+config.status: linking lib/sys_stat.in.h to cross/lib/sys_stat.in.h
+config.status: linking lib/sys_time.in.h to cross/lib/sys_time.in.h
+config.status: linking lib/sys_types.in.h to cross/lib/sys_types.in.h
+config.status: linking lib/tempname.c to cross/lib/tempname.c
+config.status: linking lib/tempname.h to cross/lib/tempname.h
+config.status: linking lib/time-internal.h to cross/lib/time-internal.h
+config.status: linking lib/time.in.h to cross/lib/time.in.h
+config.status: linking lib/time_r.c to cross/lib/time_r.c
+config.status: linking lib/time_rz.c to cross/lib/time_rz.c
+config.status: linking lib/timegm.c to cross/lib/timegm.c
+config.status: linking lib/timespec-add.c to cross/lib/timespec-add.c
+config.status: linking lib/timespec-sub.c to cross/lib/timespec-sub.c
+config.status: linking lib/timespec.c to cross/lib/timespec.c
+config.status: linking lib/timespec.h to cross/lib/timespec.h
+config.status: linking lib/u64.c to cross/lib/u64.c
+config.status: linking lib/u64.h to cross/lib/u64.h
+config.status: linking lib/unistd.c to cross/lib/unistd.c
+config.status: linking lib/unistd.in.h to cross/lib/unistd.in.h
+config.status: linking lib/unlocked-io.h to cross/lib/unlocked-io.h
+config.status: linking lib/utimens.c to cross/lib/utimens.c
+config.status: linking lib/utimens.h to cross/lib/utimens.h
+config.status: linking lib/utimensat.c to cross/lib/utimensat.c
+config.status: linking lib/verify.h to cross/lib/verify.h
+config.status: linking lib/warn-on-use.h to cross/lib/warn-on-use.h
+config.status: linking lib/save-cwd.h to cross/lib/save-cwd.h
+config.status: linking lib/fingerprint.c to cross/lib/fingerprint.c
+config.status: linking lib/fingerprint.h to cross/lib/fingerprint.h
+config.status: linking lib/save-cwd.c to cross/lib/save-cwd.c
+config.status: linking lib/openat-die.c to cross/lib/openat-die.c
+config.status: linking lib/save-cwd.c to cross/lib/save-cwd.c
+config.status: linking lib/min-max.h to cross/lib/min-max.h
+config.status: executing src/epaths.h commands
+make[1]: Entering directory '/home/calebc42/workspace/emacs/emacs'
+make[1]: Leaving directory '/home/calebc42/workspace/emacs/emacs'
+config.status: executing src/.gdbinit commands
+config.status: executing doc/emacs/emacsver.texi commands
+config.status: executing etc-refcards-emacsver.tex commands
+make actual-all || make advice-on-failure make-target=all exit-status=$?
+make[1]: Entering directory '/home/calebc42/workspace/emacs/emacs'
+make -C lib all
+make -C doc/lispref DOCLANG=default info
+make -C doc/lispintro DOCLANG=default info
+make -C doc/emacs DOCLANG=default info
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/doc/lispref'
+make[2]: Nothing to be done for 'info'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/doc/lispref'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/doc/emacs'
+make[2]: Nothing to be done for 'info'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/doc/emacs'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/doc/lispintro'
+make[2]: Nothing to be done for 'info'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/doc/lispintro'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib'
+make -C lib-src all
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C src BIN_DESTDIR='/usr/local/bin/' \
+	 ELN_DESTDIR='/usr/local/lib/emacs/32.0.50/' all
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/src'
+  GEN      globals.h
+  GEN      buildobj.h
+make -C ../admin/charsets all
+make -C ../admin/unidata charscript.el
+make -C ../admin/unidata emoji-zwj.el
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make -C ../admin/charsets cp51932.el
+make -C ../admin/charsets eucjp-ms.el
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'cp51932.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'eucjp-ms.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'charscript.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Nothing to be done for 'emoji-zwj.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+  CC       dispnew.o
+  CC       frame.o
+  CC       scroll.o
+  CC       xdisp.o
+  CC       menu.o
+  CC       window.o
+  CC       charset.o
+  CC       coding.o
+  CC       category.o
+  CC       ccl.o
+  CC       character.o
+  CC       chartab.o
+  CC       bidi.o
+  CC       term.o
+  CC       terminal.o
+  CC       xfaces.o
+  CC       emacs.o
+  CC       keyboard.o
+  CC       macros.o
+  CC       keymap.o
+  CC       sysdep.o
+  CC       bignum.o
+  CC       buffer.o
+  CC       filelock.o
+  CC       insdel.o
+  CC       marker.o
+  CC       minibuf.o
+  CC       fileio.o
+  CC       dired.o
+  CC       cmds.o
+  CC       casetab.o
+  CC       casefiddle.o
+  CC       indent.o
+  CC       search.o
+  CC       regex-emacs.o
+  CC       undo.o
+  CC       alloc.o
+  CC       pdumper.o
+  CC       data.o
+  CC       doc.o
+  CC       editfns.o
+  CC       callint.o
+  CC       eval.o
+  CC       floatfns.o
+  CC       fns.o
+  CC       sort.o
+  CC       font.o
+  CC       print.o
+  CC       lread.o
+  CC       syntax.o
+  CC       bytecode.o
+  CC       comp.o
+  CC       process.o
+  CC       gnutls.o
+  CC       callproc.o
+  CC       region-cache.o
+  CC       sound.o
+  CC       timefns.o
+  CC       atimer.o
+  CC       doprnt.o
+  CC       intervals.o
+  CC       textprop.o
+  CC       composite.o
+  CC       xml.o
+  CC       lcms.o
+  CC       inotify.o
+  CC       profiler.o
+  CC       decompress.o
+  CC       thread.o
+  CC       systhread.o
+  CC       sqlite.o
+  CC       treesit.o
+  CC       itree.o
+  CC       json.o
+  CC       fontset.o
+  CC       fringe.o
+  CC       image.o
+  CC       androidterm.o
+  CC       androidfns.o
+  CC       androidfont.o
+image.c: In function ‘image_bitmap_pixmap’:
+image.c:457:10: warning: useless cast to type ‘long int’ [-Wuseless-cast]
+  457 |   return (ptrdiff_t) FRAME_DISPLAY_INFO (f)->bitmaps[id - 1].pixmap;
+      |          ^
+  CC       androidmenu.o
+  CC       android.o
+  CC       terminfo.o
+  CCLD     temacs
+  GEN      ../etc/DOC
+/usr/bin/mkdir -p ../etc
+make -C ../lisp update-subdirs
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+cp -f temacs bootstrap-emacs
+rm -f bootstrap-emacs.pdmp
+./temacs --batch  -l loadup --temacs=pbootstrap \
+	--bin-dest '/usr/local/bin/' --eln-dest '/usr/local/lib/emacs/32.0.50/'
+Loading loadup.el (source)...
+Dump mode: pbootstrap
+Using load-path (/home/calebc42/workspace/emacs/emacs/lisp /home/calebc42/workspace/emacs/emacs/lisp/emacs-lisp /home/calebc42/workspace/emacs/emacs/lisp/progmodes /home/calebc42/workspace/emacs/emacs/lisp/language /home/calebc42/workspace/emacs/emacs/lisp/international /home/calebc42/workspace/emacs/emacs/lisp/textmodes /home/calebc42/workspace/emacs/emacs/lisp/vc)
+Loading emacs-lisp/debug-early...
+Loading emacs-lisp/byte-run...
+Loading emacs-lisp/backquote...
+Loading subr...
+Loading keymap...
+Loading version...
+Loading widget...
+Loading custom...
+Loading emacs-lisp/map-ynp...
+Loading international/mule...
+Loading international/mule-conf...
+Loading env...
+Loading format...
+Loading bindings...
+Loading window...
+Loading files...
+Loading emacs-lisp/macroexp...
+Loading cus-face...
+Loading faces...
+Loading loaddefs...
+Loading /home/calebc42/workspace/emacs/emacs/lisp/theme-loaddefs.el (source)...
+Loading button...
+Loading emacs-lisp/cl-preloaded...
+Loading emacs-lisp/oclosure...
+Loading obarray...
+Loading abbrev...
+Loading help...
+Loading jka-cmpr-hook...
+Loading epa-hook...
+Loading international/mule-cmds...
+Loading case-table...
+Loading /home/calebc42/workspace/emacs/emacs/lisp/international/charprop.el (source)...
+Loading international/characters...
+Loading international/charscript...
+Loading international/emoji-zwj...
+Loading composite...
+Loading language/chinese...
+Loading language/cyrillic...
+Loading language/indian...
+Loading language/sinhala...
+Loading language/english...
+Loading language/ethiopic...
+Loading language/european...
+Loading language/czech...
+Loading language/slovak...
+Loading language/romanian...
+Loading language/greek...
+Loading language/hebrew...
+Loading international/cp51932...
+Loading international/eucjp-ms...
+Loading language/japanese...
+Loading language/korean...
+Loading language/lao...
+Loading language/tai-viet...
+Loading language/thai...
+Loading language/tibetan...
+Loading language/vietnamese...
+Loading language/misc-lang...
+Loading language/utf-8-lang...
+Loading language/georgian...
+Loading language/khmer...
+Loading language/burmese...
+Loading language/cham...
+Loading language/philippine...
+Loading language/indonesian...
+Loading indent...
+Loading emacs-lisp/cl-generic...
+Loading simple...
+Loading emacs-lisp/seq...
+Loading emacs-lisp/nadvice...
+Loading minibuffer...
+Loading frame...
+Loading startup...
+Loading term/tty-colors...
+Loading font-core...
+Loading emacs-lisp/syntax...
+Loading font-lock...
+Loading jit-lock...
+Loading mouse...
+Loading scroll-bar...
+Loading select...
+Loading emacs-lisp/timer...
+Loading emacs-lisp/easymenu...
+Loading isearch...
+Loading rfn-eshadow...
+Loading menu-bar...
+Loading tab-bar...
+Loading emacs-lisp/lisp...
+Loading textmodes/page...
+Loading register...
+Loading textmodes/paragraphs...
+Loading progmodes/prog-mode...
+Loading emacs-lisp/lisp-mode...
+Loading textmodes/text-mode...
+Loading textmodes/fill...
+Loading newcomment...
+Loading replace...
+Loading emacs-lisp/tabulated-list...
+Loading buff-menu...
+Loading fringe...
+Loading emacs-lisp/regexp-opt...
+Loading image...
+Loading international/fontset...
+Loading dnd...
+Loading tool-bar...
+Loading dynamic-setting...
+Loading ls-lisp...
+Loading touch-screen...
+Loading term/common-win...
+Loading term/android-win...
+Loading mwheel...
+Loading progmodes/elisp-mode...
+Loading emacs-lisp/float-sup...
+Loading vc/vc-hooks...
+Loading vc/ediff-hook...
+Loading uniquify...
+Loading electric...
+Loading paren...
+Loading emacs-lisp/shorthands...
+Loading emacs-lisp/eldoc...
+Loading emacs-lisp/cconv...
+Loading cus-start...
+Loading tooltip...
+Loading international/iso-transl...
+Loading emacs-lisp/rmc...
+Loading /home/calebc42/workspace/emacs/emacs/lisp/leim/leim-list.el (source)...
+Finding pointers to doc strings...
+Finding pointers to doc strings...done
+Dumping under the name bootstrap-emacs.pdmp
+Dumping fingerprint: ea4f56e65e1d56d65feef32f7aea1ab2dc25a0fa7481f78e7dcf83b2893eea5a
+Dump complete
+Byte counts: header=100 hot=9266084 discardable=154792 cold=4180576
+Reloc counts: hot=506253 discardable=5467
+ANCIENT=yes make -C ../lisp compile-first EMACS="../src/bootstrap-emacs"
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Nothing to be done for 'compile-first'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make -C ../lisp compile-first EMACS="../src/bootstrap-emacs"
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Nothing to be done for 'compile-first'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make -C ../admin/unidata all EMACS="../../src/bootstrap-emacs"
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+rm -f emacs && cp -f temacs emacs
+LC_ALL=C ./temacs -batch  -l loadup --temacs=pdump \
+	--bin-dest '/usr/local/bin/' --eln-dest '/usr/local/lib/emacs/32.0.50/'
+Loading loadup.el (source)...
+Dump mode: pdump
+Using load-path (/home/calebc42/workspace/emacs/emacs/lisp)
+Loading emacs-lisp/debug-early...
+Loading emacs-lisp/byte-run...
+Loading emacs-lisp/backquote...
+Loading subr...
+Loading keymap...
+Loading version...
+Loading widget...
+Loading custom...
+Loading emacs-lisp/map-ynp...
+Loading international/mule...
+Loading international/mule-conf...
+Loading env...
+Loading format...
+Loading bindings...
+Loading window...
+Loading files...
+Loading emacs-lisp/macroexp...
+Loading cus-face...
+Loading faces...
+Loading loaddefs...
+Loading theme-loaddefs.el (source)...
+Loading button...
+Loading emacs-lisp/cl-preloaded...
+Loading emacs-lisp/oclosure...
+Loading obarray...
+Loading abbrev...
+Loading help...
+Loading jka-cmpr-hook...
+Loading epa-hook...
+Loading international/mule-cmds...
+Loading case-table...
+Loading international/charprop.el (source)...
+Loading international/characters...
+Loading international/charscript...
+Loading international/emoji-zwj...
+Loading composite...
+Loading language/chinese...
+Loading language/cyrillic...
+Loading language/indian...
+Loading language/sinhala...
+Loading language/english...
+Loading language/ethiopic...
+Loading language/european...
+Loading language/czech...
+Loading language/slovak...
+Loading language/romanian...
+Loading language/greek...
+Loading language/hebrew...
+Loading international/cp51932...
+Loading international/eucjp-ms...
+Loading language/japanese...
+Loading language/korean...
+Loading language/lao...
+Loading language/tai-viet...
+Loading language/thai...
+Loading language/tibetan...
+Loading language/vietnamese...
+Loading language/misc-lang...
+Loading language/utf-8-lang...
+Loading language/georgian...
+Loading language/khmer...
+Loading language/burmese...
+Loading language/cham...
+Loading language/philippine...
+Loading language/indonesian...
+Loading indent...
+Loading emacs-lisp/cl-generic...
+Loading simple...
+Loading emacs-lisp/seq...
+Loading emacs-lisp/nadvice...
+Loading minibuffer...
+Loading frame...
+Loading startup...
+Loading term/tty-colors...
+Loading font-core...
+Loading emacs-lisp/syntax...
+Loading font-lock...
+Loading jit-lock...
+Loading mouse...
+Loading scroll-bar...
+Loading select...
+Loading emacs-lisp/timer...
+Loading emacs-lisp/easymenu...
+Loading isearch...
+Loading rfn-eshadow...
+Loading menu-bar...
+Loading tab-bar...
+Loading emacs-lisp/lisp...
+Loading textmodes/page...
+Loading register...
+Loading textmodes/paragraphs...
+Loading progmodes/prog-mode...
+Loading emacs-lisp/lisp-mode...
+Loading textmodes/text-mode...
+Loading textmodes/fill...
+Loading newcomment...
+Loading replace...
+Loading emacs-lisp/tabulated-list...
+Loading buff-menu...
+Loading fringe...
+Loading emacs-lisp/regexp-opt...
+Loading image...
+Loading international/fontset...
+Loading dnd...
+Loading tool-bar...
+Loading dynamic-setting...
+Loading ls-lisp...
+Loading touch-screen...
+Loading term/common-win...
+Loading term/android-win...
+Loading mwheel...
+Loading progmodes/elisp-mode...
+Loading emacs-lisp/float-sup...
+Loading vc/vc-hooks...
+Loading vc/ediff-hook...
+Loading uniquify...
+Loading electric...
+Loading paren...
+Loading emacs-lisp/shorthands...
+Loading emacs-lisp/eldoc...
+Loading emacs-lisp/cconv...
+Loading cus-start...
+Loading tooltip...
+Loading international/iso-transl...
+Loading emacs-lisp/rmc...
+Loading leim/leim-list.el (source)...
+Waiting for git...
+Waiting for git...
+Finding pointers to doc strings...
+Finding pointers to doc strings...done
+Dumping under the name emacs.pdmp
+Dumping fingerprint: ea4f56e65e1d56d65feef32f7aea1ab2dc25a0fa7481f78e7dcf83b2893eea5a
+Dump complete
+Byte counts: header=100 hot=9271972 discardable=154792 cold=4178560
+Reloc counts: hot=506634 discardable=5467
+cp -f emacs.pdmp bootstrap-emacs.pdmp 
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/src'
+make -C lisp all
+make -C lib-src maybe-blessmail
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[2]: Nothing to be done for 'maybe-blessmail'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C ../leim all EMACS="../src/emacs"
+make -C ../admin/grammars all EMACS="../../src/emacs"
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/grammars'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/grammars'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/leim'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/leim'
+  GEN      autoloads
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Nothing to be done for 'compile-targets'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/leim'
+  GEN      small-ja-dic-option
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/doc/misc'
+make[3]: 'org.texi' is up to date.
+make[3]: 'modus-themes.texi' is up to date.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/doc/misc'
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/leim'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Nothing to be done for 'compile-targets'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+  INFO     Scraping 1584 files for loaddefs...
+  INFO     Scraping 1584 files for loaddefs...done
+  INFO     Scraping 25 files for loaddefs...
+  INFO     Scraping 25 files for loaddefs...done
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Nothing to be done for 'compile-targets'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make -C doc/misc DOCLANG=default info
+make -C src BIN_DESTDIR='/usr/local/bin/' ELN_DESTDIR='/usr/local/lib/emacs/32.0.50/'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/doc/misc'
+make[2]: Nothing to be done for 'info'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/doc/misc'
+make -C java all
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/java'
+make -C ../cross lib/libgnu.a
+make -C ../exec exec1 loader
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross'
+make -C ../lib libgnu.a
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/exec'
+make[3]: 'exec1' is up to date.
+make[3]: 'loader' is up to date.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/exec'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/src'
+make -C ../admin/charsets all
+make -C ../admin/unidata charscript.el
+make -C ../admin/unidata emoji-zwj.el
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make -C ../admin/charsets cp51932.el
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make -C ../admin/charsets eucjp-ms.el
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'eucjp-ms.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'cp51932.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib'
+make -C ../lib-src make-fingerprint
+make -C ../lib-src make-docfile
+make[3]: Nothing to be done for 'emoji-zwj.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Nothing to be done for 'charscript.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: 'make-fingerprint' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: 'make-docfile' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C lib libgnu.a
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross'
+make -C ../cross  src/android-emacs  src/libemacs.so
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make -C ../cross  lib-src/hexl  lib-src/ebrowse  lib-src/emacsclient  lib-src/etags  lib-src/movemail
+make -C ../admin/unidata all EMACS="../../src/bootstrap-emacs"
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross'
+make -C ../lib libgnu.a
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross'
+make -C ../lib libgnu.a
+  GEN      src/emacs-module.h
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/src'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib'
+make -C ../lib-src make-fingerprint
+make -C ../lib-src make-fingerprint
+make -C ../lib-src make-docfile
+make -C ../lib-src make-docfile
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: 'make-fingerprint' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: 'make-fingerprint' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: 'make-docfile' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: 'make-docfile' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C lib libgnu.a
+make -C lib libgnu.a
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make -C src android-emacs
+make -C lib-src etags emacsclient ebrowse hexl movemail
+make -C src libemacs.so
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/lib-src'
+make[4]: 'etags' is up to date.
+make[4]: 'emacsclient' is up to date.
+make[4]: 'ebrowse' is up to date.
+make[4]: 'hexl' is up to date.
+make[4]: 'movemail' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/lib-src'
+make[3]: Nothing to be done for 'lib-src/ebrowse'.
+make[3]: Nothing to be done for 'lib-src/emacsclient'.
+make[3]: Nothing to be done for 'lib-src/etags'.
+make[3]: Nothing to be done for 'lib-src/movemail'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/src'
+make[4]: 'android-emacs' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/src'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/src'
+make -C ../../lib-src/ make-docfile
+make[5]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[5]: 'make-docfile' is up to date.
+make[5]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C ../../lib-src/ make-fingerprint
+../../lib-src/make-docfile -d /home/calebc42/workspace/emacs/emacs/src -g dispnew.o frame.o scroll.o xdisp.o menu.o  window.o charset.o coding.o category.o ccl.o character.o chartab.o bidi.o  term.o terminal.o xfaces.o    emacs.o keyboard.o macros.o keymap.o sysdep.o bignum.o buffer.o filelock.o insdel.o marker.o minibuf.o fileio.o dired.o cmds.o casetab.o casefiddle.o indent.o search.o regex-emacs.o undo.o alloc.o pdumper.o data.o doc.o editfns.o callint.o eval.o floatfns.o fns.o sort.o font.o print.o lread.o emacs-module.o syntax.o bytecode.o comp.o dynlib.o process.o gnutls.o callproc.o region-cache.o sound.o timefns.o atimer.o doprnt.o intervals.o textprop.o composite.o xml.o lcms.o inotify.o  profiler.o decompress.o thread.o systhread.o sqlite.o  treesit.o itree.o json.o       fontset.o fringe.o image.o textconv.o    androidterm.o androidfns.o androidfont.o androidmenu.o android.o sfnt.o sfntfont.o sfntfont-android.o androidselect.o androidvfs.o  > globals.tmp
+make[5]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[5]: 'make-fingerprint' is up to date.
+make[5]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+  CC       dispnew.o
+  CC       frame.o
+  CC       scroll.o
+  CC       xdisp.o
+  CC       menu.o
+  CC       window.o
+  CC       charset.o
+  CC       coding.o
+  CC       category.o
+  CC       ccl.o
+  CC       character.o
+  CC       chartab.o
+  CC       bidi.o
+  CC       term.o
+  CC       terminal.o
+  CC       xfaces.o
+  CC       emacs.o
+  CC       keyboard.o
+  CC       macros.o
+  CC       keymap.o
+  CC       sysdep.o
+  CC       bignum.o
+  CC       buffer.o
+  CC       filelock.o
+  CC       insdel.o
+  CC       marker.o
+  CC       minibuf.o
+  CC       fileio.o
+  CC       dired.o
+  CC       cmds.o
+  CC       casetab.o
+  CC       casefiddle.o
+  CC       indent.o
+  CC       search.o
+  CC       regex-emacs.o
+  CC       undo.o
+  CC       alloc.o
+  CC       pdumper.o
+  CC       data.o
+  CC       doc.o
+  CC       editfns.o
+  CC       callint.o
+  CC       eval.o
+  CC       floatfns.o
+  CC       fns.o
+  CC       sort.o
+  CC       font.o
+  CC       print.o
+  CC       lread.o
+  CC       emacs-module.o
+  CC       syntax.o
+  CC       bytecode.o
+  CC       comp.o
+  CC       dynlib.o
+  CC       process.o
+  CC       gnutls.o
+  CC       callproc.o
+  CC       region-cache.o
+  CC       sound.o
+  CC       timefns.o
+  CC       atimer.o
+  CC       doprnt.o
+  CC       intervals.o
+  CC       textprop.o
+  CC       composite.o
+  CC       xml.o
+  CC       lcms.o
+  CC       inotify.o
+  CC       profiler.o
+  CC       decompress.o
+  CC       thread.o
+  CC       systhread.o
+  CC       sqlite.o
+  CC       treesit.o
+  CC       itree.o
+  CC       json.o
+  CC       fontset.o
+  CC       fringe.o
+  CC       image.o
+  CC       textconv.o
+  CC       androidterm.o
+  CC       androidfns.o
+  CC       androidfont.o
+  CC       androidmenu.o
+  CC       android.o
+  CC       sfnt.o
+  CC       sfntfont.o
+  CC       sfntfont-android.o
+  CC       androidselect.o
+  CC       androidvfs.o
+  CC       tparam.o
+  GEN      ../etc/DOC
+  CCLD     libemacs.so
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/src'
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross'
+  GEN      install_temp
+  GEN      org/gnu/emacs/EmacsConfig.java
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/java'
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/java'
+  JAVAC    org/gnu/emacs/EmacsActivity.class
+warning: [options] source value 7 is obsolete and will be removed in a future release
+warning: [options] target value 7 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+3 warnings
+  D8       classes.dex
+  AAPT     emacs.apk-in
+ 'lib/arm64-v8a/libhexl.so'...
+ 'lib/arm64-v8a/libetags.so'...
+ 'lib/arm64-v8a/libemacsclient.so'...
+ 'lib/arm64-v8a/libemacs.so'...
+ 'lib/arm64-v8a/libebrowse.so'...
+ 'lib/arm64-v8a/librcs2log.so'...
+ 'lib/arm64-v8a/libloader.so'...
+ 'lib/arm64-v8a/libandroid-emacs.so'...
+ 'lib/arm64-v8a/libmovemail.so'...
+ 'lib/arm64-v8a/libexec1.so'...
+ 'classes.dex'...
+  GEN      emacs-32.0.50-30-arm64-v8a.apk
+jar signed.
+
+Warning: 
+The signer's certificate is self-signed.
+POSIX file permission and/or symlink attributes detected. These attributes are ignored when signing and are not protected by the signature.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/java'
+make[1]: Leaving directory '/home/calebc42/workspace/emacs/emacs'
+make sanity-check make-target=all
+make[1]: Entering directory '/home/calebc42/workspace/emacs/emacs'
+make[1]: Leaving directory '/home/calebc42/workspace/emacs/emacs'
+make: Leaving directory '/home/calebc42/workspace/emacs/emacs'
+make exit=0
+-rw-r--r-- 1 calebc42 calebc42 55162561 Sep 22 07:01 /home/calebc42/workspace/emacs/emacs/java/emacs-32.0.50-30-arm64-v8a.apk
+1dbab6f58159500140b91405e81a6d574acb2e50a6a8caa7a4896e59cb7ca272  /home/calebc42/workspace/emacs/emacs/java/emacs-32.0.50-30-arm64-v8a.apk

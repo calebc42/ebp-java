@@ -1,0 +1,19 @@
+Running 13 tests (2026-09-22 07:05:24-0600, selector ‘t’)
+   passed   1/13  ebpm1-after-accept-hook-receives-the-committed-value (0.000796 sec)
+   passed   2/13  ebpm1-android-loads-on-a-host-without-the-bridge (0.001288 sec)
+   passed   3/13  ebpm1-flag-survives-reopening-its-file (0.000793 sec)
+   passed   4/13  ebpm1-handler-accepts-and-persists-both-values (0.000346 sec)
+   passed   5/13  ebpm1-handler-accepts-replay-at-an-older-revision (0.000351 sec)
+ebpm1: flag write failed, answering retryable (disk full)
+   passed   6/13  ebpm1-handler-answers-retryable-on-a-storage-failure (0.000067 sec)
+   passed   7/13  ebpm1-handler-is-idempotent (0.000356 sec)
+   passed   8/13  ebpm1-handler-rejects-a-missing-or-bad-revision (0.000326 sec)
+   passed   9/13  ebpm1-handler-rejects-a-non-boolean-desired (0.000296 sec)
+   passed  10/13  ebpm1-handler-rejects-a-wrong-surface (0.000253 sec)
+   passed  11/13  ebpm1-publish-is-a-no-op-without-a-client (0.000066 sec)
+   passed  12/13  ebpm1-spec-authors-only-advertised-members (0.000151 sec)
+   passed  13/13  ebpm1-spec-derives-the-screen-from-the-flag (0.000044 sec)
+
+Ran 13 tests, 13 results as expected, 0 unexpected (2026-09-22 07:05:24-0600, 0.005487 sec)
+
+exit=0

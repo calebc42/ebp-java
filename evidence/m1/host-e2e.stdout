@@ -1,0 +1,122 @@
+host e2e start; emacs=/home/calebc42/.local/bin/emacs; ebp.el=/home/calebc42/workspace/ebp.el/lisp
+build ok
+runner up on port 46417
+  status -> {"running": true, "port": 46417, "session": "none", "pairing_id": "fae01f5a76220e57ec033ad82908ae0f", "queued_events": 0, "in_flight": false, "pump_paused": false, "generation": 0, "surfaces": {}}
+  companion EVENT {"event":"session","state":"CHALLENGED"}
+  companion EVENT {"event":"session","state":"SYNCING"}
+  companion EVENT {"event":"surface","surface":"app:milestone"}
+  companion EVENT {"event":"session","state":"READY"}
+  status -> {"running": true, "port": 46417, "session": "READY", "pairing_id": "fae01f5a76220e57ec033ad82908ae0f", "queued_events": 0, "in_flight": false, "pump_paused": false, "generation": 2, "surfaces": {"app:milestone": {"revision": 0, "present": true}}}
+PASS welcome/READY reached with an empty queue
+  snapshot app:milestone -> {"surface": "app:milestone", "present": true, "revision": 0, "generation": 2, "items": [{"kind": "text", "path": "r.0", "text": "EBP milestone", "style": "title"}, {"kind": "text", "path": "r.1", "text": "Flag: off", "style": "body"}, {"kind": "canvas", "path": "r.2", "width": 240, "height": 120, "raster_offset": 0, "raster_bytes": 115200}, {"kind": "button", "path": "r.3", "label": "Set on", "ena
+PASS accepted screen text ['EBP milestone', 'Flag: off']
+PASS buttons ['set-on', 'set-off']
+PASS indicator first pixel ['#ffc62828']
+PASS snapshot revision equals the accepted revision
+PASS peer log records READY
+  companion EVENT {"event":"queue"}
+  companion EVENT {"event":"queue"}
+  tap-id app:milestone set-on -> {"admission": "QUEUED", "path": "r.3", "revision": 0}
+PASS Set on admitted durably (QUEUED)
+  snapshot app:milestone -> {"surface": "app:milestone", "present": true, "revision": 0, "generation": 3, "items": [{"kind": "text", "path": "r.0", "text": "EBP milestone", "style": "title"}, {"kind": "text", "path": "r.1", "text": "Flag: off", "style": "body"}, {"kind": "canvas", "path": "r.2", "width": 240, "height": 120, "raster_offset": 0, "raster_bytes": 115200}, {"kind": "button", "path": "r.3", "label": "Set on", "ena
+  companion EVENT {"event":"queue"}
+  companion EVENT {"event":"surface","surface":"app:milestone"}
+  snapshot app:milestone -> {"surface": "app:milestone", "present": true, "revision": 1, "generation": 5, "items": [{"kind": "text", "path": "r.0", "text": "EBP milestone", "style": "title"}, {"kind": "text", "path": "r.1", "text": "Flag: on", "style": "body"}, {"kind": "canvas", "path": "r.2", "width": 240, "height": 120, "raster_offset": 0, "raster_bytes": 115200}, {"kind": "button", "path": "r.3", "label": "Set on", "enab
+  snapshot app:milestone -> {"surface": "app:milestone", "present": true, "revision": 1, "generation": 5, "items": [{"kind": "text", "path": "r.0", "text": "EBP milestone", "style": "title"}, {"kind": "text", "path": "r.1", "text": "Flag: on", "style": "body"}, {"kind": "canvas", "path": "r.2", "width": 240, "height": 120, "raster_offset": 0, "raster_bytes": 115200}, {"kind": "button", "path": "r.3", "label": "Set on", "enab
+PASS indicator repainted green from the accepted snapshot
+PASS revision advanced 0 -> 1
+  status -> {"running": true, "port": 46417, "session": "READY", "pairing_id": "fae01f5a76220e57ec033ad82908ae0f", "queued_events": 0, "in_flight": false, "pump_paused": false, "generation": 5, "surfaces": {"app:milestone": {"revision": 1, "present": true}}}
+PASS Emacs handler committed desired=t
+  emacs: [jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+  emacs: Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+  emacs: [jsonrpc] Server exited with status 0
+emacs exited 0
+  companion EVENT {"event":"session","state":"CLOSED"}
+  status -> {"running": true, "port": 46417, "session": "none", "pairing_id": "fae01f5a76220e57ec033ad82908ae0f", "queued_events": 0, "in_flight": false, "pump_paused": false, "generation": 6, "surfaces": {"app:milestone": {"revision": 1, "present": true}}}
+  companion EVENT {"event":"queue"}
+  tap-id app:milestone set-off -> {"admission": "QUEUED", "path": "r.4", "revision": 1}
+PASS activation while disconnected is durably admitted
+  status -> {"running": true, "port": 46417, "session": "none", "pairing_id": "fae01f5a76220e57ec033ad82908ae0f", "queued_events": 1, "in_flight": false, "pump_paused": false, "generation": 7, "surfaces": {"app:milestone": {"revision": 1, "present": true}}}
+PASS one durable record retained without a session
+  snapshot app:milestone -> {"surface": "app:milestone", "present": true, "revision": 1, "generation": 7, "items": [{"kind": "text", "path": "r.0", "text": "EBP milestone", "style": "title"}, {"kind": "text", "path": "r.1", "text": "Flag: on", "style": "body"}, {"kind": "canvas", "path": "r.2", "width": 240, "height": 120, "raster_offset": 0, "raster_bytes": 115200}, {"kind": "button", "path": "r.3", "label": "Set on", "enab
+PASS cached screen still readable while disconnected
+  snapshot app:milestone -> {"surface": "app:milestone", "present": true, "revision": 1, "generation": 7, "items": [{"kind": "text", "path": "r.0", "text": "EBP milestone", "style": "title"}, {"kind": "text", "path": "r.1", "text": "Flag: on", "style": "body"}, {"kind": "canvas", "path": "r.2", "width": 240, "height": 120, "raster_offset": 0, "raster_bytes": 115200}, {"kind": "button", "path": "r.3", "label": "Set on", "enab
+  companion EVENT {"event":"session","state":"CHALLENGED"}
+  companion EVENT {"event":"session","state":"SYNCING"}
+  companion EVENT {"event":"surface","surface":"app:milestone"}
+  companion EVENT {"event":"queue"}
+  companion EVENT {"event":"queue"}
+  companion EVENT {"event":"surface","surface":"app:milestone"}
+  companion EVENT {"event":"session","state":"READY"}
+  snapshot app:milestone -> {"surface": "app:milestone", "present": true, "revision": 3, "generation": 11, "items": [{"kind": "text", "path": "r.0", "text": "EBP milestone", "style": "title"}, {"kind": "text", "path": "r.1", "text": "Flag: off", "style": "body"}, {"kind": "canvas", "path": "r.2", "width": 240, "height": 120, "raster_offset": 0, "raster_bytes": 115200}, {"kind": "button", "path": "r.3", "label": "Set on", "en
+  status -> {"running": true, "port": 46417, "session": "READY", "pairing_id": "fae01f5a76220e57ec033ad82908ae0f", "queued_events": 0, "in_flight": false, "pump_paused": false, "generation": 11, "surfaces": {"app:milestone": {"revision": 3, "present": true}}}
+PASS Emacs handler committed desired=false (stored nil) from the replayed event
+  snapshot app:milestone -> {"surface": "app:milestone", "present": true, "revision": 3, "generation": 11, "items": [{"kind": "text", "path": "r.0", "text": "EBP milestone", "style": "title"}, {"kind": "text", "path": "r.1", "text": "Flag: off", "style": "body"}, {"kind": "canvas", "path": "r.2", "width": 240, "height": 120, "raster_offset": 0, "raster_bytes": 115200}, {"kind": "button", "path": "r.3", "label": "Set on", "en
+PASS revision advanced after replay 1 -> 3
+  failpoint outbox.after-commit-before-send -> {"armed": true}
+PASS failpoint armed
+  emacs: [jsonrpc] Server exited with status 256
+  companion EVENT {"event":"queue"}
+  companion EVENT {"event":"failpoint","name":"outbox.after-commit-before-send"}
+PASS companion halted at the boundary (exit 3)
+PASS outbox record committed before the send
+runner up on port 46417
+  status -> {"running": true, "port": 46417, "session": "none", "pairing_id": "fae01f5a76220e57ec033ad82908ae0f", "queued_events": 1, "in_flight": false, "pump_paused": false, "generation": 0, "surfaces": {"app:milestone": {"revision": 3, "present": true}}}
+PASS relaunched companion restored the retained record
+PASS nothing is in flight after process death
+  snapshot app:milestone -> {"surface": "app:milestone", "present": true, "revision": 3, "generation": 0, "items": [{"kind": "text", "path": "r.0", "text": "EBP milestone", "style": "title"}, {"kind": "text", "path": "r.1", "text": "Flag: off", "style": "body"}, {"kind": "canvas", "path": "r.2", "width": 240, "height": 120, "raster_offset": 0, "raster_bytes": 115200}, {"kind": "button", "path": "r.3", "label": "Set on", "ena
+  snapshot app:milestone -> {"surface": "app:milestone", "present": true, "revision": 3, "generation": 0, "items": [{"kind": "text", "path": "r.0", "text": "EBP milestone", "style": "title"}, {"kind": "text", "path": "r.1", "text": "Flag: off", "style": "body"}, {"kind": "canvas", "path": "r.2", "width": 240, "height": 120, "raster_offset": 0, "raster_bytes": 115200}, {"kind": "button", "path": "r.3", "label": "Set on", "ena
+  companion EVENT {"event":"session","state":"CHALLENGED"}
+  companion EVENT {"event":"session","state":"SYNCING"}
+  companion EVENT {"event":"surface","surface":"app:milestone"}
+  companion EVENT {"event":"queue"}
+  companion EVENT {"event":"queue"}
+  companion EVENT {"event":"surface","surface":"app:milestone"}
+  companion EVENT {"event":"session","state":"READY"}
+  snapshot app:milestone -> {"surface": "app:milestone", "present": true, "revision": 5, "generation": 4, "items": [{"kind": "text", "path": "r.0", "text": "EBP milestone", "style": "title"}, {"kind": "text", "path": "r.1", "text": "Flag: on", "style": "body"}, {"kind": "canvas", "path": "r.2", "width": 240, "height": 120, "raster_offset": 0, "raster_bytes": 115200}, {"kind": "button", "path": "r.3", "label": "Set on", "enab
+  status -> {"running": true, "port": 46417, "session": "READY", "pairing_id": "fae01f5a76220e57ec033ad82908ae0f", "queued_events": 0, "in_flight": false, "pump_paused": false, "generation": 4, "surfaces": {"app:milestone": {"revision": 5, "present": true}}}
+PASS the delivered EventId stays reserved
+PASS Emacs accepted the replayed occurrence
+  emacs: [jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+  emacs: Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+  emacs: [jsonrpc] Server exited with status 0
+emacs exited 0
+  companion EVENT {"event":"session","state":"CLOSED"}
+runner up on port 46417
+  status -> {"running": true, "port": 46417, "session": "none", "pairing_id": "fae01f5a76220e57ec033ad82908ae0f", "queued_events": 0, "in_flight": false, "pump_paused": false, "generation": 0, "surfaces": {}}
+PASS companion store erased: no surface history
+  status -> {"running": true, "port": 46417, "session": "none", "pairing_id": "fae01f5a76220e57ec033ad82908ae0f", "queued_events": 0, "in_flight": false, "pump_paused": false, "generation": 0, "surfaces": {}}
+  companion EVENT {"event":"session","state":"CHALLENGED"}
+  companion EVENT {"event":"session","state":"SYNCING"}
+  companion EVENT {"event":"surface","surface":"app:milestone"}
+  companion EVENT {"event":"session","state":"READY"}
+  status -> {"running": true, "port": 46417, "session": "READY", "pairing_id": "fae01f5a76220e57ec033ad82908ae0f", "queued_events": 0, "in_flight": false, "pump_paused": false, "generation": 2, "surfaces": {"app:milestone": {"revision": 6, "present": true}}}
+PASS Emacs did not reuse an old revision after the companion store was erased (3 -> 6)
+  emacs: [jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+  emacs: Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+  emacs: [jsonrpc] Server exited with status 0
+emacs exited 0
+  companion EVENT {"event":"session","state":"CLOSED"}
+peer log:
+state connecting
+started flag=nil
+state ready
+accept t
+stopping flag=t
+state closed
+state connecting
+started flag=t
+accept nil
+state ready
+accept t
+state ready
+stopping flag=t
+state closed
+state connecting
+started flag=t
+state ready
+stopping flag=t
+state closed
+
+RESULT PASS
+e2e exit=0

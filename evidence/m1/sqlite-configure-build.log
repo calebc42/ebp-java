@@ -1,0 +1,2672 @@
+checking for xcrun... no
+checking for GNU Make... make
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking for javac... javac
+checking for jarsigner... jarsigner
+checking whether the Java compiler works... yes
+checking whether android.jar is new enough... 
+checking whether javac accepts --release 7... yes
+checking whether Java compiler accepts -Xlint:deprecation... yes
+checking whether Java compiler accepts -Xlint:cast... yes
+checking whether Java compiler accepts -Xlint:divzero... yes
+checking whether Java compiler accepts -Xlint:nonempty... no
+checking whether Java compiler accepts -Xlint:empty... yes
+checking whether Java compiler accepts -Xlint:finally... yes
+checking whether Java compiler accepts -Xlint:overrides... yes
+checking whether Java compiler accepts -Xlint:path... yes
+checking whether Java compiler accepts -Xlint:serial... yes
+checking whether Java compiler accepts -Xlint:unchecked... yes
+checking for aapt... /home/calebc42/.local/share/android-sdk/build-tools/37.0.0/aapt
+checking for apksigner... /home/calebc42/.local/share/android-sdk/build-tools/37.0.0/apksigner
+checking for d8... /home/calebc42/.local/share/android-sdk/build-tools/37.0.0/d8
+checking whether d8.jar coresident with d8 binary provides r8... yes
+checking for zipalign... /home/calebc42/.local/share/android-sdk/build-tools/37.0.0/zipalign
+checking for the kind of Android system Emacs is being built for... arm64-v8a
+checking for the lowest Android version Emacs can run on... 30
+configure: called to recursively configure Emacs for Android.
+checking for xcrun... no
+checking for GNU Make... make
+checking the cross-compiler's target... aarch64-unknown-linux-android30
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... aarch64-unknown-linux-android30
+checking for the directory where the NDK is installed... /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018 (combined)
+checking for aarch64-unknown-linux-android30-ar... no
+checking for aarch64-unknown-linux-android30-ar... no
+checking for llvm-ar... /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar
+checking for aarch64-unknown-linux-android30-ranlib... no
+checking for aarch64-unknown-linux-android30-ranlib... no
+checking for llvm-ranlib... /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ranlib
+checking for readelf... /usr/bin/readelf
+checking for aarch64-linux-android30-clang++... /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang++
+checking whether compiler defaults to libc++... yes
+
+C++ compiler configuration: 
+
+Library includes        : 
+Linker options          : -lc++_shared
+Library file (if any)   : /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/../sysroot/usr/lib/aarch64-linux-android/libc++_shared.so
+
+configure: configuring in `exec'
+checking for aarch64-unknown-linux-android30-gcc... /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang accepts -g... yes
+checking for /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for aarch64-unknown-linux-android30-gcc... (cached) /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang
+checking whether the compiler supports GNU C... (cached) yes
+checking whether /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang accepts -g... (cached) yes
+checking for /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang option to enable C11 features... (cached) none needed
+checking how to run the C preprocessor... /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang -E
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for uintptr_t... yes
+checking for size_t... yes
+checking for ssize_t... yes
+checking for pid_t... yes
+checking for _Bool... yes
+checking for stdbool.h that conforms to C99 or later... yes
+checking for getpagesize... yes
+checking for stpcpy... yes
+checking for /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang options needed to detect all undeclared functions... none needed
+checking whether stpcpy is declared... yes
+checking for process_vm_readv... yes
+checking for process_vm_writev... yes
+checking whether process_vm_readv is declared... yes
+checking for sys/param.h... yes
+checking for sys/uio.h... yes
+checking for siginfo_t.si_syscall... yes
+checking whether byte ordering is bigendian... no
+checking build system type... x86_64-pc-linux-android
+checking host system type... aarch64-unknown-linux-android30
+checking for sys/user.h... yes
+checking for gm4... no
+checking for m4... m4
+checking for aarch64-unknown-linux-android30-as... /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang
+checking for aarch64-unknown-linux-android30-ar... /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar
+checking for aarch64-unknown-linux-android30-ld... /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang
+checking whether ld is a C compiler... yes
+checking whether as is a C compiler... yes
+checking for struct user_regs_struct.sp... yes
+checking whether __NR_clone3 is declared... yes
+checking whether ld supports --rosegment... yes
+checking for linux/seccomp.h... yes
+checking whether SECCOMP_SET_MODE_FILTER is declared... yes
+checking whether SECCOMP_FILTER_FLAG_TSYNC is declared... yes
+checking whether SECCOMP_RET_TRACE is declared... yes
+checking for linux/filter.h... yes
+checking whether SECCOMP_SET_MODE_FILTER is declared... (cached) yes
+checking whether SECCOMP_FILTER_FLAG_TSYNC is declared... (cached) yes
+checking whether SECCOMP_RET_TRACE is declared... (cached) yes
+checking whether as understands -O... yes
+checking whether as understands -g... yes
+checking whether gcc understands -MMD -MF... yes
+checking for 'find' args to delete a file... -delete
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: config.h is unchanged
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... yes
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang accepts -g... yes
+checking for /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang option to enable C23 features... (cached) unsupported
+checking for /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang option to enable C11 features... none needed
+checking whether the compiler is clang... yes
+checking for compiler option needed when checking for declarations... -Werror=implicit-function-declaration
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for linux/fs.h... yes
+checking for malloc.h... yes
+checking for sys/systeminfo.h... no
+checking for sys/sysinfo.h... yes
+checking for coff.h... no
+checking for pty.h... yes
+checking for sys/resource.h... yes
+checking for sys/utsname.h... yes
+checking for pwd.h... yes
+checking for util.h... no
+checking for sanitizer/lsan_interface.h... yes
+checking for sanitizer/asan_interface.h... yes
+checking for sanitizer/common_interface_defs.h... yes
+checking for sys/socket.h... yes
+checking for sys/param.h... yes
+checking for pthread.h... yes
+checking for malloc/malloc.h... no
+checking for sys/un.h... yes
+checking for vfork.h... no
+checking for stdbool.h... yes
+checking for utmp.h... yes
+checking for utmpx.h... yes
+checking for OS.h... no
+checking for byteswap.h... yes
+checking for dirent.h... yes
+checking for execinfo.h... yes
+checking for linux/xattr.h... yes
+checking for selinux/selinux.h... no
+checking for stdio_ext.h... yes
+checking for sys/vfs.h... yes
+checking for sys/fs_types.h... no
+checking for getopt.h... yes
+checking for sys/time.h... yes
+checking for ieee754.h... no
+checking for limits.h... yes
+checking for sys/select.h... yes
+checking for stdbit.h... no
+checking for stdckdint.h... yes
+checking for stdcountof.h... no
+checking for sys/random.h... yes
+checking for endian.h... yes
+checking for sys/endian.h... yes
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking how to run the C preprocessor... /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang -E
+checking for egrep -e... /usr/bin/grep -E
+checking for Minix Amsterdam compiler... no
+checking for ar... /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar
+configure: WARNING: using cross tools not prefixed with host triplet
+checking for  option for large files... none needed
+checking for  option for timestamps after 2038... none needed
+checking whether the compiler supports GNU C++... yes
+checking whether /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang++  accepts -g... yes
+checking for /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang++  option to enable C++11 features... none needed
+checking for string... yes
+checking whether toolchain supports configurations with 16k page sizes... yes
+checking whether /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang accepts -O... yes
+checking whether the compiler is clang... yes
+checking whether C compiler handles -Werror -Wunknown-warning-option... yes
+checking whether -Wno-missing-field-initializers is needed... no
+checking whether -Wuninitialized is supported... yes
+checking whether C compiler handles -fstrict-flex-arrays... no
+checking whether C compiler handles -Wall... yes
+checking whether C compiler handles -Warith-conversion... no
+checking whether C compiler handles -Wdate-time... yes
+checking whether C compiler handles -Wduplicated-cond... no
+checking whether C compiler handles -Wextra... yes
+checking whether C compiler handles -Wflex-array-member-not-at-end... no
+checking whether C compiler handles -Wformat-signedness... no
+checking whether C compiler handles -Wfree-labels... no
+checking whether C compiler handles -Winit-self... yes
+checking whether C compiler handles -Winvalid-pch... yes
+checking whether C compiler handles -Wkeyword-macro... yes
+checking whether C compiler handles -Wlogical-op... no
+checking whether C compiler handles -Wmissing-declarations... yes
+checking whether C compiler handles -Wmissing-include-dirs... yes
+checking whether C compiler handles -Wmissing-prototypes... yes
+checking whether C compiler handles -Wmissing-variable-declarations... yes
+checking whether C compiler handles -Wnested-externs... yes
+checking whether C compiler handles -Wnull-dereference... yes
+checking whether C compiler handles -Wold-style-definition... yes
+checking whether C compiler handles -Wopenmp-simd... no
+checking whether C compiler handles -Wpacked... yes
+checking whether C compiler handles -Wpointer-arith... yes
+checking whether C compiler handles -Wstrict-flex-arrays... no
+checking whether C compiler handles -Wstrict-prototypes... yes
+checking whether C compiler handles -Wsuggest-attribute=format... no
+checking whether C compiler handles -Wtrampolines... no
+checking whether C compiler handles -Wuninitialized... yes
+checking whether C compiler handles -Wunknown-pragmas... yes
+checking whether C compiler handles -Wunused-macros... no
+checking whether C compiler handles -Wvariadic-macros... yes
+checking whether C compiler handles -Wvector-operation-performance... no
+checking whether C compiler handles -Wwrite-strings... yes
+checking whether C compiler handles -Warray-bounds=2... no
+checking whether C compiler handles -Wattribute-alias=2... no
+checking whether C compiler handles -Wformat=2... yes
+checking whether C compiler handles -Wformat-truncation=2... no
+checking whether C compiler handles -Wimplicit-fallthrough=5... no
+checking whether C compiler handles -Wshift-overflow=2... no
+checking whether C compiler handles -Wstringop-overflow=4... no
+checking whether C compiler handles -Wuse-after-free=3... no
+checking whether C compiler handles -Wunused-const-variable=2... no
+checking whether C compiler handles -Wvla-larger-than=4031... no
+checking whether C compiler handles -Wuseless-cast... no
+checking whether C compiler handles -Wthread-safety... yes
+checking whether C compiler handles -Wno-gnu-include-next... yes
+checking whether C compiler handles -Wno-string-plus-int... yes
+checking whether C compiler handles -Wno-string-plus-char... yes
+checking whether C compiler handles -Wredundant-decls... yes
+checking whether C compiler handles -Wtrailing-whitespace... no
+checking whether C compiler handles -Wno-missing-field-initializers... yes
+checking whether C compiler handles -Wno-override-init... yes
+checking whether C compiler handles -Wno-sign-compare... yes
+checking whether C compiler handles -Wno-type-limits... yes
+checking whether C compiler handles -Wno-unused-parameter... yes
+checking whether C compiler handles -Wno-format-nonliteral... yes
+checking whether C compiler handles -Wno-bidi-chars... no
+checking whether C compiler handles -Wno-bitwise-instead-of-logical... yes
+checking whether C compiler handles -Wno-format-signedness... no
+checking whether C compiler handles -Wno-missing-braces... yes
+checking whether C compiler handles -Wno-null-pointer-arithmetic... yes
+checking whether C compiler handles -Wno-implicit-const-int-float-conversion... yes
+checking whether C compiler handles -Wno-int-in-bool-context... yes
+checking whether C compiler handles -Wno-shift-overflow... yes
+checking whether C compiler handles -Wno-initializer-overrides... yes
+checking whether C compiler handles -Wno-tautological-compare... yes
+checking whether C compiler handles -Wno-tautological-constant-out-of-range-compare... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for gawk... no
+checking for mawk... mawk
+checking command to symlink files in the same directory... ln -s
+checking for install-info... /usr/bin/install-info
+checking for gzip... /usr/bin/gzip
+checking for 'find' args to delete a file... -delete
+checking for brew... no
+checking for DOCLANGS derivation from texinfo.tex/texindex versions... 'default'
+configure: WARNING: texinfo.tex/texindex versions suggest that indexing is locale dependent, manual compilation is restricted to lang 'default', override this by setting DOCLANGS in the environment
+checking whether addresses are sanitized... no
+checking for flag to work around GCC union bugs... none needed
+checking for math library... -lm
+checking for machine/soundcard.h... no
+checking for sys/soundcard.h... no
+checking for soundcard.h... no
+checking for mmsystem.h... no
+checking for _oss_ioctl in -lossaudio... no
+checking for Android.mk providing alsa... no
+checking for ADDR_NO_RANDOMIZE... yes
+checking if Linux sysinfo may be used... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for net/if.h... yes
+checking for ifaddrs.h... yes
+checking for net/if_dl.h... no
+checking for struct ifreq.ifr_flags... yes
+checking for struct ifreq.ifr_hwaddr... yes
+checking for struct ifreq.ifr_netmask... yes
+checking for struct ifreq.ifr_broadaddr... yes
+checking for struct ifreq.ifr_addr... yes
+checking for struct ifreq.ifr_addr.sa_len... no
+checking whether gcc understands -MMD -MF... yes
+checking for /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang options needed to detect all undeclared functions... none needed
+checking whether android_get_device_api_level is declared... yes
+checking for struct passwd.pw_gecos... yes
+checking whether malloc is Doug Lea style... no
+checking alignment of EMACS_INT... 8
+checking size of long... 8
+checking for struct alignment... yes
+checking for alignas and alignof... yes, <stdalign.h> macros
+checking for sbrk... yes
+checking for getpagesize... yes
+checking for __lsan_ignore_object... no
+checking for fork... yes
+checking for vfork... yes
+checking for fchmod... yes
+checking for utmpname... yes
+checking for utmpxname... no
+checking for canonicalize_file_name... no
+checking for realpath... yes
+checking for lstat... yes
+checking for fchmodat... yes
+checking for lchmod... no
+checking for fcntl... yes
+checking for fdopendir... yes
+checking for listxattr... yes
+checking for fstatat... yes
+checking for fsync... yes
+checking for gettimeofday... yes
+checking for memset_s... no
+checking for strftime_z... no
+checking for pselect... yes
+checking for pthread_sigmask... yes
+checking for readlink... yes
+checking for isblank... yes
+checking for iswctype... yes
+checking for vasprintf... yes
+checking for strtoimax... yes
+checking for symlink... yes
+checking for localtime_r... yes
+checking for getdtablesize... no
+checking for utimens... no
+checking for lutimens... no
+checking for working mmap... yes
+checking for main in -lXbsd... no
+checking for pthread library... none needed
+checking alignment of max_align_t... 16
+checking alignment of pthread_cond_t... 4
+checking alignment of pthread_mutex_t... 4
+checking for thread support... yes
+checking for Android.mk providing librsvg... no
+checking for Android.mk providing webpdemux... no
+checking for Android.mk providing webp... no
+checking for Android.mk providing libsqlite_static_minimal... yes
+checking whether sqlite3_open_v2 is declared... yes
+checking for getaddrinfo_a in -lanl... no
+checking for malloc_trim... no
+checking for Android.mk providing gnutls... no
+checking for Android.mk providing tree-sitter... no
+checking for Android.mk providing tree-sitter... (cached) no
+checking for sys/inotify.h... yes
+checking for inotify_init... yes
+checking for inotify_init1... yes
+checking for Android.mk providing harfbuzz... no
+checking for Android.mk providing libjpeg... no
+checking for Android.mk providing liblcms2... no
+checking for library containing inflateEnd... -lz
+checking for dlopen... yes
+checking for dladdr... yes
+checking for dlfunc... no
+checking for gcc_jit_context_acquire in -lgccjit... no
+configure: WARNING: Elisp native compiler can't be enabled as libgccjit was not
+found.
+Please try installing libgccjit or a similar package if you want to have it
+enabled.
+checking for libgccjit.h... no
+configure: WARNING: Elisp native compiler can't be enabled as libgccjit header files
+were not found.
+Please try installing libgccjit-dev or a similar package if you want to have it
+enabled.
+checking for Android.mk providing libpng... no
+checking for libpng not configured by pkg-config... no
+checking for Android.mk providing libtiff... no
+checking for gif_lib.h... no
+checking for Android.mk providing libgif... no
+checking for Android.mk providing libxml2... no
+checking for maillock in -lmail... no
+checking for maillock in -llockfile... no
+checking for liblockfile.so... no
+checking for maillock.h... no
+checking for linux/seccomp.h... yes
+checking whether SECCOMP_SET_MODE_FILTER is declared... yes
+checking whether SECCOMP_FILTER_FLAG_TSYNC is declared... yes
+checking for linux/filter.h... yes
+checking whether SECCOMP_SET_MODE_FILTER is declared... (cached) yes
+checking whether SECCOMP_FILTER_FLAG_TSYNC is declared... (cached) yes
+checking for Android.mk providing libseccomp... no
+checking for accept4... yes
+checking for fchdir... yes
+checking for gethostname... yes
+checking for getrusage... yes
+checking for get_current_dir_name... no
+checking for lrand48... yes
+checking for random... yes
+checking for rint... yes
+checking for tcdrain... yes
+checking for trunc... yes
+checking for select... yes
+checking for getpagesize... (cached) yes
+checking for newlocale... yes
+checking for getrlimit... yes
+checking for setrlimit... yes
+checking for shutdown... yes
+checking for pthread_sigmask... (cached) yes
+checking for strsignal... yes
+checking for setitimer... yes
+checking for sendto... yes
+checking for recvfrom... yes
+checking for getsockname... yes
+checking for getifaddrs... yes
+checking for freeifaddrs... yes
+checking for gai_strerror... yes
+checking for sync... yes
+checking for endpwent... yes
+checking for getgrent... yes
+checking for endgrent... yes
+checking for cfmakeraw... yes
+checking for cfsetspeed... yes
+checking for __executable_start... yes
+checking for log2... yes
+checking for pthread_setname_np... yes
+checking for pthread_set_name_np... no
+checking for getpwent... yes
+checking for renameat2... yes
+checking whether pthread_setname_np takes a single argument... no
+checking whether pthread_setname_np takes three arguments... no
+checking for aligned_alloc... yes
+checking whether aligned_alloc is declared... yes
+checking for posix_madvise... yes
+checking for madvise... yes
+checking for __builtin_frame_address... yes
+checking for __builtin_unwind_init... yes
+checking for declarations of fseeko and ftello... yes
+checking for grantpt... yes
+checking for getpt... yes
+checking for posix_openpt... yes
+checking for library containing tputs... none required
+checking for timerfd interface... yes
+checking whether signals can be handled on alternate stack... yes
+checking for valgrind/valgrind.h... no
+checking for struct unipair.unicode... yes
+checking for pid_t... yes
+checking for working fork... cross
+configure: WARNING: result yes guessed because of cross compilation
+checking for working vfork... (cached) yes
+checking for snprintf... yes
+checking for open_memstream... yes
+checking for spawn.h... yes
+checking for posix_spawn... yes
+checking for compiler option needed when checking for future declarations... none
+checking for posix_spawn_file_actions_addchdir... future OS version
+checking for posix_spawn_file_actions_addchdir_np... future OS version
+checking for posix_spawnattr_setflags... yes
+checking whether POSIX_SPAWN_SETSID is declared... yes
+checking whether GLib is linked in... no
+checking for nl_langinfo and CODESET... yes
+checking for nl_langinfo and _NL_PAPER_WIDTH... no
+checking for mbstate_t... yes
+checking whether grantpt is declared... yes
+checking whether posix_openpt is declared... yes
+checking for _setjmp... yes
+checking for sigsetjmp... yes
+checking POSIX termios... yes
+checking size of speed_t... 4
+checking for usable FIONREAD... yes
+checking for usable SIGIO... yes
+checking for C/C++ restrict keyword... __restrict__
+checking for typeof syntax and keyword spelling... typeof
+checking for statement expressions... yes
+checking for sys/acl.h... no
+configure: WARNING: libacl development library was not found or not usable.
+configure: WARNING: GNU Emacs will be built without ACL support.
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking whether the preprocessor supports include_next... yes
+checking whether source code line length is unlimited... yes
+checking whether endutent is declared... yes
+checking for struct utmpx.ut_user... yes
+checking for struct utmp.ut_user... yes
+checking for struct utmpx.ut_name... yes
+checking for struct utmp.ut_name... yes
+checking for struct utmpx.ut_type... yes
+checking for struct utmp.ut_type... yes
+checking for struct utmpx.ut_pid... yes
+checking for struct utmp.ut_pid... yes
+checking for struct utmp.ut_tv... yes
+checking for struct utmpx.ut_host... yes
+checking for struct utmp.ut_host... yes
+checking for struct utmpx.ut_id... yes
+checking for struct utmp.ut_id... yes
+checking for struct utmpx.ut_session... yes
+checking for struct utmp.ut_session... yes
+checking for struct utmpx.ut_exit... yes
+checking for struct utmp.ut_exit... yes
+checking for struct utmpx.ut_exit.e_exit... yes
+checking for struct utmp.ut_exit.e_exit... yes
+checking for struct utmpx.ut_exit.e_termination... yes
+checking for struct utmp.ut_exit.e_termination... yes
+checking whether sysinfo is declared... yes
+checking for sys/sysctl.h... no
+checking for sysctl... no
+checking whether lstat correctly handles trailing slash... guessing yes
+checking whether // is distinct from /... unknown, assuming no
+checking whether realpath works... guessing no
+checking for faccessat... yes
+checking for getcwd... yes
+checking whether byte ordering is bigendian... no
+checking if environ is properly declared... yes
+checking for complete errno.h... yes
+checking whether ctype.h defines __header_inline... no
+checking for mode_t... yes
+checking for library containing getfilecon_raw... no
+checking whether strmode is declared... no
+checking whether getline is declared... yes
+checking for getopt.h... (cached) yes
+checking for getopt_long_only... yes
+checking whether getopt is POSIX compatible... guessing yes
+checking for working GNU getopt function... guessing no
+checking for glibc-compatible sys/cdefs.h... no
+checking whether timespec_get is declared... yes
+checking for timespec_get... yes
+checking for struct timeval... yes
+checking for wide-enough struct timeval.tv_sec member... yes
+checking whether limits.h has WORD_BIT, BOOL_WIDTH etc.... no
+checking whether the compiler produces multi-arch binaries... no
+checking whether stdint.h conforms to C99... no
+checking for sys/inttypes.h... no
+checking for sys/bitypes.h... no
+checking for bit size of ptrdiff_t... 64
+checking for bit size of size_t... 64
+checking for bit size of sig_atomic_t... 32
+checking for bit size of wchar_t... 32
+checking for bit size of wint_t... 32
+checking whether sig_atomic_t is signed... yes
+checking whether wchar_t is signed... no
+checking whether wint_t is signed... no
+checking for ptrdiff_t integer literal suffix... l
+checking for size_t integer literal suffix... ul
+checking for sig_atomic_t integer literal suffix... 
+checking for wchar_t integer literal suffix... u
+checking for wint_t integer literal suffix... u
+checking whether malloc is ptrdiff_t safe... yes
+checking whether malloc, calloc set errno on failure... yes
+checking whether malloc (0) returns nonnull... guessing no
+checking whether memeq is declared... no
+checking whether memmem is declared... yes
+checking whether memrchr is declared... yes
+checking whether <limits.h> defines MIN and MAX... no
+checking whether <sys/param.h> defines MIN and MAX... yes
+checking whether time_t is signed... yes
+checking whether alarm is declared... yes
+checking for working mktime... guessing no
+checking for struct tm.tm_gmtoff... yes
+checking for struct tm.tm_zone... yes
+checking whether <sys/select.h> is self-contained... yes
+checking whether realloc should abort upon undefined behaviour... no
+checking for inline... inline
+checking for sigset_t... yes
+checking for volatile sig_atomic_t... yes
+checking for sighandler_t... yes
+checking whether stdckdint.h can be included in C... yes
+checking checking for an ISO C23 compliant stdckdint.h in C... yes
+checking whether stdckdint.h can be included in C++... yes
+checking checking for an ISO C++26 compliant stdckdint.h in C++... yes
+checking whether the C++ compiler has <stdcountof.h>... no
+checking for good max_align_t... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking for unreachable in C... no
+checking whether nullptr_t needs <stddef.h>... yes
+checking whether <stddef.h> is idempotent... guessing yes
+checking whether fcloseall is declared... no
+checking whether getw is declared... no
+checking whether putw is declared... no
+checking which flavor of printf attribute matches inttypes macros... system
+checking for an english Unicode locale... none
+checking whether ecvt is declared... no
+checking whether fcvt is declared... no
+checking whether gcvt is declared... no
+checking whether MB_CUR_MAX is correct... guessing yes
+checking whether streq is declared... no
+checking whether strnlen is declared... yes
+checking whether strtoimax is declared... yes
+checking whether stat file-mode macros are broken... no
+checking for nlink_t... yes
+checking for blksize_t... yes
+checking for blkcnt_t... yes
+checking for struct timespec in <time.h>... yes
+checking for TIME_UTC in <time.h>... yes
+checking whether execvpe is declared... yes
+checking whether clearerr_unlocked is declared... yes
+checking whether feof_unlocked is declared... yes
+checking whether ferror_unlocked is declared... yes
+checking whether fflush_unlocked is declared... yes
+checking whether fgets_unlocked is declared... yes
+checking whether fileno_unlocked is declared... yes
+checking whether fputc_unlocked is declared... yes
+checking whether fputs_unlocked is declared... yes
+checking whether fread_unlocked is declared... yes
+checking whether fwrite_unlocked is declared... yes
+checking whether getc_unlocked is declared... yes
+checking whether getchar_unlocked is declared... yes
+checking whether putc_unlocked is declared... yes
+checking whether putchar_unlocked is declared... yes
+checking if endian.h defines stdint types... yes
+checking if endian.h defines functions and macros... yes
+checking if sys/endian.h defines stdint types... yes
+checking if sys/endian.h defines functions and macros... yes
+checking type of array argument to getgroups... gid_t
+checking whether getdelim is declared... yes
+checking whether getdtablesize is declared... no
+checking for O_CLOEXEC... yes
+checking for promoted mode_t type... mode_t
+checking whether the utimes function works... guessing no
+checking for C compiler option to allow warnings... -Wno-error
+checking for alloca as a compiler built-in... yes
+checking for static_assert... no
+checking for bool, true, false... no
+checking for __builtin_expect... yes
+checking for working bswap_16, bswap_32, bswap_64... yes
+checking for readlinkat... yes
+checking for library containing clock_gettime... none required
+checking for clock_getres... yes
+checking for clock_gettime... yes
+checking for clock_settime... yes
+checking for copy_file_range... future OS version
+checking for d_type member in directory struct... yes
+checking whether // is distinct from /... (cached) unknown, assuming no
+checking whether dup2 works... guessing no
+checking for setdtablesize... no
+checking for library containing backtrace_symbols_fd... no
+checking for faccessat... (cached) yes
+checking whether fchmodat works... guessing no
+checking for readlinkat... (cached) yes
+checking whether fcntl handles F_DUPFD correctly... guessing yes
+checking whether fcntl understands F_DUPFD_CLOEXEC... guessing no
+checking whether fdopendir is declared... yes
+checking whether fdopendir works... guessing no
+checking for sys/smack.h... no
+checking for flexible array member... yes
+checking for __fpending... yes
+checking whether __fpending is declared... yes
+checking whether free is known to preserve errno... no
+checking for __fseterr... yes
+checking whether fstatat (..., 0) works... guessing yes
+checking for no AT_EMPTY_PATH or fstatat with null file... guessing no
+checking for sys/mount.h... yes
+checking for statvfs function (SVR4)... yes
+checking whether to use statvfs64... no
+checking for two-argument statfs with statfs.f_frsize member... no
+checking for sys/fs/s5param.h... no
+checking for sys/statfs.h... yes
+checking for statfs that truncates block counts... no
+checking for futimens... yes
+checking whether futimens works... guessing yes
+checking for getline... yes
+checking for working getline function... guessing no
+checking for getloadavg... yes
+checking for sys/loadavg.h... no
+checking whether getloadavg is declared... (cached) yes
+checking for getrandom... yes
+checking whether getrandom is compatible with its GNU+BSD signature... yes
+checking for gettimeofday with POSIX signature... almost
+checking whether the compiler supports the __inline keyword... yes
+checking for gmp.h... no
+checking for gmp/gmp.h... no
+checking for memmem... yes
+checking whether memmem works... guessing yes
+checking for mempcpy... yes
+checking for memrchr... yes
+checking for memset_explicit... future OS version
+checking for explicit_memset... no
+checking for mkostemp... yes
+checking for library containing nanosleep... none required
+checking for working nanosleep... guessing no (mishandles large arguments)
+checking for mntent.h... yes
+checking for sys/pstat.h... no
+checking for sys/param.h... (cached) yes
+checking for setmntent... yes
+checking for sys/sysctl.h... (cached) no
+checking for sched_getaffinity_np... no
+checking for pstat_getdynamic... no
+checking for sysctl... (cached) no
+checking for sched_getaffinity... yes
+checking for glibc compatible sched_getaffinity... yes
+checking for pipe2... yes
+checking whether signature of pselect conforms to POSIX... yes
+checking whether pselect detects invalid fds... guessing yes
+checking whether pthread_sigmask is a macro... no
+checking whether pthread_sigmask works without -lpthread... guessing yes
+checking whether pthread_sigmask returns error numbers... guessing yes
+checking for xattr library with ATTR_ACTION_PERMISSIONS... no
+configure: WARNING: libattr development library was not found or not usable.
+configure: WARNING: GNU Emacs will be built without xattr support.
+checking whether readlink signature is correct... yes
+checking whether readlink handles trailing slash correctly... guessing yes
+checking whether readlink truncates results correctly... guessing yes
+checking for readlinkat... (cached) yes
+checking whether readlinkat signature is correct... yes
+checking whether realloc sets errno on failure... yes
+checking whether realloc (..., 0) returns nonnull... guessing no
+checking for working re_compile_pattern... guessing no
+checking for libintl.h... no
+checking whether isblank is declared... yes
+checking for sig2str... future OS version
+checking for str2sig... future OS version
+checking for sigdescr_np... no
+checking for socklen_t... yes
+checking for ssize_t... yes
+checking for struct stat.st_atim.tv_nsec... yes
+checking whether struct stat.st_atim is of type struct timespec... yes
+checking for struct stat.st_birthtimespec.tv_nsec... no
+checking for struct stat.st_birthtimensec... no
+checking for struct stat.st_birthtim.tv_nsec... no
+checking for stpcpy... yes
+checking for working strnlen... yes
+checking whether strtoimax works... guessing yes
+checking whether symlink handles trailing slash correctly... guessing yes
+checking whether localtime_r is declared... yes
+checking whether localtime_r is compatible with its POSIX signature... yes
+checking whether localtime works even near extrema... guessing yes
+checking for timezone_t... yes
+checking for tzalloc... future OS version
+checking for timegm... yes
+checking whether timer_settime is declared... yes
+checking for library containing timer_settime... none required
+checking for timer_settime... yes
+checking for utimensat... yes
+checking whether utimensat works... guessing yes
+checking for variable-length arrays... yes
+checking for rawmemchr... no
+checking whether open recognizes a trailing slash... guessing yes
+checking for getdelim... yes
+checking for working getdelim function... guessing no
+checking for flockfile... yes
+checking for funlockfile... yes
+checking whether getc_unlocked is declared... (cached) yes
+checking for __mktime_internal... no
+checking for Android.mk providing libgmp... no
+checking for timer_getoverrun... yes
+
+Configured for 'aarch64-unknown-linux-android30'.
+
+  Where should the build process find the source code?    .
+  What compiler should emacs be built with?               /home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang  -Werror=implicit-function-declaration -O
+  Should Emacs use the GNU version of malloc?             no
+    (The GNU allocators don't work with this system configuration.)
+  Should Emacs use a relocating allocator for buffers?    no
+  Should Emacs use mmap(2) for buffer allocation?         no
+  What window system should Emacs use?                    android
+  What toolkit should Emacs use?                          none
+  Where do we find X Windows header files?                NONE
+  Where do we find X Windows libraries?                   NONE
+  Does Emacs use -lXaw3d?                                 no
+  Is Emacs being built for Android?                       yes 
+  Does Emacs use the X Double Buffer Extension?           no
+  Does Emacs use -lXpm?                                   no
+  Does Emacs use -ljpeg?                                  no
+  Does Emacs use -ltiff?                                  no
+  Does Emacs use a gif library?                           no 
+  Does Emacs use a png library?                           no 
+  Does Emacs use -lrsvg-2?                                no
+  Does Emacs use -lwebp?                                  no
+  Does Emacs use -lsqlite3?                               yes
+  Does Emacs use cairo?                                   no
+  Does Emacs use -llcms2?                                 no
+  Does Emacs use imagemagick?                             no
+  Does Emacs use native APIs for images?                  no
+  Does Emacs support sound?                               no
+  Does Emacs use -lgpm?                                   no
+  Does Emacs use -ldbus?                                  no
+  Does Emacs use -lgconf?                                 no
+  Does Emacs use GSettings?                               no
+  Does Emacs use a file notification library?             yes (inotify)
+  Does Emacs use access control lists?                    no
+  Does Emacs use -lselinux?                               no
+  Does Emacs use -lgnutls?                                no
+  Does Emacs use -lxml2?                                  no
+  Does Emacs use -lfreetype?                              no
+  Does Emacs use HarfBuzz?                                no
+  Does Emacs use -lm17n-flt?                              no
+  Does Emacs use -lotf?                                   no
+  Does Emacs use -lxft?                                   no
+  Does Emacs use -lsystemd?                               no
+  Does Emacs use -ltree-sitter?                           no
+  Does Emacs use the GMP library?                         no
+  Does Emacs directly use zlib?                           yes
+  Does Emacs have dynamic modules support?                yes
+  Does Emacs use toolkit scroll bars?                     no
+  Does Emacs support Xwidgets?                            no
+  Does Emacs have threading support in lisp?              yes
+  Does Emacs support the portable dumper?                 yes
+  Which dumping strategy does Emacs use?                  pdumper
+  Does Emacs have native lisp compiler?                   no
+  Does Emacs use version 2 of the X Input Extension?      no
+  Does Emacs generate a smaller-size Japanese dictionary? no
+
+
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating lib/gnulib.mk
+config.status: creating lib/Makefile
+config.status: creating lib-src/Makefile
+config.status: creating oldXMenu/Makefile
+config.status: creating src/Makefile
+config.status: creating lwlib/Makefile
+config.status: creating nextstep/Makefile
+config.status: creating nt/Makefile
+config.status: creating cross/ndk-build/Makefile
+config.status: creating cross/ndk-build/ndk-build.mk
+config.status: creating src/config.h
+configure: WARNING: This configuration installs a 'movemail' program
+that does not retrieve POP3 email.  By default, Emacs 25 and earlier
+installed a 'movemail' program that retrieved POP3 email via only
+insecure channels, a practice that is no longer recommended but that
+you can continue to support by using './configure --with-pop'.
+configure: You might want to use './configure --with-mailutils'.
+configure: Generating lib/Makefile.android
+configure: Generating lib/gnulib.mk.android
+configure: Generating lib-src/Makefile.android
+configure: Generating src/Makefile.android
+configure: Generating src/config.h.android
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C23 features... -std=gnu23
+checking whether the compiler is clang... no
+checking for compiler option needed when checking for declarations... none
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for linux/fs.h... yes
+checking for malloc.h... yes
+checking for sys/systeminfo.h... no
+checking for sys/sysinfo.h... yes
+checking for coff.h... no
+checking for pty.h... yes
+checking for sys/resource.h... yes
+checking for sys/utsname.h... yes
+checking for pwd.h... yes
+checking for util.h... no
+checking for sanitizer/lsan_interface.h... yes
+checking for sanitizer/asan_interface.h... yes
+checking for sanitizer/common_interface_defs.h... yes
+checking for sys/socket.h... yes
+checking for sys/param.h... yes
+checking for pthread.h... yes
+checking for malloc/malloc.h... no
+checking for sys/un.h... yes
+checking for vfork.h... no
+checking for stdbool.h... yes
+checking for utmp.h... yes
+checking for utmpx.h... yes
+checking for OS.h... no
+checking for byteswap.h... yes
+checking for dirent.h... yes
+checking for execinfo.h... yes
+checking for linux/xattr.h... yes
+checking for selinux/selinux.h... yes
+checking for stdio_ext.h... yes
+checking for sys/vfs.h... yes
+checking for sys/fs_types.h... no
+checking for getopt.h... yes
+checking for sys/time.h... yes
+checking for ieee754.h... yes
+checking for limits.h... yes
+checking for sys/select.h... yes
+checking for stdbit.h... yes
+checking for stdckdint.h... yes
+checking for stdcountof.h... no
+checking for sys/random.h... yes
+checking for endian.h... yes
+checking for sys/endian.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking how to run the C preprocessor... gcc -std=gnu23 -E
+checking for egrep -e... /usr/bin/grep -E
+checking for Minix Amsterdam compiler... no
+checking for ar... ar
+checking for ranlib... ranlib
+checking for  option for large files... none needed
+checking for  option for timestamps after 2038... none needed
+checking whether gcc -std=gnu23 accepts -g3 -O2... yes
+checking whether the compiler is clang... no
+checking whether C compiler handles -Werror -Wunknown-warning-option... no
+checking whether -Wno-missing-field-initializers is needed... no
+checking whether -Wuninitialized is supported... yes
+checking whether C compiler handles -fstrict-flex-arrays... yes
+checking whether C compiler handles -Wall... yes
+checking whether C compiler handles -Warith-conversion... yes
+checking whether C compiler handles -Wdate-time... yes
+checking whether C compiler handles -Wdouble-promotion... yes
+checking whether C compiler handles -Wduplicated-cond... yes
+checking whether C compiler handles -Wextra... yes
+checking whether C compiler handles -Wflex-array-member-not-at-end... yes
+checking whether C compiler handles -Wformat-signedness... yes
+checking whether C compiler handles -Wfree-labels... no
+checking whether C compiler handles -Winit-self... yes
+checking whether C compiler handles -Winvalid-pch... yes
+checking whether C compiler handles -Wkeyword-macro... no
+checking whether C compiler handles -Wlogical-op... yes
+checking whether C compiler handles -Wmissing-declarations... yes
+checking whether C compiler handles -Wmissing-include-dirs... yes
+checking whether C compiler handles -Wmissing-prototypes... yes
+checking whether C compiler handles -Wmissing-variable-declarations... yes
+checking whether C compiler handles -Wnested-externs... yes
+checking whether C compiler handles -Wnull-dereference... yes
+checking whether C compiler handles -Wold-style-definition... yes
+checking whether C compiler handles -Wopenmp-simd... yes
+checking whether C compiler handles -Wpacked... yes
+checking whether C compiler handles -Wpointer-arith... yes
+checking whether C compiler handles -Wstrict-flex-arrays... yes
+checking whether C compiler handles -Wstrict-prototypes... yes
+checking whether C compiler handles -Wsuggest-attribute=format... yes
+checking whether C compiler handles -Wtrampolines... yes
+checking whether C compiler handles -Wuninitialized... yes
+checking whether C compiler handles -Wunknown-pragmas... yes
+checking whether C compiler handles -Wunused-macros... yes
+checking whether C compiler handles -Wvariadic-macros... yes
+checking whether C compiler handles -Wvector-operation-performance... yes
+checking whether C compiler handles -Wwrite-strings... yes
+checking whether C compiler handles -Warray-bounds=2... yes
+checking whether C compiler handles -Wattribute-alias=2... yes
+checking whether C compiler handles -Wformat=2... yes
+checking whether C compiler handles -Wformat-truncation=2... yes
+checking whether C compiler handles -Wimplicit-fallthrough=5... yes
+checking whether C compiler handles -Wshift-overflow=2... yes
+checking whether C compiler handles -Wstringop-overflow=4... yes
+checking whether C compiler handles -Wuse-after-free=3... yes
+checking whether C compiler handles -Wunused-const-variable=2... yes
+checking whether C compiler handles -Wvla-larger-than=4031... yes
+checking whether C compiler handles -Wuseless-cast... yes
+checking whether C compiler handles -Wthread-safety... no
+checking whether C compiler handles -Wno-gnu-include-next... no
+checking whether C compiler handles -Wno-string-plus-int... no
+checking whether C compiler handles -Wno-string-plus-char... no
+checking whether C compiler handles -Wredundant-decls... yes
+checking whether C compiler handles -Wtrailing-whitespace... no
+checking whether C compiler handles -Wno-missing-field-initializers... yes
+checking whether C compiler handles -Wno-override-init... yes
+checking whether C compiler handles -Wno-sign-compare... yes
+checking whether C compiler handles -Wno-type-limits... yes
+checking whether C compiler handles -Wno-unused-parameter... yes
+checking whether C compiler handles -Wno-format-nonliteral... yes
+checking whether C compiler handles -Wno-bidi-chars... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for gawk... no
+checking for mawk... mawk
+checking command to symlink files in the same directory... ln -s
+checking for install-info... /usr/bin/install-info
+checking for gzip... /usr/bin/gzip
+checking for 'find' args to delete a file... -delete
+checking for brew... no
+checking for DOCLANGS derivation from texinfo.tex/texindex versions... 'default'
+configure: WARNING: texinfo.tex/texindex versions suggest that indexing is locale dependent, manual compilation is restricted to lang 'default', override this by setting DOCLANGS in the environment
+checking whether addresses are sanitized... no
+checking for flag to work around GCC union bugs... -fno-tree-sra
+checking for math library... -lm
+checking for machine/soundcard.h... no
+checking for sys/soundcard.h... yes
+checking for soundcard.h... no
+checking for mmsystem.h... no
+checking for _oss_ioctl in -lossaudio... no
+checking for alsa >= 1.0.0... no
+checking for ADDR_NO_RANDOMIZE... yes
+checking if Linux sysinfo may be used... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for net/if.h... yes
+checking for ifaddrs.h... yes
+checking for net/if_dl.h... no
+checking for struct ifreq.ifr_flags... yes
+checking for struct ifreq.ifr_hwaddr... yes
+checking for struct ifreq.ifr_netmask... yes
+checking for struct ifreq.ifr_broadaddr... yes
+checking for struct ifreq.ifr_addr... yes
+checking for struct ifreq.ifr_addr.sa_len... no
+checking whether gcc understands -MMD -MF... yes
+checking for gcc -std=gnu23 options needed to detect all undeclared functions... none needed
+checking for struct passwd.pw_gecos... yes
+checking whether malloc is Doug Lea style... no
+checking alignment of EMACS_INT... 8
+checking size of long... 8
+checking for struct alignment... yes
+checking for alignas and alignof... yes, keywords
+checking for sbrk... yes
+checking for getpagesize... yes
+checking for __lsan_ignore_object... no
+checking for fork... yes
+checking for vfork... yes
+checking for fchmod... yes
+checking for utmpname... yes
+checking for utmpxname... yes
+checking for canonicalize_file_name... yes
+checking for realpath... yes
+checking for lstat... yes
+checking for fchmodat... yes
+checking for lchmod... yes
+checking for fcntl... yes
+checking for fdopendir... yes
+checking for listxattr... yes
+checking for fstatat... yes
+checking for fsync... yes
+checking for gettimeofday... yes
+checking for memset_s... no
+checking for strftime_z... no
+checking for pselect... yes
+checking for pthread_sigmask... yes
+checking for readlink... yes
+checking for isblank... yes
+checking for iswctype... yes
+checking for vasprintf... yes
+checking for strtoimax... yes
+checking for symlink... yes
+checking for localtime_r... yes
+checking for getdtablesize... yes
+checking for utimens... no
+checking for lutimens... no
+checking for working mmap... yes
+checking for main in -lXbsd... no
+checking for pthread library... none needed
+checking alignment of max_align_t... 16
+checking alignment of pthread_cond_t... 8
+checking alignment of pthread_mutex_t... 8
+checking for thread support... no
+checking for getaddrinfo_a in -lanl... yes
+checking for malloc_trim... yes
+checking for sys/inotify.h... yes
+checking for inotify_init... yes
+checking for inotify_init1... yes
+checking for library containing inflateEnd... -lz
+checking for linux/seccomp.h... yes
+checking whether SECCOMP_SET_MODE_FILTER is declared... yes
+checking whether SECCOMP_FILTER_FLAG_TSYNC is declared... yes
+checking for linux/filter.h... yes
+checking whether SECCOMP_SET_MODE_FILTER is declared... (cached) yes
+checking whether SECCOMP_FILTER_FLAG_TSYNC is declared... (cached) yes
+checking for libseccomp >= 2.5.2... no
+checking for accept4... yes
+checking for fchdir... yes
+checking for gethostname... yes
+checking for getrusage... yes
+checking for get_current_dir_name... yes
+checking for lrand48... yes
+checking for random... yes
+checking for rint... yes
+checking for tcdrain... yes
+checking for trunc... yes
+checking for select... yes
+checking for getpagesize... (cached) yes
+checking for newlocale... yes
+checking for getrlimit... yes
+checking for setrlimit... yes
+checking for shutdown... yes
+checking for pthread_sigmask... (cached) yes
+checking for strsignal... yes
+checking for setitimer... yes
+checking for sendto... yes
+checking for recvfrom... yes
+checking for getsockname... yes
+checking for getifaddrs... yes
+checking for freeifaddrs... yes
+checking for gai_strerror... yes
+checking for sync... yes
+checking for endpwent... yes
+checking for getgrent... yes
+checking for endgrent... yes
+checking for cfmakeraw... yes
+checking for cfsetspeed... yes
+checking for __executable_start... yes
+checking for log2... yes
+checking for pthread_setname_np... yes
+checking for pthread_set_name_np... no
+checking for getpwent... yes
+checking for renameat2... yes
+checking whether pthread_setname_np takes a single argument... no
+checking whether pthread_setname_np takes three arguments... no
+checking for aligned_alloc... yes
+checking whether aligned_alloc is declared... yes
+checking for posix_madvise... yes
+checking for madvise... yes
+checking for __builtin_frame_address... yes
+checking for __builtin_unwind_init... yes
+checking for declarations of fseeko and ftello... yes
+checking for grantpt... yes
+checking for getpt... yes
+checking for posix_openpt... yes
+checking for library containing tputs... -ltinfo
+checking whether -ltinfo library defines BC... yes
+checking for timerfd interface... yes
+checking whether signals can be handled on alternate stack... yes
+checking for valgrind/valgrind.h... no
+checking for struct unipair.unicode... yes
+checking for pid_t... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking for snprintf... yes
+checking for open_memstream... yes
+checking for spawn.h... yes
+checking for posix_spawn... yes
+checking for compiler option needed when checking for future declarations... none
+checking for posix_spawn_file_actions_addchdir... no
+checking for posix_spawn_file_actions_addchdir_np... yes
+checking for posix_spawnattr_setflags... yes
+checking whether POSIX_SPAWN_SETSID is declared... yes
+checking whether GLib is linked in... no
+checking for nl_langinfo and CODESET... yes
+checking for nl_langinfo and _NL_PAPER_WIDTH... yes
+checking for mbstate_t... yes
+checking for signals via characters... yes
+checking for _setjmp... yes
+checking for sigsetjmp... yes
+checking POSIX termios... yes
+checking size of speed_t... 4
+checking for usable FIONREAD... yes
+checking for usable SIGIO... yes
+checking for C/C++ restrict keyword... __restrict__
+checking for typeof syntax and keyword spelling... typeof
+checking for statement expressions... yes
+checking for sys/acl.h... yes
+checking for library containing acl_get_file... -lacl
+checking for acl_get_file... yes
+checking for acl_get_fd... yes
+checking for acl_set_file... yes
+checking for acl_set_fd... yes
+checking for acl_get_link_np... no
+checking for acl_free... yes
+checking for acl_from_mode... yes
+checking for acl_from_text... yes
+checking for acl_delete_def_file... yes
+checking for acl_extended_file... yes
+checking for acl_delete_fd_np... no
+checking for acl_delete_file_np... no
+checking for acl_copy_ext_native... no
+checking for acl_create_entry_np... no
+checking for acl_to_short_text... no
+checking for acl_free_text... no
+checking for working acl_get_file... yes
+checking for acl/libacl.h... yes
+checking for acl_entries... yes
+checking for ACL_FIRST_ENTRY... yes
+checking for ACL_TYPE_EXTENDED... no
+checking for working alloca.h... yes
+checking for alloca... yes
+checking for a race-free mkdir -p... /usr/bin/mkdir -p
+checking whether the preprocessor supports include_next... yes
+checking whether source code line length is unlimited... yes
+checking whether endutent is declared... yes
+checking for struct utmpx.ut_user... yes
+checking for struct utmp.ut_user... yes
+checking for struct utmpx.ut_name... yes
+checking for struct utmp.ut_name... yes
+checking for struct utmpx.ut_type... yes
+checking for struct utmp.ut_type... yes
+checking for struct utmpx.ut_pid... yes
+checking for struct utmp.ut_pid... yes
+checking for struct utmp.ut_tv... yes
+checking for struct utmpx.ut_host... yes
+checking for struct utmp.ut_host... yes
+checking for struct utmpx.ut_id... yes
+checking for struct utmp.ut_id... yes
+checking for struct utmpx.ut_session... yes
+checking for struct utmp.ut_session... yes
+checking for struct utmpx.ut_exit... yes
+checking for struct utmp.ut_exit... yes
+checking for struct utmpx.ut_exit.e_exit... yes
+checking for struct utmp.ut_exit.e_exit... yes
+checking for struct utmpx.ut_exit.e_termination... yes
+checking for struct utmp.ut_exit.e_termination... yes
+checking whether sysinfo is declared... yes
+checking for sys/sysctl.h... no
+checking for sysctl... no
+checking whether lstat correctly handles trailing slash... yes
+checking whether // is distinct from /... no
+checking whether realpath works... yes
+checking for faccessat... yes
+checking for getcwd... yes
+checking whether byte ordering is bigendian... no
+checking if environ is properly declared... yes
+checking for complete errno.h... yes
+checking whether ctype.h defines __header_inline... no
+checking for mode_t... yes
+checking whether strmode is declared... no
+checking whether getline is declared... yes
+checking for getopt.h... (cached) yes
+checking for getopt_long_only... yes
+checking whether getopt is POSIX compatible... yes
+checking for working GNU getopt function... yes
+checking for working GNU getopt_long function... yes
+checking for glibc-compatible sys/cdefs.h... yes
+checking whether timespec_get is declared... yes
+checking for timespec_get... yes
+checking for struct timeval... yes
+checking for wide-enough struct timeval.tv_sec member... yes
+checking whether limits.h has WORD_BIT, BOOL_WIDTH etc.... yes
+checking whether limits.h has SSIZE_MAX... yes
+checking whether the compiler produces multi-arch binaries... no
+checking whether stdint.h conforms to C99... yes
+checking whether stdint.h works without ISO C predefines... yes
+checking whether stdint.h has UINTMAX_WIDTH etc.... yes
+checking whether malloc is ptrdiff_t safe... yes
+checking whether malloc, calloc set errno on failure... yes
+checking whether malloc (0) returns nonnull... yes
+checking whether memeq is declared... no
+checking whether memmem is declared... yes
+checking whether memrchr is declared... yes
+checking whether <limits.h> defines MIN and MAX... no
+checking whether <sys/param.h> defines MIN and MAX... yes
+checking whether time_t is signed... yes
+checking whether alarm is declared... yes
+checking for working mktime... yes
+checking for struct tm.tm_gmtoff... yes
+checking for struct tm.tm_zone... yes
+checking whether <sys/select.h> is self-contained... yes
+checking whether realloc should abort upon undefined behaviour... no
+checking for inline... inline
+checking for sigset_t... yes
+checking for volatile sig_atomic_t... yes
+checking for sighandler_t... yes
+checking whether stdc_rotate_left_uc is declared... no
+checking whether stdckdint.h can be included in C... yes
+checking checking for an ISO C23 compliant stdckdint.h in C... yes
+checking for good max_align_t... yes
+checking whether NULL can be used in arbitrary expressions... yes
+checking for unreachable in C... yes
+checking whether nullptr_t needs <stddef.h>... no
+checking whether <stddef.h> is idempotent... guessing no
+checking whether fcloseall is declared... yes
+checking whether getw is declared... yes
+checking whether putw is declared... yes
+checking which flavor of printf attribute matches inttypes macros... system
+checking for an english Unicode locale... en_US.UTF-8
+checking whether ecvt is declared... yes
+checking whether fcvt is declared... yes
+checking whether gcvt is declared... yes
+checking whether MB_CUR_MAX is correct... yes
+checking whether streq is declared... no
+checking whether strnlen is declared... yes
+checking whether strtoimax is declared... yes
+checking whether stat file-mode macros are broken... no
+checking for nlink_t... yes
+checking for blksize_t... yes
+checking for blkcnt_t... yes
+checking for struct timespec in <time.h>... yes
+checking for TIME_UTC in <time.h>... yes
+checking whether execvpe is declared... yes
+checking whether clearerr_unlocked is declared... yes
+checking whether feof_unlocked is declared... yes
+checking whether ferror_unlocked is declared... yes
+checking whether fflush_unlocked is declared... yes
+checking whether fgets_unlocked is declared... yes
+checking whether fileno_unlocked is declared... yes
+checking whether fputc_unlocked is declared... yes
+checking whether fputs_unlocked is declared... yes
+checking whether fread_unlocked is declared... yes
+checking whether fwrite_unlocked is declared... yes
+checking whether getc_unlocked is declared... yes
+checking whether getchar_unlocked is declared... yes
+checking whether putc_unlocked is declared... yes
+checking whether putchar_unlocked is declared... yes
+checking if endian.h defines stdint types... no
+checking if endian.h defines functions and macros... yes
+checking type of array argument to getgroups... gid_t
+checking whether getdelim is declared... yes
+checking whether getdtablesize is declared... yes
+checking for O_CLOEXEC... yes
+checking for promoted mode_t type... mode_t
+checking whether the utimes function works... yes
+checking for C compiler option to allow warnings... -Wno-error
+checking for alloca as a compiler built-in... yes
+checking for static_assert... yes, a keyword
+checking for bool, true, false... yes
+checking for __builtin_expect... yes
+checking for working bswap_16, bswap_32, bswap_64... yes
+checking for readlinkat... yes
+checking for library containing clock_gettime... none required
+checking for clock_getres... yes
+checking for clock_gettime... yes
+checking for clock_settime... yes
+checking for copy_file_range... yes
+checking for d_type member in directory struct... yes
+checking whether // is distinct from /... (cached) no
+checking whether dup2 works... yes
+checking for library containing backtrace_symbols_fd... none required
+checking for faccessat... (cached) yes
+checking whether fchmodat works... yes
+checking whether fcntl handles F_DUPFD correctly... yes
+checking whether fcntl understands F_DUPFD_CLOEXEC... needs runtime check
+checking whether fdopendir is declared... yes
+checking whether fdopendir works... yes
+checking for sys/smack.h... no
+checking for flexible array member... yes
+checking for __fpending... yes
+checking whether __fpending is declared... yes
+checking whether free is known to preserve errno... yes
+checking for __fseterr... no
+checking whether fstatat (..., 0) works... yes
+checking for no AT_EMPTY_PATH or fstatat with null file... yes
+checking for sys/mount.h... yes
+checking for statvfs function (SVR4)... yes
+checking whether to use statvfs64... no
+checking for two-argument statfs with statfs.f_frsize member... yes
+checking for sys/fs/s5param.h... no
+checking for sys/statfs.h... yes
+checking for statfs that truncates block counts... no
+checking for futimens... yes
+checking whether futimens works... yes
+checking for getline... yes
+checking for working getline function... yes
+checking for getloadavg... yes
+checking for sys/loadavg.h... no
+checking whether getloadavg is declared... yes
+checking for getrandom... yes
+checking whether getrandom is compatible with its GNU+BSD signature... yes
+checking for gettimeofday with POSIX signature... yes
+checking whether the compiler supports the __inline keyword... yes
+checking for gmp.h... yes
+checking for library containing __gmpz_roinit_n... -lgmp
+checking for memmem... yes
+checking whether memmem works... yes
+checking for mempcpy... yes
+checking for memrchr... yes
+checking for memset_explicit... no
+checking for explicit_memset... no
+checking for mkostemp... yes
+checking for library containing nanosleep... none required
+checking for working nanosleep... no (mishandles large arguments)
+checking for mntent.h... yes
+checking for sys/pstat.h... no
+checking for sys/param.h... (cached) yes
+checking for setmntent... yes
+checking for sys/sysctl.h... (cached) no
+checking for sched_getaffinity_np... no
+checking for pstat_getdynamic... no
+checking for sysctl... (cached) no
+checking for sched_getaffinity... yes
+checking for glibc compatible sched_getaffinity... yes
+checking for pipe2... yes
+checking whether signature of pselect conforms to POSIX... yes
+checking whether pselect detects invalid fds... yes
+checking whether pthread_sigmask is a macro... no
+checking whether pthread_sigmask works without -lpthread... yes
+checking whether pthread_sigmask returns error numbers... yes
+checking for xattr library with ATTR_ACTION_PERMISSIONS... -lattr
+checking whether readlink signature is correct... yes
+checking whether readlink handles trailing slash correctly... yes
+checking whether readlink truncates results correctly... yes
+checking for readlinkat... (cached) yes
+checking whether readlinkat signature is correct... yes
+checking whether realloc sets errno on failure... yes
+checking whether realloc (..., 0) returns nonnull... no
+checking for working re_compile_pattern... no
+checking for libintl.h... yes
+checking whether isblank is declared... yes
+checking for sig2str... no
+checking for str2sig... no
+checking for sigdescr_np... yes
+checking for socklen_t... yes
+checking for ssize_t... yes
+checking for struct stat.st_atim.tv_nsec... yes
+checking whether struct stat.st_atim is of type struct timespec... yes
+checking for struct stat.st_birthtimespec.tv_nsec... no
+checking for struct stat.st_birthtimensec... no
+checking for struct stat.st_birthtim.tv_nsec... no
+checking for stpcpy... yes
+checking for working strnlen... yes
+checking whether strtoimax works... yes
+checking whether symlink handles trailing slash correctly... yes
+checking whether localtime_r is declared... yes
+checking whether localtime_r is compatible with its POSIX signature... yes
+checking whether localtime works even near extrema... yes
+checking for timezone_t... no
+checking for tzalloc... no
+checking for timegm... yes
+checking whether timer_settime is declared... yes
+checking for library containing timer_settime... none required
+checking for timer_settime... yes
+checking for utimensat... yes
+checking whether utimensat works... yes
+checking for variable-length arrays... yes
+checking whether getdtablesize works... yes
+checking for timer_getoverrun... yes
+
+Configured for 'x86_64-pc-linux-gnu'.
+
+  Where should the build process find the source code?    .
+  What compiler should emacs be built with?               gcc -std=gnu23 -g3 -O2
+  Should Emacs use the GNU version of malloc?             no
+    (The GNU allocators don't work with this system configuration.)
+  Should Emacs use a relocating allocator for buffers?    no
+  Should Emacs use mmap(2) for buffer allocation?         no
+  What window system should Emacs use?                    android
+  What toolkit should Emacs use?                          none
+  Where do we find X Windows header files?                NONE
+  Where do we find X Windows libraries?                   NONE
+  Does Emacs use -lXaw3d?                                 no
+  Is Emacs being built for Android?                       yes 
+  Does Emacs use the X Double Buffer Extension?           no
+  Does Emacs use -lXpm?                                   no
+  Does Emacs use -ljpeg?                                  no
+  Does Emacs use -ltiff?                                  no
+  Does Emacs use a gif library?                           no 
+  Does Emacs use a png library?                           no 
+  Does Emacs use -lrsvg-2?                                no
+  Does Emacs use -lwebp?                                  no
+  Does Emacs use -lsqlite3?                               no
+  Does Emacs use cairo?                                   no
+  Does Emacs use -llcms2?                                 no
+  Does Emacs use imagemagick?                             no
+  Does Emacs use native APIs for images?                  no
+  Does Emacs support sound?                               yes
+  Does Emacs use -lgpm?                                   no
+  Does Emacs use -ldbus?                                  no
+  Does Emacs use -lgconf?                                 no
+  Does Emacs use GSettings?                               no
+  Does Emacs use a file notification library?             yes (inotify)
+  Does Emacs use access control lists?                    yes -lacl -lattr
+  Does Emacs use -lselinux?                               no
+  Does Emacs use -lgnutls?                                no
+  Does Emacs use -lxml2?                                  no
+  Does Emacs use -lfreetype?                              no
+  Does Emacs use HarfBuzz?                                no
+  Does Emacs use -lm17n-flt?                              no
+  Does Emacs use -lotf?                                   no
+  Does Emacs use -lxft?                                   no
+  Does Emacs use -lsystemd?                               no
+  Does Emacs use -ltree-sitter?                           no
+  Does Emacs use the GMP library?                         yes
+  Does Emacs directly use zlib?                           yes
+  Does Emacs have dynamic modules support?                no
+  Does Emacs use toolkit scroll bars?                     no
+  Does Emacs support Xwidgets?                            no
+  Does Emacs have threading support in lisp?              no
+  Does Emacs support the portable dumper?                 yes
+  Which dumping strategy does Emacs use?                  pdumper
+  Does Emacs have native lisp compiler?                   no
+  Does Emacs use version 2 of the X Input Extension?      no
+  Does Emacs generate a smaller-size Japanese dictionary? no
+
+
+configure: creating ./config.status
+config.status: creating src/verbose.mk
+config.status: creating src/emacs-module.h
+config.status: creating Makefile
+config.status: creating lib/gnulib.mk
+config.status: creating ./doc/man/emacs.1
+config.status: creating lib/Makefile
+config.status: creating lib-src/Makefile
+config.status: creating oldXMenu/Makefile
+config.status: creating src/Makefile
+config.status: creating lwlib/Makefile
+config.status: creating nextstep/Makefile
+config.status: creating nt/Makefile
+config.status: creating doc/emacs/Makefile
+config.status: creating doc/misc/Makefile
+config.status: creating doc/lispintro/Makefile
+config.status: creating doc/lispref/Makefile
+config.status: creating lisp/Makefile
+config.status: creating leim/Makefile
+config.status: creating test/Makefile
+config.status: creating test/manual/noverlay/Makefile
+config.status: creating test/infra/Makefile
+config.status: creating admin/charsets/Makefile
+config.status: creating admin/unidata/Makefile
+config.status: creating admin/grammars/Makefile
+config.status: creating java/Makefile
+config.status: creating cross/Makefile
+config.status: creating java/AndroidManifest.xml
+config.status: creating src/config.h
+config.status: linking lib/_Noreturn.h to cross/lib/_Noreturn.h
+config.status: linking lib/acl-errno-valid.c to cross/lib/acl-errno-valid.c
+config.status: linking lib/acl-internal.c to cross/lib/acl-internal.c
+config.status: linking lib/acl-internal.h to cross/lib/acl-internal.h
+config.status: linking lib/acl.h to cross/lib/acl.h
+config.status: linking lib/acl_entries.c to cross/lib/acl_entries.c
+config.status: linking lib/alloca.in.h to cross/lib/alloca.in.h
+config.status: linking lib/allocator.c to cross/lib/allocator.c
+config.status: linking lib/allocator.h to cross/lib/allocator.h
+config.status: linking lib/arg-nonnull.h to cross/lib/arg-nonnull.h
+config.status: linking lib/assert.in.h to cross/lib/assert.in.h
+config.status: linking lib/at-func.c to cross/lib/at-func.c
+config.status: linking lib/attribute.h to cross/lib/attribute.h
+config.status: linking lib/binary-io.c to cross/lib/binary-io.c
+config.status: linking lib/binary-io.h to cross/lib/binary-io.h
+config.status: linking lib/boot-time-aux.h to cross/lib/boot-time-aux.h
+config.status: linking lib/boot-time.c to cross/lib/boot-time.c
+config.status: linking lib/boot-time.h to cross/lib/boot-time.h
+config.status: linking lib/byteswap.c to cross/lib/byteswap.c
+config.status: linking lib/byteswap.in.h to cross/lib/byteswap.in.h
+config.status: linking lib/c++defs.h to cross/lib/c++defs.h
+config.status: linking lib/c-ctype.c to cross/lib/c-ctype.c
+config.status: linking lib/c-ctype.h to cross/lib/c-ctype.h
+config.status: linking lib/c-strcase.h to cross/lib/c-strcase.h
+config.status: linking lib/c-strcasecmp.c to cross/lib/c-strcasecmp.c
+config.status: linking lib/c-strncasecmp.c to cross/lib/c-strncasecmp.c
+config.status: linking lib/canonicalize-lgpl.c to cross/lib/canonicalize-lgpl.c
+config.status: linking lib/careadlinkat.c to cross/lib/careadlinkat.c
+config.status: linking lib/careadlinkat.h to cross/lib/careadlinkat.h
+config.status: linking lib/cdefs.h to cross/lib/cdefs.h
+config.status: linking lib/cloexec.c to cross/lib/cloexec.c
+config.status: linking lib/cloexec.h to cross/lib/cloexec.h
+config.status: linking lib/close-stream.c to cross/lib/close-stream.c
+config.status: linking lib/close-stream.h to cross/lib/close-stream.h
+config.status: linking lib/copy-file-range.c to cross/lib/copy-file-range.c
+config.status: linking lib/diffseq.h to cross/lib/diffseq.h
+config.status: linking lib/dirent-private.h to cross/lib/dirent-private.h
+config.status: linking lib/dirent.in.h to cross/lib/dirent.in.h
+config.status: linking lib/dirfd.c to cross/lib/dirfd.c
+config.status: linking lib/dtoastr.c to cross/lib/dtoastr.c
+config.status: linking lib/dtotimespec.c to cross/lib/dtotimespec.c
+config.status: linking lib/dup2.c to cross/lib/dup2.c
+config.status: linking lib/dynarray.h to cross/lib/dynarray.h
+config.status: linking lib/endian.c to cross/lib/endian.c
+config.status: linking lib/endian.in.h to cross/lib/endian.in.h
+config.status: linking lib/errno.in.h to cross/lib/errno.in.h
+config.status: linking lib/euidaccess.c to cross/lib/euidaccess.c
+config.status: linking lib/execinfo.c to cross/lib/execinfo.c
+config.status: linking lib/execinfo.in.h to cross/lib/execinfo.in.h
+config.status: linking lib/faccessat.c to cross/lib/faccessat.c
+config.status: linking lib/fchmodat.c to cross/lib/fchmodat.c
+config.status: linking lib/fcntl.c to cross/lib/fcntl.c
+config.status: linking lib/fcntl.in.h to cross/lib/fcntl.in.h
+config.status: linking lib/fdopendir.c to cross/lib/fdopendir.c
+config.status: linking lib/file-has-acl.c to cross/lib/file-has-acl.c
+config.status: linking lib/filemode.c to cross/lib/filemode.c
+config.status: linking lib/filemode.h to cross/lib/filemode.h
+config.status: linking lib/filename.h to cross/lib/filename.h
+config.status: linking lib/filevercmp.c to cross/lib/filevercmp.c
+config.status: linking lib/filevercmp.h to cross/lib/filevercmp.h
+config.status: linking lib/flexmember.h to cross/lib/flexmember.h
+config.status: linking lib/fpending.c to cross/lib/fpending.c
+config.status: linking lib/fpending.h to cross/lib/fpending.h
+config.status: linking lib/free.c to cross/lib/free.c
+config.status: linking lib/fseterr.c to cross/lib/fseterr.c
+config.status: linking lib/fseterr.h to cross/lib/fseterr.h
+config.status: linking lib/fstatat.c to cross/lib/fstatat.c
+config.status: linking lib/fsusage.c to cross/lib/fsusage.c
+config.status: linking lib/fsusage.h to cross/lib/fsusage.h
+config.status: linking lib/fsync.c to cross/lib/fsync.c
+config.status: linking lib/ftoastr.c to cross/lib/ftoastr.c
+config.status: linking lib/ftoastr.h to cross/lib/ftoastr.h
+config.status: linking lib/futimens.c to cross/lib/futimens.c
+config.status: linking lib/get-permissions.c to cross/lib/get-permissions.c
+config.status: linking lib/getdelim.c to cross/lib/getdelim.c
+config.status: linking lib/getdtablesize.c to cross/lib/getdtablesize.c
+config.status: linking lib/getgroups.c to cross/lib/getgroups.c
+config.status: linking lib/getline.c to cross/lib/getline.c
+config.status: linking lib/getloadavg.c to cross/lib/getloadavg.c
+config.status: linking lib/getopt-cdefs.in.h to cross/lib/getopt-cdefs.in.h
+config.status: linking lib/getopt-core.h to cross/lib/getopt-core.h
+config.status: linking lib/getopt-ext.h to cross/lib/getopt-ext.h
+config.status: linking lib/getopt-pfx-core.h to cross/lib/getopt-pfx-core.h
+config.status: linking lib/getopt-pfx-ext.h to cross/lib/getopt-pfx-ext.h
+config.status: linking lib/getopt.c to cross/lib/getopt.c
+config.status: linking lib/getopt.in.h to cross/lib/getopt.in.h
+config.status: linking lib/getopt1.c to cross/lib/getopt1.c
+config.status: linking lib/getopt_int.h to cross/lib/getopt_int.h
+config.status: linking lib/getrandom.c to cross/lib/getrandom.c
+config.status: linking lib/gettext.h to cross/lib/gettext.h
+config.status: linking lib/gettime.c to cross/lib/gettime.c
+config.status: linking lib/gettimeofday.c to cross/lib/gettimeofday.c
+config.status: linking lib/group-member.c to cross/lib/group-member.c
+config.status: linking lib/idx.h to cross/lib/idx.h
+config.status: linking lib/ieee754.in.h to cross/lib/ieee754.in.h
+config.status: linking lib/ignore-value.h to cross/lib/ignore-value.h
+config.status: linking lib/intprops-internal.h to cross/lib/intprops-internal.h
+config.status: linking lib/intprops.h to cross/lib/intprops.h
+config.status: linking lib/inttypes.in.h to cross/lib/inttypes.in.h
+config.status: linking lib/issymlink.c to cross/lib/issymlink.c
+config.status: linking lib/issymlink.h to cross/lib/issymlink.h
+config.status: linking lib/issymlinkat.c to cross/lib/issymlinkat.c
+config.status: linking lib/issymlinkat.h to cross/lib/issymlinkat.h
+config.status: linking lib/lchmod.c to cross/lib/lchmod.c
+config.status: linking lib/libc-config.h to cross/lib/libc-config.h
+config.status: linking lib/limits.in.h to cross/lib/limits.in.h
+config.status: linking lib/lstat.c to cross/lib/lstat.c
+config.status: linking lib/malloc.c to cross/lib/malloc.c
+config.status: linking lib/malloc/dynarray-skeleton.c to cross/lib/malloc/dynarray-skeleton.c
+config.status: linking lib/malloc/dynarray.h to cross/lib/malloc/dynarray.h
+config.status: linking lib/malloc/dynarray_at_failure.c to cross/lib/malloc/dynarray_at_failure.c
+config.status: linking lib/malloc/dynarray_emplace_enlarge.c to cross/lib/malloc/dynarray_emplace_enlarge.c
+config.status: linking lib/malloc/dynarray_finalize.c to cross/lib/malloc/dynarray_finalize.c
+config.status: linking lib/malloc/dynarray_resize.c to cross/lib/malloc/dynarray_resize.c
+config.status: linking lib/malloc/dynarray_resize_clear.c to cross/lib/malloc/dynarray_resize_clear.c
+config.status: linking lib/malloc/scratch_buffer.h to cross/lib/malloc/scratch_buffer.h
+config.status: linking lib/malloc/scratch_buffer_grow.c to cross/lib/malloc/scratch_buffer_grow.c
+config.status: linking lib/malloc/scratch_buffer_grow_preserve.c to cross/lib/malloc/scratch_buffer_grow_preserve.c
+config.status: linking lib/malloc/scratch_buffer_set_array_size.c to cross/lib/malloc/scratch_buffer_set_array_size.c
+config.status: linking lib/md5-stream.c to cross/lib/md5-stream.c
+config.status: linking lib/md5.c to cross/lib/md5.c
+config.status: linking lib/md5.h to cross/lib/md5.h
+config.status: linking lib/memeq.c to cross/lib/memeq.c
+config.status: linking lib/memmem.c to cross/lib/memmem.c
+config.status: linking lib/mempcpy.c to cross/lib/mempcpy.c
+config.status: linking lib/memrchr.c to cross/lib/memrchr.c
+config.status: linking lib/memset_explicit.c to cross/lib/memset_explicit.c
+config.status: linking lib/min-eloop-threshold.h to cross/lib/min-eloop-threshold.h
+config.status: linking lib/mini-gmp-gnulib.c to cross/lib/mini-gmp-gnulib.c
+config.status: linking lib/mini-gmp.c to cross/lib/mini-gmp.c
+config.status: linking lib/mini-gmp.h to cross/lib/mini-gmp.h
+config.status: linking lib/minmax.h to cross/lib/minmax.h
+config.status: linking lib/mkostemp.c to cross/lib/mkostemp.c
+config.status: linking lib/mktime-internal.h to cross/lib/mktime-internal.h
+config.status: linking lib/mktime.c to cross/lib/mktime.c
+config.status: linking lib/nanosleep.c to cross/lib/nanosleep.c
+config.status: linking lib/nproc.c to cross/lib/nproc.c
+config.status: linking lib/nproc.h to cross/lib/nproc.h
+config.status: linking lib/nstrftime.c to cross/lib/nstrftime.c
+config.status: linking lib/open.c to cross/lib/open.c
+config.status: linking lib/openat-priv.h to cross/lib/openat-priv.h
+config.status: linking lib/openat-proc.c to cross/lib/openat-proc.c
+config.status: linking lib/openat.h to cross/lib/openat.h
+config.status: linking lib/pathmax.h to cross/lib/pathmax.h
+config.status: linking lib/pipe2.c to cross/lib/pipe2.c
+config.status: linking lib/pselect.c to cross/lib/pselect.c
+config.status: linking lib/pthread_sigmask.c to cross/lib/pthread_sigmask.c
+config.status: linking lib/qcopy-acl.c to cross/lib/qcopy-acl.c
+config.status: linking lib/rawmemchr.c to cross/lib/rawmemchr.c
+config.status: linking lib/readlink.c to cross/lib/readlink.c
+config.status: linking lib/readlinkat.c to cross/lib/readlinkat.c
+config.status: linking lib/readutmp.h to cross/lib/readutmp.h
+config.status: linking lib/realloc.c to cross/lib/realloc.c
+config.status: linking lib/regcomp.c to cross/lib/regcomp.c
+config.status: linking lib/regex.c to cross/lib/regex.c
+config.status: linking lib/regex.h to cross/lib/regex.h
+config.status: linking lib/regex_internal.c to cross/lib/regex_internal.c
+config.status: linking lib/regex_internal.h to cross/lib/regex_internal.h
+config.status: linking lib/regexec.c to cross/lib/regexec.c
+config.status: linking lib/root-uid.h to cross/lib/root-uid.h
+config.status: linking lib/scratch_buffer.h to cross/lib/scratch_buffer.h
+config.status: linking lib/set-permissions.c to cross/lib/set-permissions.c
+config.status: linking lib/sha1.c to cross/lib/sha1.c
+config.status: linking lib/sha1.h to cross/lib/sha1.h
+config.status: linking lib/sha256.c to cross/lib/sha256.c
+config.status: linking lib/sha256.h to cross/lib/sha256.h
+config.status: linking lib/sha3.c to cross/lib/sha3.c
+config.status: linking lib/sha3.h to cross/lib/sha3.h
+config.status: linking lib/sha512.c to cross/lib/sha512.c
+config.status: linking lib/sha512.h to cross/lib/sha512.h
+config.status: linking lib/sig2str.c to cross/lib/sig2str.c
+config.status: linking lib/sig2str.h to cross/lib/sig2str.h
+config.status: linking lib/sigdescr_np.c to cross/lib/sigdescr_np.c
+config.status: linking lib/signal.in.h to cross/lib/signal.in.h
+config.status: linking lib/stat-time.c to cross/lib/stat-time.c
+config.status: linking lib/stat-time.h to cross/lib/stat-time.h
+config.status: linking lib/stdbit.in.h to cross/lib/stdbit.in.h
+config.status: linking lib/stdc_bit_width.c to cross/lib/stdc_bit_width.c
+config.status: linking lib/stdc_count_ones.c to cross/lib/stdc_count_ones.c
+config.status: linking lib/stdc_leading_zeros.c to cross/lib/stdc_leading_zeros.c
+config.status: linking lib/stdc_memreverse8u.c to cross/lib/stdc_memreverse8u.c
+config.status: linking lib/stdc_trailing_zeros.c to cross/lib/stdc_trailing_zeros.c
+config.status: linking lib/stdckdint.in.h to cross/lib/stdckdint.in.h
+config.status: linking lib/stdcountof.in.h to cross/lib/stdcountof.in.h
+config.status: linking lib/stddef.in.h to cross/lib/stddef.in.h
+config.status: linking lib/stdint.in.h to cross/lib/stdint.in.h
+config.status: linking lib/stdio-consolesafe.c to cross/lib/stdio-consolesafe.c
+config.status: linking lib/stdio-impl.h to cross/lib/stdio-impl.h
+config.status: linking lib/stdio.in.h to cross/lib/stdio.in.h
+config.status: linking lib/stdlib.c to cross/lib/stdlib.c
+config.status: linking lib/stdlib.in.h to cross/lib/stdlib.in.h
+config.status: linking lib/stpcpy.c to cross/lib/stpcpy.c
+config.status: linking lib/str-two-way.h to cross/lib/str-two-way.h
+config.status: linking lib/streq.c to cross/lib/streq.c
+config.status: linking lib/strftime.c to cross/lib/strftime.c
+config.status: linking lib/strftime.h to cross/lib/strftime.h
+config.status: linking lib/string.in.h to cross/lib/string.in.h
+config.status: linking lib/strnlen.c to cross/lib/strnlen.c
+config.status: linking lib/strnul.c to cross/lib/strnul.c
+config.status: linking lib/strtoimax.c to cross/lib/strtoimax.c
+config.status: linking lib/strtol.c to cross/lib/strtol.c
+config.status: linking lib/strtoll.c to cross/lib/strtoll.c
+config.status: linking lib/symlink.c to cross/lib/symlink.c
+config.status: linking lib/sys-limits.h to cross/lib/sys-limits.h
+config.status: linking lib/sys_random.in.h to cross/lib/sys_random.in.h
+config.status: linking lib/sys_select.in.h to cross/lib/sys_select.in.h
+config.status: linking lib/sys_stat.in.h to cross/lib/sys_stat.in.h
+config.status: linking lib/sys_time.in.h to cross/lib/sys_time.in.h
+config.status: linking lib/sys_types.in.h to cross/lib/sys_types.in.h
+config.status: linking lib/tempname.c to cross/lib/tempname.c
+config.status: linking lib/tempname.h to cross/lib/tempname.h
+config.status: linking lib/time-internal.h to cross/lib/time-internal.h
+config.status: linking lib/time.in.h to cross/lib/time.in.h
+config.status: linking lib/time_r.c to cross/lib/time_r.c
+config.status: linking lib/time_rz.c to cross/lib/time_rz.c
+config.status: linking lib/timegm.c to cross/lib/timegm.c
+config.status: linking lib/timespec-add.c to cross/lib/timespec-add.c
+config.status: linking lib/timespec-sub.c to cross/lib/timespec-sub.c
+config.status: linking lib/timespec.c to cross/lib/timespec.c
+config.status: linking lib/timespec.h to cross/lib/timespec.h
+config.status: linking lib/u64.c to cross/lib/u64.c
+config.status: linking lib/u64.h to cross/lib/u64.h
+config.status: linking lib/unistd.c to cross/lib/unistd.c
+config.status: linking lib/unistd.in.h to cross/lib/unistd.in.h
+config.status: linking lib/unlocked-io.h to cross/lib/unlocked-io.h
+config.status: linking lib/utimens.c to cross/lib/utimens.c
+config.status: linking lib/utimens.h to cross/lib/utimens.h
+config.status: linking lib/utimensat.c to cross/lib/utimensat.c
+config.status: linking lib/verify.h to cross/lib/verify.h
+config.status: linking lib/warn-on-use.h to cross/lib/warn-on-use.h
+config.status: linking lib/save-cwd.h to cross/lib/save-cwd.h
+config.status: linking lib/fingerprint.c to cross/lib/fingerprint.c
+config.status: linking lib/fingerprint.h to cross/lib/fingerprint.h
+config.status: linking lib/save-cwd.c to cross/lib/save-cwd.c
+config.status: linking lib/openat-die.c to cross/lib/openat-die.c
+config.status: linking lib/save-cwd.c to cross/lib/save-cwd.c
+config.status: linking lib/min-max.h to cross/lib/min-max.h
+config.status: executing src/epaths.h commands
+config.status: executing src/.gdbinit commands
+config.status: executing doc/emacs/emacsver.texi commands
+config.status: executing etc-refcards-emacsver.tex commands
+configure exit=0
+src/config.h:163:#define EMACS_CONFIG_OPTIONS "--with-android=/home/calebc42/.local/share/android-sdk/platforms/android-37.0/android.jar ANDROID_CC=/home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang SDK_BUILD_TOOLS=/home/calebc42/.local/share/android-sdk/build-tools/37.0.0 --with-android-debug --with-gnutls=ifavailable --with-ndk-path=/home/calebc42/workspace/android-deps/sqlite"
+src/config.h:1417:/* Define to 1 if you have the libsqlite3 library (-lsqlite). */
+src/config.h:1418:/* #undef HAVE_SQLITE3 */
+src/config.h:1420:/* Define to 1 if sqlite3 supports loading extensions. */
+src/config.h:1421:/* #undef HAVE_SQLITE3_LOAD_EXTENSION */
+cross/src/config.h:163:#define EMACS_CONFIG_OPTIONS "--with-png=yes --with-webp=yes --with-gif=yes --with-jpeg=yes --with-xml2=yes --with-sqlite3=yes --with-gnutls=ifavailable --with-tiff=yes --with-selinux=maybe --with-modules=yes --with-tree-sitter=ifavailable --with-imagemagick=no --with-lcms2=yes --with-mailutils= --with-pop=no-by-default --with-harfbuzz=yes --with-threads=yes --with-rsvg=yes --enable-check-lisp-object-type= 'CFLAGS= -Werror=implicit-function-declaration'"
+cross/src/config.h:1417:/* Define to 1 if you have the libsqlite3 library (-lsqlite). */
+cross/src/config.h:1418:/* #undef HAVE_SQLITE3 */
+cross/src/config.h:1420:/* Define to 1 if sqlite3 supports loading extensions. */
+cross/src/config.h:1421:/* #undef HAVE_SQLITE3_LOAD_EXTENSION */
+make actual-all || make advice-on-failure make-target=all exit-status=$?
+make[1]: Entering directory '/home/calebc42/workspace/emacs/emacs'
+make -C lib all
+make -C doc/lispref DOCLANG=default info
+make -C doc/lispintro DOCLANG=default info
+make -C doc/emacs DOCLANG=default info
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/doc/lispref'
+make[2]: Nothing to be done for 'info'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/doc/lispref'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/doc/emacs'
+make[2]: Nothing to be done for 'info'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/doc/emacs'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/doc/lispintro'
+make[2]: Nothing to be done for 'info'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/doc/lispintro'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib'
+  GEN      alloca.h
+  GEN      dirent.h
+  GEN      fcntl.h
+  GEN      inttypes.h
+  GEN      limits.h
+  GEN      signal.h
+  GEN      stdbit.h
+  GEN      stdcountof.h
+  GEN      stddef.h
+  GEN      stdio.h
+  GEN      stdlib.h
+  GEN      string.h
+  GEN      sys/random.h
+  GEN      sys/select.h
+  GEN      sys/stat.h
+  GEN      sys/time.h
+  GEN      sys/types.h
+  GEN      time.h
+  GEN      unistd.h
+  CC       fingerprint.o
+  CC       acl-errno-valid.o
+  CC       acl-internal.o
+  CC       get-permissions.o
+  CC       set-permissions.o
+  CC       allocator.o
+  CC       binary-io.o
+  CC       boot-time.o
+  CC       c-ctype.o
+  CC       c-strcasecmp.o
+  CC       c-strncasecmp.o
+  CC       careadlinkat.o
+  CC       close-stream.o
+  CC       copy-file-range.o
+  CC       md5-stream.o
+  CC       md5.o
+  CC       sha1.o
+  CC       sha256.o
+  CC       sha3.o
+  CC       sha512.o
+  CC       dtoastr.o
+  CC       dtotimespec.o
+  CC       fcntl.o
+  CC       file-has-acl.o
+  CC       filemode.o
+  CC       filevercmp.o
+  CC       fseterr.o
+  CC       fsusage.o
+  CC       gettime.o
+  CC       malloc/dynarray_at_failure.o
+  CC       malloc/dynarray_emplace_enlarge.o
+  CC       malloc/dynarray_finalize.o
+  CC       malloc/dynarray_resize.o
+  CC       malloc/dynarray_resize_clear.o
+  CC       memeq.o
+  CC       memset_explicit.o
+  CC       nanosleep.o
+  CC       nproc.o
+  CC       nstrftime.o
+  CC       pipe2.o
+  CC       qcopy-acl.o
+  CC       realloc.o
+  CC       regex.o
+  CC       sig2str.o
+  CC       stat-time.o
+  CC       stdlib.o
+  CC       streq.o
+  CC       strnul.o
+  CC       tempname.o
+  CC       time_rz.o
+  CC       timespec.o
+  CC       timespec-add.o
+  CC       timespec-sub.o
+  CC       u64.o
+  CC       unistd.o
+  CC       openat-die.o
+  CC       save-cwd.o
+  AR       libgnu.a
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib'
+make -C lib-src all
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+  CCLD     etags
+  CCLD     emacsclient
+  CCLD     ebrowse
+  CCLD     hexl
+  CCLD     make-docfile
+  CCLD     make-fingerprint
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C src BIN_DESTDIR='/usr/local/bin/' \
+	 ELN_DESTDIR='/usr/local/lib/emacs/32.0.50/' all
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/src'
+  GEN      globals.h
+  GEN      buildobj.h
+make -C ../admin/charsets all
+make -C ../admin/unidata charscript.el
+make -C ../admin/unidata emoji-zwj.el
+make -C ../admin/charsets cp51932.el
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make -C ../admin/charsets eucjp-ms.el
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'cp51932.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'eucjp-ms.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'charscript.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Nothing to be done for 'emoji-zwj.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+  CC       dispnew.o
+  CC       frame.o
+  CC       scroll.o
+  CC       xdisp.o
+  CC       menu.o
+  CC       window.o
+  CC       charset.o
+  CC       coding.o
+  CC       category.o
+  CC       ccl.o
+  CC       character.o
+  CC       chartab.o
+  CC       bidi.o
+  CC       term.o
+  CC       terminal.o
+  CC       xfaces.o
+  CC       emacs.o
+  CC       keyboard.o
+  CC       macros.o
+  CC       keymap.o
+  CC       sysdep.o
+  CC       bignum.o
+  CC       buffer.o
+  CC       filelock.o
+  CC       insdel.o
+  CC       marker.o
+  CC       minibuf.o
+  CC       fileio.o
+  CC       dired.o
+  CC       cmds.o
+  CC       casetab.o
+  CC       casefiddle.o
+  CC       indent.o
+  CC       search.o
+  CC       regex-emacs.o
+  CC       undo.o
+  CC       alloc.o
+  CC       pdumper.o
+  CC       data.o
+  CC       doc.o
+  CC       editfns.o
+  CC       callint.o
+  CC       eval.o
+  CC       floatfns.o
+  CC       fns.o
+  CC       sort.o
+  CC       font.o
+  CC       print.o
+  CC       lread.o
+  CC       syntax.o
+  CC       bytecode.o
+  CC       comp.o
+  CC       process.o
+  CC       gnutls.o
+  CC       callproc.o
+  CC       region-cache.o
+  CC       sound.o
+  CC       timefns.o
+  CC       atimer.o
+  CC       doprnt.o
+  CC       intervals.o
+  CC       textprop.o
+  CC       composite.o
+  CC       xml.o
+  CC       lcms.o
+  CC       inotify.o
+  CC       profiler.o
+  CC       decompress.o
+  CC       thread.o
+  CC       systhread.o
+  CC       sqlite.o
+  CC       treesit.o
+  CC       itree.o
+  CC       json.o
+  CC       fontset.o
+  CC       fringe.o
+  CC       image.o
+  CC       androidterm.o
+  CC       androidfns.o
+  CC       androidfont.o
+  CC       androidmenu.o
+image.c: In function ‘image_bitmap_pixmap’:
+image.c:457:10: warning: useless cast to type ‘long int’ [-Wuseless-cast]
+  457 |   return (ptrdiff_t) FRAME_DISPLAY_INFO (f)->bitmaps[id - 1].pixmap;
+      |          ^
+  CC       android.o
+  CC       terminfo.o
+  CCLD     temacs
+  GEN      ../etc/DOC
+/usr/bin/mkdir -p ../etc
+make -C ../lisp update-subdirs
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+cp -f temacs bootstrap-emacs
+rm -f bootstrap-emacs.pdmp
+./temacs --batch  -l loadup --temacs=pbootstrap \
+	--bin-dest '/usr/local/bin/' --eln-dest '/usr/local/lib/emacs/32.0.50/'
+Loading loadup.el (source)...
+Dump mode: pbootstrap
+Using load-path (/home/calebc42/workspace/emacs/emacs/lisp /home/calebc42/workspace/emacs/emacs/lisp/emacs-lisp /home/calebc42/workspace/emacs/emacs/lisp/progmodes /home/calebc42/workspace/emacs/emacs/lisp/language /home/calebc42/workspace/emacs/emacs/lisp/international /home/calebc42/workspace/emacs/emacs/lisp/textmodes /home/calebc42/workspace/emacs/emacs/lisp/vc)
+Loading emacs-lisp/debug-early...
+Loading emacs-lisp/byte-run...
+Loading emacs-lisp/backquote...
+Loading subr...
+Loading keymap...
+Loading version...
+Loading widget...
+Loading custom...
+Loading emacs-lisp/map-ynp...
+Loading international/mule...
+Loading international/mule-conf...
+Loading env...
+Loading format...
+Loading bindings...
+Loading window...
+Loading files...
+Loading emacs-lisp/macroexp...
+Loading cus-face...
+Loading faces...
+Loading loaddefs...
+Loading /home/calebc42/workspace/emacs/emacs/lisp/theme-loaddefs.el (source)...
+Loading button...
+Loading emacs-lisp/cl-preloaded...
+Loading emacs-lisp/oclosure...
+Loading obarray...
+Loading abbrev...
+Loading help...
+Loading jka-cmpr-hook...
+Loading epa-hook...
+Loading international/mule-cmds...
+Loading case-table...
+Loading /home/calebc42/workspace/emacs/emacs/lisp/international/charprop.el (source)...
+Loading international/characters...
+Loading international/charscript...
+Loading international/emoji-zwj...
+Loading composite...
+Loading language/chinese...
+Loading language/cyrillic...
+Loading language/indian...
+Loading language/sinhala...
+Loading language/english...
+Loading language/ethiopic...
+Loading language/european...
+Loading language/czech...
+Loading language/slovak...
+Loading language/romanian...
+Loading language/greek...
+Loading language/hebrew...
+Loading international/cp51932...
+Loading international/eucjp-ms...
+Loading language/japanese...
+Loading language/korean...
+Loading language/lao...
+Loading language/tai-viet...
+Loading language/thai...
+Loading language/tibetan...
+Loading language/vietnamese...
+Loading language/misc-lang...
+Loading language/utf-8-lang...
+Loading language/georgian...
+Loading language/khmer...
+Loading language/burmese...
+Loading language/cham...
+Loading language/philippine...
+Loading language/indonesian...
+Loading indent...
+Loading emacs-lisp/cl-generic...
+Loading simple...
+Loading emacs-lisp/seq...
+Loading emacs-lisp/nadvice...
+Loading minibuffer...
+Loading frame...
+Loading startup...
+Loading term/tty-colors...
+Loading font-core...
+Loading emacs-lisp/syntax...
+Loading font-lock...
+Loading jit-lock...
+Loading mouse...
+Loading scroll-bar...
+Loading select...
+Loading emacs-lisp/timer...
+Loading emacs-lisp/easymenu...
+Loading isearch...
+Loading rfn-eshadow...
+Loading menu-bar...
+Loading tab-bar...
+Loading emacs-lisp/lisp...
+Loading textmodes/page...
+Loading register...
+Loading textmodes/paragraphs...
+Loading progmodes/prog-mode...
+Loading emacs-lisp/lisp-mode...
+Loading textmodes/text-mode...
+Loading textmodes/fill...
+Loading newcomment...
+Loading replace...
+Loading emacs-lisp/tabulated-list...
+Loading buff-menu...
+Loading fringe...
+Loading emacs-lisp/regexp-opt...
+Loading image...
+Loading international/fontset...
+Loading dnd...
+Loading tool-bar...
+Loading dynamic-setting...
+Loading ls-lisp...
+Loading touch-screen...
+Loading term/common-win...
+Loading term/android-win...
+Loading mwheel...
+Loading progmodes/elisp-mode...
+Loading emacs-lisp/float-sup...
+Loading vc/vc-hooks...
+Loading vc/ediff-hook...
+Loading uniquify...
+Loading electric...
+Loading paren...
+Loading emacs-lisp/shorthands...
+Loading emacs-lisp/eldoc...
+Loading emacs-lisp/cconv...
+Loading cus-start...
+Loading tooltip...
+Loading international/iso-transl...
+Loading emacs-lisp/rmc...
+Loading /home/calebc42/workspace/emacs/emacs/lisp/leim/leim-list.el (source)...
+Finding pointers to doc strings...
+Finding pointers to doc strings...done
+Dumping under the name bootstrap-emacs.pdmp
+Dumping fingerprint: 0067660bcc707ca8e53db0ad09985922a6c288cac42b842db1c297205d48b516
+Dump complete
+Byte counts: header=100 hot=9266084 discardable=154792 cold=4180576
+Reloc counts: hot=506253 discardable=5467
+ANCIENT=yes make -C ../lisp compile-first EMACS="../src/bootstrap-emacs"
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Nothing to be done for 'compile-first'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make -C ../lisp compile-first EMACS="../src/bootstrap-emacs"
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Nothing to be done for 'compile-first'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make -C ../admin/unidata all EMACS="../../src/bootstrap-emacs"
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+rm -f emacs && cp -f temacs emacs
+LC_ALL=C ./temacs -batch  -l loadup --temacs=pdump \
+	--bin-dest '/usr/local/bin/' --eln-dest '/usr/local/lib/emacs/32.0.50/'
+Loading loadup.el (source)...
+Dump mode: pdump
+Using load-path (/home/calebc42/workspace/emacs/emacs/lisp)
+Loading emacs-lisp/debug-early...
+Loading emacs-lisp/byte-run...
+Loading emacs-lisp/backquote...
+Loading subr...
+Loading keymap...
+Loading version...
+Loading widget...
+Loading custom...
+Loading emacs-lisp/map-ynp...
+Loading international/mule...
+Loading international/mule-conf...
+Loading env...
+Loading format...
+Loading bindings...
+Loading window...
+Loading files...
+Loading emacs-lisp/macroexp...
+Loading cus-face...
+Loading faces...
+Loading loaddefs...
+Loading theme-loaddefs.el (source)...
+Loading button...
+Loading emacs-lisp/cl-preloaded...
+Loading emacs-lisp/oclosure...
+Loading obarray...
+Loading abbrev...
+Loading help...
+Loading jka-cmpr-hook...
+Loading epa-hook...
+Loading international/mule-cmds...
+Loading case-table...
+Loading international/charprop.el (source)...
+Loading international/characters...
+Loading international/charscript...
+Loading international/emoji-zwj...
+Loading composite...
+Loading language/chinese...
+Loading language/cyrillic...
+Loading language/indian...
+Loading language/sinhala...
+Loading language/english...
+Loading language/ethiopic...
+Loading language/european...
+Loading language/czech...
+Loading language/slovak...
+Loading language/romanian...
+Loading language/greek...
+Loading language/hebrew...
+Loading international/cp51932...
+Loading international/eucjp-ms...
+Loading language/japanese...
+Loading language/korean...
+Loading language/lao...
+Loading language/tai-viet...
+Loading language/thai...
+Loading language/tibetan...
+Loading language/vietnamese...
+Loading language/misc-lang...
+Loading language/utf-8-lang...
+Loading language/georgian...
+Loading language/khmer...
+Loading language/burmese...
+Loading language/cham...
+Loading language/philippine...
+Loading language/indonesian...
+Loading indent...
+Loading emacs-lisp/cl-generic...
+Loading simple...
+Loading emacs-lisp/seq...
+Loading emacs-lisp/nadvice...
+Loading minibuffer...
+Loading frame...
+Loading startup...
+Loading term/tty-colors...
+Loading font-core...
+Loading emacs-lisp/syntax...
+Loading font-lock...
+Loading jit-lock...
+Loading mouse...
+Loading scroll-bar...
+Loading select...
+Loading emacs-lisp/timer...
+Loading emacs-lisp/easymenu...
+Loading isearch...
+Loading rfn-eshadow...
+Loading menu-bar...
+Loading tab-bar...
+Loading emacs-lisp/lisp...
+Loading textmodes/page...
+Loading register...
+Loading textmodes/paragraphs...
+Loading progmodes/prog-mode...
+Loading emacs-lisp/lisp-mode...
+Loading textmodes/text-mode...
+Loading textmodes/fill...
+Loading newcomment...
+Loading replace...
+Loading emacs-lisp/tabulated-list...
+Loading buff-menu...
+Loading fringe...
+Loading emacs-lisp/regexp-opt...
+Loading image...
+Loading international/fontset...
+Loading dnd...
+Loading tool-bar...
+Loading dynamic-setting...
+Loading ls-lisp...
+Loading touch-screen...
+Loading term/common-win...
+Loading term/android-win...
+Loading mwheel...
+Loading progmodes/elisp-mode...
+Loading emacs-lisp/float-sup...
+Loading vc/vc-hooks...
+Loading vc/ediff-hook...
+Loading uniquify...
+Loading electric...
+Loading paren...
+Loading emacs-lisp/shorthands...
+Loading emacs-lisp/eldoc...
+Loading emacs-lisp/cconv...
+Loading cus-start...
+Loading tooltip...
+Loading international/iso-transl...
+Loading emacs-lisp/rmc...
+Loading leim/leim-list.el (source)...
+Waiting for git...
+Waiting for git...
+Finding pointers to doc strings...
+Finding pointers to doc strings...done
+Dumping under the name emacs.pdmp
+Dumping fingerprint: 0067660bcc707ca8e53db0ad09985922a6c288cac42b842db1c297205d48b516
+Dump complete
+Byte counts: header=100 hot=9271972 discardable=154792 cold=4178560
+Reloc counts: hot=506634 discardable=5467
+cp -f emacs.pdmp bootstrap-emacs.pdmp 
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/src'
+make -C lisp all
+make -C lib-src maybe-blessmail
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[2]: Nothing to be done for 'maybe-blessmail'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C ../leim all EMACS="../src/emacs"
+make -C ../admin/grammars all EMACS="../../src/emacs"
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/grammars'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/grammars'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/leim'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/leim'
+  GEN      autoloads
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Nothing to be done for 'compile-targets'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/leim'
+  GEN      small-ja-dic-option
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/doc/misc'
+make[3]: 'org.texi' is up to date.
+make[3]: 'modus-themes.texi' is up to date.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/doc/misc'
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/leim'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+  INFO     Scraping 1584 files for loaddefs...
+make[3]: Nothing to be done for 'compile-targets'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+  INFO     Scraping 1584 files for loaddefs...done
+  INFO     Scraping 25 files for loaddefs...
+  INFO     Scraping 25 files for loaddefs...done
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Nothing to be done for 'compile-targets'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make -C doc/misc DOCLANG=default info
+make -C src BIN_DESTDIR='/usr/local/bin/' ELN_DESTDIR='/usr/local/lib/emacs/32.0.50/'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/doc/misc'
+make[2]: Nothing to be done for 'info'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/doc/misc'
+make -C java all
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/java'
+make -C ../cross lib/libgnu.a
+make -C ../exec exec1 loader
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross'
+  GEN      config.status
+  GEN      lib/config.h
+  GEN      lib/gnulib.mk
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/exec'
+make[3]: 'exec1' is up to date.
+make[3]: 'loader' is up to date.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/exec'
+  GEN      lib/Makefile
+make -C ../lib libgnu.a
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/src'
+make -C ../admin/charsets all
+make -C ../admin/unidata charscript.el
+make -C ../admin/unidata emoji-zwj.el
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib'
+make -C ../admin/charsets cp51932.el
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make -C ../lib-src make-fingerprint
+make -C ../admin/charsets eucjp-ms.el
+make -C ../lib-src make-docfile
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: 'make-fingerprint' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: 'make-docfile' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C lib libgnu.a
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'cp51932.el'.
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'eucjp-ms.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+  GEN      alloca.h
+make[3]: Nothing to be done for 'emoji-zwj.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Nothing to be done for 'charscript.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+  GEN      assert.h
+  GEN      dirent.h
+  GEN      execinfo.h
+  GEN      fcntl.h
+  GEN      getopt.h
+  GEN      getopt-cdefs.h
+  GEN      ieee754.h
+  GEN      inttypes.h
+  GEN      gmp.h
+  GEN      limits.h
+  GEN      signal.h
+  GEN      stdbit.h
+  GEN      stdcountof.h
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make -C ../admin/unidata all EMACS="../../src/bootstrap-emacs"
+  GEN      stddef.h
+  GEN      stdint.h
+  GEN      stdio.h
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+  GEN      stdlib.h
+  GEN      string.h
+  GEN      sys/random.h
+  GEN      sys/select.h
+  GEN      sys/stat.h
+  GEN      sys/time.h
+  GEN      sys/types.h
+  GEN      time.h
+  GEN      unistd.h
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/src'
+  CC       fingerprint.o
+  CC       malloc.o
+  CC       mktime.o
+  CC       acl-errno-valid.o
+  CC       acl-internal.o
+  CC       get-permissions.o
+  CC       set-permissions.o
+  CC       allocator.o
+  CC       openat-proc.o
+  CC       binary-io.o
+  CC       boot-time.o
+  CC       c-ctype.o
+  CC       c-strcasecmp.o
+  CC       c-strncasecmp.o
+  CC       canonicalize-lgpl.o
+  CC       careadlinkat.o
+  CC       close-stream.o
+  CC       copy-file-range.o
+  CC       md5-stream.o
+  CC       md5.o
+  CC       sha1.o
+  CC       sha256.o
+  CC       sha3.o
+  CC       sha512.o
+  CC       dtoastr.o
+  CC       dtotimespec.o
+  CC       dup2.o
+  CC       execinfo.o
+  CC       fchmodat.o
+  CC       fcntl.o
+  CC       fdopendir.o
+  CC       file-has-acl.o
+  CC       filemode.o
+  CC       filevercmp.o
+  CC       free.o
+  CC       fstatat.o
+  CC       fsusage.o
+  CC       getdelim.o
+  CC       getdtablesize.o
+  CC       getline.o
+  CC       getopt.o
+  CC       getopt1.o
+  CC       gettime.o
+  CC       malloc/dynarray_at_failure.o
+  CC       malloc/dynarray_emplace_enlarge.o
+  CC       malloc/dynarray_finalize.o
+  CC       malloc/dynarray_resize.o
+  CC       malloc/dynarray_resize_clear.o
+  CC       malloc/scratch_buffer_grow.o
+  CC       malloc/scratch_buffer_grow_preserve.o
+  CC       malloc/scratch_buffer_set_array_size.o
+  CC       issymlinkat.o
+  CC       mini-gmp-gnulib.o
+  CC       memeq.o
+  CC       memset_explicit.o
+  CC       nanosleep.o
+  CC       nproc.o
+  CC       nstrftime.o
+  CC       pipe2.o
+  CC       qcopy-acl.o
+  CC       rawmemchr.o
+  CC       realloc.o
+  CC       regex.o
+  CC       sig2str.o
+  CC       sigdescr_np.o
+  CC       stat-time.o
+  CC       stdc_bit_width.o
+  CC       stdc_count_ones.o
+  CC       stdc_leading_zeros.o
+  CC       stdc_trailing_zeros.o
+  CC       stdlib.o
+  CC       streq.o
+  CC       strnul.o
+  CC       tempname.o
+  CC       time_rz.o
+  CC       timegm.o
+  CC       timespec.o
+  CC       timespec-add.o
+  CC       timespec-sub.o
+  CC       u64.o
+  CC       unistd.o
+  CC       openat-die.o
+  CC       save-cwd.o
+  AR       libgnu.a
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross'
+make -C ../cross  src/android-emacs  src/libemacs.so
+make -C ../cross  lib-src/hexl  lib-src/ebrowse  lib-src/emacsclient  lib-src/etags  lib-src/movemail
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross'
+  GEN      src/Makefile
+  GEN      src/config.h
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross'
+make -C ../lib libgnu.a
+  GEN      lib-src/config.h
+  GEN      lib-src/Makefile
+make -C ../lib libgnu.a
+  GEN      src/emacs-module.h
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib'
+make -C ../lib-src make-fingerprint
+make -C ../lib-src make-docfile
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: 'make-docfile' is up to date.
+make[4]: 'make-fingerprint' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C ../lib-src make-fingerprint
+make -C lib libgnu.a
+make -C ../lib-src make-docfile
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: 'make-fingerprint' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: 'make-docfile' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C lib libgnu.a
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make -C lib-src etags emacsclient ebrowse hexl movemail
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make -C src android-emacs
+make -C src libemacs.so
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/lib-src'
+  CCLD     etags
+  CCLD     emacsclient
+  CCLD     ebrowse
+  CCLD     hexl
+  CC       pop.o
+  CCLD     movemail
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/src'
+make[4]: 'android-emacs' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/src'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/src'
+make -C ../../lib-src/ make-docfile
+make[5]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[5]: 'make-docfile' is up to date.
+make[5]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C ../../lib-src/ make-fingerprint
+make -C ../../cross/ndk-build libsqlite_static_minimal.a 
+../../lib-src/make-docfile -d /home/calebc42/workspace/emacs/emacs/src -g dispnew.o frame.o scroll.o xdisp.o menu.o  window.o charset.o coding.o category.o ccl.o character.o chartab.o bidi.o  term.o terminal.o xfaces.o    emacs.o keyboard.o macros.o keymap.o sysdep.o bignum.o buffer.o filelock.o insdel.o marker.o minibuf.o fileio.o dired.o cmds.o casetab.o casefiddle.o indent.o search.o regex-emacs.o undo.o alloc.o pdumper.o data.o doc.o editfns.o callint.o eval.o floatfns.o fns.o sort.o font.o print.o lread.o emacs-module.o syntax.o bytecode.o comp.o dynlib.o process.o gnutls.o callproc.o region-cache.o sound.o timefns.o atimer.o doprnt.o intervals.o textprop.o composite.o xml.o lcms.o inotify.o  profiler.o decompress.o thread.o systhread.o sqlite.o  treesit.o itree.o json.o       fontset.o fringe.o image.o textconv.o    androidterm.o androidfns.o androidfont.o androidmenu.o android.o sfnt.o sfntfont.o sfntfont-android.o androidselect.o androidvfs.o  > globals.tmp
+make[5]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[5]: 'make-fingerprint' is up to date.
+make[5]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[5]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/ndk-build'
+/home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android30-clang -c /home/calebc42/workspace/android-deps/sqlite/sqlite-autoconf-3440400/sqlite3.c -o libsqlite_static_minimal-static-sqlite-autoconf-3440400_sqlite3.o  -I/home/calebc42/workspace/android-deps/sqlite/sqlite-autoconf-3440400 -fPIC -iquote /home/calebc42/workspace/android-deps/sqlite  -DNDEBUG=1 -DHAVE_USLEEP=1 -DSQLITE_HAVE_ISNAN -DSQLITE_DEFAULT_JOURNAL_SIZE_LIMIT=1048576 -DSQLITE_THREADSAFE=2 -DSQLITE_TEMP_STORE=3 -DSQLITE_POWERSAFE_OVERWRITE=1 -DSQLITE_DEFAULT_FILE_FORMAT=4 -DSQLITE_DEFAULT_AUTOVACUUM=1 -DSQLITE_ENABLE_DBSTAT_VTAB -DSQLITE_ENABLE_MEMORY_MANAGEMENT=1 -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_BACKWARDS -DSQLITE_ENABLE_FTS4 -DSQLITE_OMIT_BUILTIN_TEST -DSQLITE_OMIT_COMPILEOPTION_DIAGS -DSQLITE_OMIT_LOAD_EXTENSION -DSQLITE_DEFAULT_FILE_PERMISSIONS=0600 -DSQLITE_SECURE_DELETE -DSQLITE_ENABLE_BATCH_ATOMIC_WRITE -DBIONIC_IOCTL_NO_SIGNEDNESS_OVERLOAD -DSQLITE_DEFAULT_LEGACY_ALTER_TABLE -DSQLITE_ALLOW_ROWID_IN_VIEW -DSQLITE_ENABLE_BYTECODE_VTAB -DUSE_PREAD64 -Dfdatasync=fdatasync -DHAVE_MALLOC_H=1 -Wno-unused-parameter  
+  CC       dispnew.o
+  CC       frame.o
+  CC       scroll.o
+  CC       xdisp.o
+  CC       menu.o
+  CC       window.o
+  CC       charset.o
+  CC       coding.o
+  CC       category.o
+  CC       ccl.o
+  CC       character.o
+  CC       chartab.o
+  CC       bidi.o
+  CC       term.o
+  CC       terminal.o
+  CC       xfaces.o
+  CC       emacs.o
+  CC       keyboard.o
+  CC       macros.o
+  CC       keymap.o
+  CC       sysdep.o
+  CC       bignum.o
+  CC       buffer.o
+  CC       filelock.o
+  CC       insdel.o
+  CC       marker.o
+  CC       minibuf.o
+  CC       fileio.o
+  CC       dired.o
+  CC       cmds.o
+  CC       casetab.o
+  CC       casefiddle.o
+  CC       indent.o
+  CC       search.o
+  CC       regex-emacs.o
+  CC       undo.o
+  CC       alloc.o
+  CC       pdumper.o
+  CC       data.o
+  CC       doc.o
+  CC       editfns.o
+  CC       callint.o
+  CC       eval.o
+  CC       floatfns.o
+  CC       fns.o
+  CC       sort.o
+  CC       font.o
+  CC       print.o
+  CC       lread.o
+  CC       emacs-module.o
+  CC       syntax.o
+  CC       bytecode.o
+  CC       comp.o
+  CC       dynlib.o
+  CC       process.o
+  CC       gnutls.o
+  CC       callproc.o
+  CC       region-cache.o
+  CC       sound.o
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/lib-src'
+make[3]: Nothing to be done for 'lib-src/ebrowse'.
+make[3]: Nothing to be done for 'lib-src/emacsclient'.
+make[3]: Nothing to be done for 'lib-src/etags'.
+make[3]: Nothing to be done for 'lib-src/movemail'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross'
+  CC       timefns.o
+  CC       atimer.o
+  CC       doprnt.o
+  CC       intervals.o
+  CC       textprop.o
+  CC       composite.o
+  CC       xml.o
+  CC       lcms.o
+  CC       inotify.o
+  CC       profiler.o
+  CC       decompress.o
+  CC       thread.o
+  CC       systhread.o
+  CC       sqlite.o
+  CC       treesit.o
+  CC       itree.o
+  CC       json.o
+  CC       fontset.o
+  CC       fringe.o
+  CC       image.o
+  CC       textconv.o
+  CC       androidterm.o
+  CC       androidfns.o
+  CC       androidfont.o
+  CC       androidmenu.o
+  CC       android.o
+  CC       sfnt.o
+  CC       sfntfont.o
+  CC       sfntfont-android.o
+  CC       androidselect.o
+  CC       androidvfs.o
+  CC       tparam.o
+/home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar r libsqlite_static_minimal.a libsqlite_static_minimal-static-sqlite-autoconf-3440400_sqlite3.o
+/home/calebc42/.local/share/android-sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar: warning: creating libsqlite_static_minimal.a
+make[5]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/ndk-build'
+  GEN      ../etc/DOC
+  CCLD     libemacs.so
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/src'
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross'
+  GEN      install_temp
+  GEN      org/gnu/emacs/EmacsConfig.java
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/java'
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/java'
+  AAPT     emacs.apk-in
+ 'lib/arm64-v8a/libhexl.so'...
+ 'lib/arm64-v8a/libetags.so'...
+ 'lib/arm64-v8a/libemacsclient.so'...
+ 'lib/arm64-v8a/libemacs.so'...
+ 'lib/arm64-v8a/libebrowse.so'...
+ 'lib/arm64-v8a/librcs2log.so'...
+ 'lib/arm64-v8a/libloader.so'...
+ 'lib/arm64-v8a/libandroid-emacs.so'...
+ 'lib/arm64-v8a/libmovemail.so'...
+ 'lib/arm64-v8a/libexec1.so'...
+ 'classes.dex'...
+  GEN      emacs-32.0.50-30-arm64-v8a.apk
+jar signed.
+
+Warning: 
+The signer's certificate is self-signed.
+POSIX file permission and/or symlink attributes detected. These attributes are ignored when signing and are not protected by the signature.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/java'
+make[1]: Leaving directory '/home/calebc42/workspace/emacs/emacs'
+make sanity-check make-target=all
+make[1]: Entering directory '/home/calebc42/workspace/emacs/emacs'
+make[1]: Leaving directory '/home/calebc42/workspace/emacs/emacs'
+make exit=0

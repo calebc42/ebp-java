@@ -1,0 +1,236 @@
+make actual-all || make advice-on-failure make-target=all exit-status=$?
+make[1]: Entering directory '/home/calebc42/workspace/emacs/emacs'
+make -C lib all
+make -C doc/lispref DOCLANG=default info
+make -C doc/lispintro DOCLANG=default info
+make -C doc/emacs DOCLANG=default info
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/doc/emacs'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/doc/lispref'
+make[2]: Nothing to be done for 'info'.
+make[2]: Nothing to be done for 'info'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/doc/emacs'
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/doc/lispref'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/doc/lispintro'
+make[2]: Nothing to be done for 'info'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/doc/lispintro'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib'
+make -C lib-src all
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C src BIN_DESTDIR='/usr/local/bin/' \
+	 ELN_DESTDIR='/usr/local/lib/emacs/32.0.50/' all
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/src'
+make -C ../admin/charsets all
+make -C ../admin/unidata charscript.el
+make -C ../admin/unidata emoji-zwj.el
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make -C ../admin/charsets cp51932.el
+make -C ../admin/charsets eucjp-ms.el
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'cp51932.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'eucjp-ms.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'charscript.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Nothing to be done for 'emoji-zwj.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make -C ../admin/unidata all EMACS="../../src/bootstrap-emacs"
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/src'
+make -C lisp all
+make -C lib-src maybe-blessmail
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[2]: Nothing to be done for 'maybe-blessmail'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C ../leim all EMACS="../src/emacs"
+make -C ../admin/grammars all EMACS="../../src/emacs"
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/grammars'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/grammars'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/leim'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/leim'
+  GEN      autoloads
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Nothing to be done for 'compile-targets'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/leim'
+make[3]: Nothing to be done for 'generate-ja-dic'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/leim'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/doc/misc'
+make[3]: 'org.texi' is up to date.
+make[3]: 'modus-themes.texi' is up to date.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/doc/misc'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Nothing to be done for 'compile-targets'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+  INFO     Scraping 1584 files for loaddefs...
+  INFO     Scraping 1584 files for loaddefs...done
+  INFO     Scraping 25 files for loaddefs...
+  INFO     Scraping 25 files for loaddefs...done
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[3]: Nothing to be done for 'compile-targets'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lisp'
+make -C doc/misc DOCLANG=default info
+make -C src BIN_DESTDIR='/usr/local/bin/' ELN_DESTDIR='/usr/local/lib/emacs/32.0.50/'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/doc/misc'
+make[2]: Nothing to be done for 'info'.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/doc/misc'
+make -C java all
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/java'
+make -C ../cross lib/libgnu.a
+make -C ../exec exec1 loader
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross'
+make -C ../lib libgnu.a
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/exec'
+make[3]: 'exec1' is up to date.
+make[3]: 'loader' is up to date.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/exec'
+make[2]: Entering directory '/home/calebc42/workspace/emacs/emacs/src'
+make -C ../admin/charsets all
+make -C ../admin/unidata charscript.el
+make -C ../admin/unidata emoji-zwj.el
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make -C ../admin/charsets cp51932.el
+make -C ../admin/charsets eucjp-ms.el
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'cp51932.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'eucjp-ms.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib'
+make -C ../lib-src make-fingerprint
+make -C ../lib-src make-docfile
+make[3]: Nothing to be done for 'charscript.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: 'make-fingerprint' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: 'make-docfile' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C lib libgnu.a
+make[3]: Nothing to be done for 'emoji-zwj.el'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/charsets'
+make -C ../admin/unidata all EMACS="../../src/bootstrap-emacs"
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross'
+make -C ../cross  src/android-emacs  src/libemacs.so
+make -C ../cross  lib-src/hexl  lib-src/ebrowse  lib-src/emacsclient  lib-src/etags  lib-src/movemail
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross'
+make -C ../lib libgnu.a
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross'
+make -C ../lib libgnu.a
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/admin/unidata'
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/src'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib'
+make -C ../lib-src make-fingerprint
+make -C ../lib-src make-fingerprint
+make -C ../lib-src make-docfile
+make -C ../lib-src make-docfile
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: 'make-fingerprint' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: 'make-docfile' is up to date.
+make[4]: 'make-fingerprint' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C lib libgnu.a
+make[4]: 'make-docfile' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C lib libgnu.a
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make[4]: 'libgnu.a' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/lib'
+make -C lib-src etags emacsclient ebrowse hexl movemail
+make -C src android-emacs
+make -C src libemacs.so
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/lib-src'
+make[4]: 'etags' is up to date.
+make[4]: 'emacsclient' is up to date.
+make[4]: 'ebrowse' is up to date.
+make[4]: 'hexl' is up to date.
+make[4]: 'movemail' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/lib-src'
+make[3]: Nothing to be done for 'lib-src/ebrowse'.
+make[3]: Nothing to be done for 'lib-src/emacsclient'.
+make[3]: Nothing to be done for 'lib-src/etags'.
+make[3]: Nothing to be done for 'lib-src/movemail'.
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/src'
+make[4]: 'android-emacs' is up to date.
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/src'
+make[4]: Entering directory '/home/calebc42/workspace/emacs/emacs/cross/src'
+make -C ../../lib-src/ make-docfile
+make[5]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[5]: 'make-docfile' is up to date.
+make[5]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make -C ../../lib-src/ make-fingerprint
+make[5]: Entering directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[5]: 'make-fingerprint' is up to date.
+make[5]: Leaving directory '/home/calebc42/workspace/emacs/emacs/lib-src'
+make[4]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross/src'
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/cross'
+  GEN      install_temp
+  GEN      org/gnu/emacs/EmacsConfig.java
+make[3]: Entering directory '/home/calebc42/workspace/emacs/emacs/java'
+make[3]: Leaving directory '/home/calebc42/workspace/emacs/emacs/java'
+  AAPT     emacs.apk-in
+ 'lib/arm64-v8a/libhexl.so'...
+ 'lib/arm64-v8a/libetags.so'...
+ 'lib/arm64-v8a/libemacsclient.so'...
+ 'lib/arm64-v8a/libemacs.so'...
+ 'lib/arm64-v8a/libebrowse.so'...
+ 'lib/arm64-v8a/librcs2log.so'...
+ 'lib/arm64-v8a/libloader.so'...
+ 'lib/arm64-v8a/libandroid-emacs.so'...
+ 'lib/arm64-v8a/libmovemail.so'...
+ 'lib/arm64-v8a/libexec1.so'...
+ 'classes.dex'...
+  GEN      emacs-32.0.50-30-arm64-v8a.apk
+jar signed.
+
+Warning: 
+The signer's certificate is self-signed.
+POSIX file permission and/or symlink attributes detected. These attributes are ignored when signing and are not protected by the signature.
+make[2]: Leaving directory '/home/calebc42/workspace/emacs/emacs/java'
+make[1]: Leaving directory '/home/calebc42/workspace/emacs/emacs'
+make sanity-check make-target=all
+make[1]: Entering directory '/home/calebc42/workspace/emacs/emacs'
+make[1]: Leaving directory '/home/calebc42/workspace/emacs/emacs'
+exit=0

@@ -1,0 +1,497 @@
+diff --git a/java/Makefile.in b/java/Makefile.in
+index bd39f32a005..ca3f27b122b 100644
+--- a/java/Makefile.in
++++ b/java/Makefile.in
+@@ -88,6 +88,9 @@ SIGN_EMACS_V2 =
+ 	--ks-pass pass:emacs1
+ 
+ JAVA_FILES := $(wildcard $(srcdir)/org/gnu/emacs/*.java)
++# The jetpacs-native fork's EBP Companion core, vendored from ebp-java by
++# its tools/sync-emacs.sh (EXPERIMENTAL; NOT FOR UPSTREAM SUBMISSION).
++JAVA_FILES += $(wildcard $(srcdir)/com/calebc42/ebp/companion/*/*.java)
+ RESOURCE_FILES := $(foreach file,$(wildcard $(srcdir)/res/*),	\
+ 		    $(wildcard $(file)/*))
+ 
+diff --git a/java/proguard.conf b/java/proguard.conf
+index 78a55e24bde..a7650b97e75 100644
+--- a/java/proguard.conf
++++ b/java/proguard.conf
+@@ -51,3 +51,8 @@
+ # truncate-lines: t
+ # indent-tabs-mode: nil
+ # End:
++
++# jetpacs-native fork: the EBP Companion host is reached from C through
++# JNI (src/androidfns.c), so the shrinker must keep it; everything it
++# references is retained by reachability.  EXPERIMENTAL; NOT FOR UPSTREAM.
++-keep,allowoptimization class           org.gnu.emacs.EmacsEbpHost             { public <methods>; }
+diff --git a/src/androidfns.c b/src/androidfns.c
+index 6d9af385ce7..eb62e07e66f 100644
+--- a/src/androidfns.c
++++ b/src/androidfns.c
+@@ -27,6 +27,7 @@ Copyright (C) 2023-2026 Free Software Foundation, Inc.
+ #include "blockinput.h"
+ #include "keyboard.h"
+ #include "buffer.h"
++#include "coding.h"
+ #include "androidgui.h"
+ #include "pdumper.h"
+ 
+@@ -3354,6 +3355,440 @@ DEFUN ("android-recreate-activity", Fandroid_recreate_activity,
+   return Qnil;
+ }
+ 
++
++
++/* EBP bridge for the jetpacs-native fork.
++
++   EXPERIMENTAL; NOT FOR UPSTREAM SUBMISSION.  This block is the
++   fork's Lisp face of org.gnu.emacs.EmacsEbpHost, the Java EBP
++   Companion endpoint hosted inside the Emacs process.  It lets Lisp
++   start and stop the loopback listener, read the pairing credentials
++   the host provisioned, fetch the host's published presentation
++   state as one immutable bundle, and forward button activations.
++
++   Every value crossing this boundary is either ASCII by contract or
++   a UTF-8 byte array copied out under Lisp control; JNI's modified
++   UTF-8 is never taken for UTF-8, and Java never retains a reference
++   to a Lisp object or a canvas pixel buffer.  */
++
++#define EBP_HOST_CLASS "org/gnu/emacs/EmacsEbpHost"
++
++struct android_ebp_host
++{
++  /* Global reference to the EmacsEbpHost class, or NULL should the
++     class be absent from this build.  */
++  jclass class;
++
++  /* IDs of its static methods.  */
++  jmethodID start, stop, credentials, status, snapshot, activate;
++  jmethodID arm_failpoint;
++};
++
++static struct android_ebp_host ebp_host;
++
++/* Whether the lookup in android_ebp_init has been attempted.  */
++static bool ebp_host_initialized;
++
++/* Resolve the EmacsEbpHost class and its static methods, once.
++   Value is false, with any pending exception cleared, if the class
++   or one of its methods is absent from this build.  */
++
++static bool
++android_ebp_init (void)
++{
++  jclass class;
++  jmethodID method;
++
++  if (ebp_host_initialized)
++    return ebp_host.class != NULL;
++
++  ebp_host_initialized = true;
++  class = (*android_java_env)->FindClass (android_java_env,
++					  EBP_HOST_CLASS);
++
++  if (!class)
++    {
++      (*android_java_env)->ExceptionClear (android_java_env);
++      return false;
++    }
++
++  ebp_host.class
++    = (*android_java_env)->NewGlobalRef (android_java_env, class);
++  ANDROID_DELETE_LOCAL_REF (class);
++
++  if (!ebp_host.class)
++    {
++      (*android_java_env)->ExceptionClear (android_java_env);
++      return false;
++    }
++
++#define FIND_METHOD(c_name, name, signature)				\
++  method = (*android_java_env)->GetStaticMethodID (android_java_env,	\
++						   ebp_host.class,	\
++						   name, signature);	\
++  if (!method)								\
++    goto missing;							\
++  ebp_host.c_name = method
++
++  FIND_METHOD (start, "start", "(I)I");
++  FIND_METHOD (stop, "stop", "()V");
++  FIND_METHOD (credentials, "credentials", "()Ljava/lang/String;");
++  FIND_METHOD (status, "status", "()[B");
++  FIND_METHOD (snapshot, "snapshot", "(Ljava/lang/String;)[B");
++  FIND_METHOD (activate, "activate",
++	       "(Ljava/lang/String;JLjava/lang/String;)I");
++  FIND_METHOD (arm_failpoint, "armFailpoint", "(Ljava/lang/String;)Z");
++#undef FIND_METHOD
++
++  return true;
++
++ missing:
++  (*android_java_env)->ExceptionClear (android_java_env);
++  (*android_java_env)->DeleteGlobalRef (android_java_env,
++					ebp_host.class);
++  ebp_host.class = NULL;
++  return false;
++}
++
++/* Signal an error unless the EmacsEbpHost class is available.  */
++
++static void
++android_ebp_require (void)
++{
++  if (!android_ebp_init ())
++    error ("EBP host unavailable in this build of Emacs");
++}
++
++/* If a Java exception is pending after the EmacsEbpHost call WHAT,
++   describe and clear it, delete the local references OBJECT and
++   OBJECT1 (either of which may be NULL), and signal a Lisp error.
++   Unlike android_exception_check, an exception here is a host bug,
++   not memory exhaustion.  */
++
++static void
++android_ebp_check (const char *what, jobject object, jobject object1)
++{
++  if (!(*android_java_env)->ExceptionCheck (android_java_env))
++    return;
++
++  (*android_java_env)->ExceptionDescribe (android_java_env);
++  (*android_java_env)->ExceptionClear (android_java_env);
++
++  if (object)
++    ANDROID_DELETE_LOCAL_REF (object);
++
++  if (object1)
++    ANDROID_DELETE_LOCAL_REF (object1);
++
++  error ("EBP host raised a Java exception in %s", what);
++}
++
++/* Copy LENGTH bytes starting at OFFSET within the Java byte array
++   ARRAY into a fresh unibyte string and return it.  */
++
++static Lisp_Object
++android_ebp_copy_bytes (jbyteArray array, jsize offset, jsize length)
++{
++  Lisp_Object string;
++
++  /* No Lisp allocation intervenes between the allocation of STRING
++     and the copy, so its data pointer remains valid.  */
++  string = make_uninit_string (length);
++  (*android_java_env)->GetByteArrayRegion (android_java_env, array,
++					   offset, length,
++					   (jbyte *) SDATA (string));
++  android_exception_check_1 (array);
++  return string;
++}
++
++DEFUN ("android-ebp-start", Fandroid_ebp_start, Sandroid_ebp_start, 0, 1, 0,
++       doc: /* Start the EBP Companion endpoint on the loopback interface.
++PORT is the TCP port to bind on 127.0.0.1, or nil or 0 to bind an
++ephemeral port.  Value is the bound port, or nil if the endpoint could
++not be started.  If the endpoint is already running, value is the port
++it is running on.
++
++This is the jetpacs-native fork's experimental EBP bridge.  */)
++  (Lisp_Object port)
++{
++  jint result;
++  int port_number;
++
++  if (!android_init_gui)
++    return Qnil;
++
++  if (NILP (port))
++    port_number = 0;
++  else
++    {
++      CHECK_FIXNAT (port);
++
++      if (XFIXNAT (port) > 65535)
++	args_out_of_range (port, make_fixnum (65535));
++
++      port_number = XFIXNAT (port);
++    }
++
++  android_ebp_require ();
++  result = (*android_java_env)->CallStaticIntMethod (android_java_env,
++						     ebp_host.class,
++						     ebp_host.start,
++						     (jint) port_number);
++  android_ebp_check ("start", NULL, NULL);
++  return result > 0 ? make_fixnum (result) : Qnil;
++}
++
++DEFUN ("android-ebp-stop", Fandroid_ebp_stop, Sandroid_ebp_stop, 0, 0, 0,
++       doc: /* Stop the EBP Companion endpoint, if it is running.
++Committed durable state survives; only the listener, its sessions, and
++the published presentation cache are released.
++
++This is the jetpacs-native fork's experimental EBP bridge.  */)
++  (void)
++{
++  if (!android_init_gui)
++    return Qnil;
++
++  android_ebp_require ();
++  (*android_java_env)->CallStaticVoidMethod (android_java_env,
++					     ebp_host.class,
++					     ebp_host.stop);
++  android_ebp_check ("stop", NULL, NULL);
++  return Qnil;
++}
++
++DEFUN ("android-ebp-credentials", Fandroid_ebp_credentials,
++       Sandroid_ebp_credentials, 0, 0, 0,
++       doc: /* Return the pairing credentials of the running EBP endpoint.
++Value is a string of the form "PAIRING-ID:TOKEN", where PAIRING-ID is
++the 32-character hexadecimal pairing identity and TOKEN is the
++22-character base64url pairing token the endpoint provisioned in
++application-private storage, or nil if the endpoint is not running.
++
++TOKEN is a secret; do not log or display it.
++
++This is the jetpacs-native fork's experimental EBP bridge.  */)
++  (void)
++{
++  jstring string;
++  const char *data;
++  Lisp_Object result;
++
++  if (!android_init_gui)
++    return Qnil;
++
++  android_ebp_require ();
++  string
++    = (*android_java_env)->CallStaticObjectMethod (android_java_env,
++						   ebp_host.class,
++						   ebp_host.credentials);
++  android_ebp_check ("credentials", NULL, NULL);
++
++  if (!string)
++    return Qnil;
++
++  /* The value is ASCII by contract, so JNI's modified UTF-8 is
++     identical to it.  */
++  data = (*android_java_env)->GetStringUTFChars (android_java_env,
++						 string, NULL);
++  android_exception_check_nonnull ((void *) data, string);
++  result = build_unibyte_string (data);
++  (*android_java_env)->ReleaseStringUTFChars (android_java_env, string,
++					      data);
++  ANDROID_DELETE_LOCAL_REF (string);
++  return result;
++}
++
++DEFUN ("android-ebp-status", Fandroid_ebp_status, Sandroid_ebp_status,
++       0, 0, 0,
++       doc: /* Return the EBP endpoint's diagnostics as a JSON string.
++The object describes the listener, the session state, the durable
++queue, and the presentation generation; it never contains a pairing
++secret or a message payload.  Value is nil if the endpoint is not
++running.
++
++This is the jetpacs-native fork's experimental EBP bridge.  */)
++  (void)
++{
++  jbyteArray array;
++  jsize length;
++  Lisp_Object bytes;
++
++  if (!android_init_gui)
++    return Qnil;
++
++  android_ebp_require ();
++  array
++    = (*android_java_env)->CallStaticObjectMethod (android_java_env,
++						   ebp_host.class,
++						   ebp_host.status);
++  android_ebp_check ("status", NULL, NULL);
++
++  if (!array)
++    return Qnil;
++
++  length = (*android_java_env)->GetArrayLength (android_java_env,
++						array);
++  bytes = android_ebp_copy_bytes (array, 0, length);
++  ANDROID_DELETE_LOCAL_REF (array);
++
++  /* The host encodes the document as UTF-8; decode it as such rather
++     than through any JNI string conversion.  */
++  return code_convert_string_norecord (bytes, Qutf_8_unix, false);
++}
++
++DEFUN ("android-ebp-snapshot", Fandroid_ebp_snapshot, Sandroid_ebp_snapshot,
++       1, 1, 0,
++       doc: /* Return the presentation the EBP endpoint published for SURFACE.
++Value is nil if the endpoint is not running or has not accepted a
++snapshot of SURFACE, and otherwise a cons (JSON . PIXELS): JSON is a
++multibyte string holding the presentation document of one committed
++generation, and PIXELS a unibyte string holding, back to back, the
++ARGB32 rasters of that document's canvas items in the byte order the
++canvas image type's `:data' expects.  Each canvas item names its byte
++range within PIXELS.
++
++Both halves belong to one immutable generation: the host builds the
++bundle from one committed snapshot and copies it out in one call, so
++text, actions, and rasters can never mix revisions.
++
++This is the jetpacs-native fork's experimental EBP bridge.  */)
++  (Lisp_Object surface)
++{
++  jstring jsurface;
++  jbyteArray array;
++  jsize length;
++  jbyte header[4];
++  uint32_t json_length;
++  Lisp_Object json, pixels;
++
++  CHECK_STRING (surface);
++
++  if (!android_init_gui)
++    return Qnil;
++
++  android_ebp_require ();
++  jsurface = android_build_string (surface, NULL);
++  array
++    = (*android_java_env)->CallStaticObjectMethod (android_java_env,
++						   ebp_host.class,
++						   ebp_host.snapshot,
++						   jsurface);
++  android_ebp_check ("snapshot", jsurface, NULL);
++  ANDROID_DELETE_LOCAL_REF (jsurface);
++
++  if (!array)
++    return Qnil;
++
++  length = (*android_java_env)->GetArrayLength (android_java_env,
++						array);
++
++  /* The bundle starts with a big-endian 32-bit length of the JSON
++     section.  Refuse an inconsistent header rather than trust it.  */
++
++  if (length < 4)
++    {
++      ANDROID_DELETE_LOCAL_REF (array);
++      return Qnil;
++    }
++
++  (*android_java_env)->GetByteArrayRegion (android_java_env, array,
++					   0, 4, header);
++  android_exception_check_1 (array);
++  json_length = (((uint32_t) (unsigned char) header[0] << 24)
++		 | ((uint32_t) (unsigned char) header[1] << 16)
++		 | ((uint32_t) (unsigned char) header[2] << 8)
++		 | (uint32_t) (unsigned char) header[3]);
++
++  if (json_length > (uint32_t) (length - 4))
++    {
++      ANDROID_DELETE_LOCAL_REF (array);
++      return Qnil;
++    }
++
++  json = android_ebp_copy_bytes (array, 4, (jsize) json_length);
++  pixels = android_ebp_copy_bytes (array, 4 + (jsize) json_length,
++				   length - 4 - (jsize) json_length);
++  ANDROID_DELETE_LOCAL_REF (array);
++
++  json = code_convert_string_norecord (json, Qutf_8_unix, false);
++  return Fcons (json, pixels);
++}
++
++DEFUN ("android-ebp-activate", Fandroid_ebp_activate, Sandroid_ebp_activate,
++       3, 3, 0,
++       doc: /* Ask the EBP endpoint to activate a button on SURFACE.
++REVISION is the accepted revision of SURFACE that was displayed when
++the user activated the button, and PATH the button's activation
++identity from the presentation document.  The endpoint revalidates the
++descriptor and its enabled state against the accepted snapshot before
++admitting the occurrence; the outcome reaches Lisp later as an
++invalidation event, never as the value of this function.
++
++Value is 0 if the activation was accepted for admission, 1 if the
++activation queue is saturated, 2 if the endpoint is not running, and 3
++if the arguments were refused.  Value is nil without a GUI.
++
++This is the jetpacs-native fork's experimental EBP bridge.  */)
++  (Lisp_Object surface, Lisp_Object revision, Lisp_Object path)
++{
++  jstring jsurface, jpath;
++  jint result;
++
++  CHECK_STRING (surface);
++  CHECK_FIXNAT (revision);
++  CHECK_STRING (path);
++
++  if (!android_init_gui)
++    return Qnil;
++
++  android_ebp_require ();
++  jsurface = android_build_string (surface, NULL);
++  jpath = android_build_string (path, jsurface, NULL);
++  result
++    = (*android_java_env)->CallStaticIntMethod (android_java_env,
++						ebp_host.class,
++						ebp_host.activate,
++						jsurface,
++						(jlong) XFIXNAT (revision),
++						jpath);
++  android_ebp_check ("activate", jsurface, jpath);
++  ANDROID_DELETE_LOCAL_REF (jpath);
++  ANDROID_DELETE_LOCAL_REF (jsurface);
++  return make_fixnum (result);
++}
++
++DEFUN ("android-ebp-arm-failpoint", Fandroid_ebp_arm_failpoint,
++       Sandroid_ebp_arm_failpoint, 1, 1, 0,
++       doc: /* Arm the EBP endpoint's test-only failpoint NAME.
++An armed failpoint terminates the process when the endpoint reaches the
++named commit or response boundary, so recovery tests can name exactly
++which boundary they exercised.  Value is t if NAME was armed, and nil if
++NAME is unknown or this build of Emacs is not debuggable.
++
++This is the jetpacs-native fork's experimental EBP bridge.  */)
++  (Lisp_Object name)
++{
++  jstring jname;
++  jboolean result;
++
++  CHECK_STRING (name);
++
++  if (!android_init_gui)
++    return Qnil;
++
++  android_ebp_require ();
++  jname = android_build_string (name, NULL);
++  result
++    = (*android_java_env)->CallStaticBooleanMethod (android_java_env,
++						    ebp_host.class,
++						    ebp_host.arm_failpoint,
++						    jname);
++  android_ebp_check ("armFailpoint", jname, NULL);
++  ANDROID_DELETE_LOCAL_REF (jname);
++  return result ? Qt : Qnil;
++}
++
+ #endif /* !ANDROID_STUBIFY */
+ 
+ 
+@@ -3777,6 +4212,16 @@ syms_of_androidfns (void)
+   defsubr (&Sandroid_request_storage_access);
+   defsubr (&Sandroid_recreate_activity);
+ 
++  /* The jetpacs-native fork's EBP bridge; see the comment block
++     preceding android_ebp_init.  */
++  defsubr (&Sandroid_ebp_start);
++  defsubr (&Sandroid_ebp_stop);
++  defsubr (&Sandroid_ebp_credentials);
++  defsubr (&Sandroid_ebp_status);
++  defsubr (&Sandroid_ebp_snapshot);
++  defsubr (&Sandroid_ebp_activate);
++  defsubr (&Sandroid_ebp_arm_failpoint);
++
+   tip_timer = Qnil;
+   staticpro (&tip_timer);
+   tip_frame = Qnil;
