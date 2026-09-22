@@ -31,6 +31,7 @@
 (declare-function android-ebp-status "androidfns.c" ())
 (declare-function android-ebp-snapshot "androidfns.c" (surface))
 (declare-function android-ebp-activate "androidfns.c" (surface revision path))
+(declare-function android-ebp-agent-start "androidfns.c" ())
 (declare-function canvas-refresh "image.c" (image &optional reload-data))
 
 (defconst ebpm1-android-buffer "*ebp-milestone*"
@@ -113,6 +114,56 @@ diagnostics."
     (android-ebp-stop))
   (clrhash ebpm1-android--canvases)
   (setq ebpm1-android--port nil))
+
+;;;; The :agent Companion over loopback-unix (SPEC 5.3)
+
+(defvar ebpm1-android--agent-socket nil
+  "The socket path of the `:agent' Companion this Emacs last dialed.")
+
+(defun ebpm1-android--read-credentials (file)
+  "The \"PAIRING-ID:TOKEN\" line in FILE, or nil.  The token is a secret."
+  (when (file-readable-p file)
+    (with-temp-buffer
+      (insert-file-contents file)
+      (string-trim (buffer-string)))))
+
+;;;###autoload
+(defun ebpm1-android-start-agent ()
+  "Start the `:agent' Companion and connect the application to it.
+The agent is a separate process of this package hosting a SPEC 5.3
+`loopback-unix' listener and its own durable store, so it outlives this
+Emacs; Emacs is the dialer, as under every Android profile.  Unlike
+`ebpm1-android-start' nothing is presented in a buffer here: the agent
+is a wire endpoint only (design record: ebp/slop-docs/EMACS-UNIX-AGENT-kit.md)."
+  (interactive)
+  (unless (fboundp 'android-ebp-agent-start)
+    (user-error "This Emacs has no EBP agent bridge (android-ebp-agent-start)"))
+  (let ((path (android-ebp-agent-start)))
+    (unless path
+      (user-error "The EBP agent service could not be started"))
+    ;; The service starts asynchronously; the socket and credentials
+    ;; appear once it is up.  Wait a bounded while for both.
+    (let ((credentials-file (expand-file-name "agent-credentials"
+                                              (file-name-directory path)))
+          (deadline (+ (float-time) 10)))
+      (while (and (< (float-time) deadline)
+                  (not (and (file-exists-p path)
+                            (file-readable-p credentials-file))))
+        (accept-process-output nil 0.2))
+      (let ((credentials (ebpm1-android--read-credentials credentials-file)))
+        (unless (and (stringp credentials)
+                     (string-match
+                      "\\`\\([0-9a-f]\\{32\\}\\):\\([A-Za-z0-9_-]\\{22\\}\\)\\'"
+                      credentials))
+          (user-error "The EBP agent did not provide a well-formed pairing"))
+        (setq ebpm1-android--agent-socket path)
+        ;; A socket not yet bound is `file-missing' to the dialer, which
+        ;; retries with SPEC 5.7 backoff; the token goes to the client
+        ;; and nowhere else.
+        (ebpm1-app-start path nil
+                         (match-string 1 credentials)
+                         (match-string 2 credentials)
+                         :transport 'loopback-unix)))))
 
 ;;;; Invalidation events
 

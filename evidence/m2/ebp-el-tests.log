@@ -1,0 +1,379 @@
+Running 91 tests (2026-09-22 13:14:02-0600, selector ‘t’)
+   passed   1/91  ebp-client-receipt-file-resolves-under-ebp-directory (0.002866 sec)
+   passed   2/91  ebp-client-store-open-creates-missing-directory (0.001052 sec)
+ebp: durable receipt store /tmp/ebp-store-blockerV2Fkoa/sub/ebp-receipts unavailable (File exists: /tmp/ebp-store-blockerV2Fkoa); event.action answers 1500 event-retry
+   passed   3/91  ebp-client-store-open-survives-uncreatable-directory (0.000150 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed   4/91  ebp-test-abandoned-request-is-cancelled-on-the-wire (0.931147 sec)
+   passed   5/91  ebp-test-accepted-never-leaves-without-committed-row (0.304811 sec)
+   passed   6/91  ebp-test-after-replay-settled (0.000675 sec)
+ebp: durable receipt store /nonexistent-ebp-dir/receipts unavailable (Creating directory: Permission denied, /nonexistent-ebp-dir); event.action answers 1500 event-retry
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed   7/91  ebp-test-barrier-seam-and-kind-carrying-errors (0.658089 sec)
+   passed   8/91  ebp-test-candidate-doc-cap-boundaries (0.001134 sec)
+   passed   9/91  ebp-test-candidate-doc-comparand-is-the-retained-reply (0.000750 sec)
+   passed  10/91  ebp-test-candidate-doc-degrades-to-empty (0.001342 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  11/91  ebp-test-candidate-doc-error-extras-on-the-wire (0.703667 sec)
+   passed  12/91  ebp-test-candidate-doc-float-seeded-mirror-still-answers (0.000790 sec)
+   passed  13/91  ebp-test-candidate-doc-index-arms (0.000751 sec)
+   passed  14/91  ebp-test-candidate-doc-minted-on-every-arm-and-superseded (0.000752 sec)
+   passed  15/91  ebp-test-candidate-doc-out-of-order-supersession (0.000675 sec)
+   passed  16/91  ebp-test-candidate-doc-outlives-the-accept (0.000815 sec)
+   passed  17/91  ebp-test-candidate-doc-session-event-clears (0.000852 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  18/91  ebp-test-client-answers-unknown-request (0.663616 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  19/91  ebp-test-client-handler-registry (0.659100 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  20/91  ebp-test-client-handshake-to-ready (0.615676 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  21/91  ebp-test-client-rejects-bad-server-proof (0.614925 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  22/91  ebp-test-client-rejects-incomplete-welcome (0.614742 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  23/91  ebp-test-client-rejects-malformed-surface-profile (0.623014 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  24/91  ebp-test-client-surface-remove-is-revisioned (0.637295 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  25/91  ebp-test-client-surface-revisions-above-floors (0.681144 sec)
+[jsonrpc] Server exited with status 256
+ebp: reconnect attempt failed (file-error); retrying
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  26/91  ebp-test-companion-restart-redials-same-client (0.751008 sec)
+   passed  27/91  ebp-test-connect-rejects-misconfigured-transport (0.000098 sec)
+   passed  28/91  ebp-test-decode-does-not-grow-the-global-obarray (0.632476 sec)
+   passed  29/91  ebp-test-duplicate-member-scan (0.000075 sec)
+   passed  30/91  ebp-test-edit-apply-cursor-chains-across-applies (0.000829 sec)
+   passed  31/91  ebp-test-edit-apply-cursor-marker-arithmetic (0.000762 sec)
+   passed  32/91  ebp-test-edit-apply-editor-too-large (0.000685 sec)
+   passed  33/91  ebp-test-edit-open-reconcile-seam (0.000599 sec)
+   passed  34/91  ebp-test-editor-golden-scalar-splices (0.006196 sec)
+   passed  35/91  ebp-test-encoder-syntax (0.000024 sec)
+   passed  36/91  ebp-test-envelope-classification (0.000024 sec)
+Warning (ebp): queue.replay concluded with error (:code 1600 :message "backlog unavailable" :data (:kind "event-retry")); proceeding to session.ready and retrying in READY (SPEC 10.3)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  37/91  ebp-test-errored-replay-still-reaches-ready (0.768155 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  38/91  ebp-test-event-action-duplicate-after-restart (1.316240 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  39/91  ebp-test-event-action-handler-event-retry (1.660147 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  40/91  ebp-test-event-action-malformed-is-invalid-params (0.659529 sec)
+ebp: durable receipt store /nonexistent-ebp-dir/receipts unavailable (Creating directory: Permission denied, /nonexistent-ebp-dir); event.action answers 1500 event-retry
+   passed  41/91  ebp-test-event-action-no-store-answers-1500-before-handler (0.000248 sec)
+ebp: durable receipt store /nonexistent-ebp-dir/receipts unavailable (Creating directory: Permission denied, /nonexistent-ebp-dir); event.action answers 1500 event-retry
+   passed  42/91  ebp-test-event-action-no-store-unregistered-action-also-retries (0.000142 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  43/91  ebp-test-event-action-statuses-and-duplicates (0.707479 sec)
+   passed  44/91  ebp-test-event-known-p-predicate (0.001114 sec)
+   passed  45/91  ebp-test-fingerprint-normalization (0.000094 sec)
+   passed  46/91  ebp-test-force-replay-retry-is-single-flight (0.059039 sec)
+   passed  47/91  ebp-test-force-replay-retry-survives-a-drained-cycle (0.121538 sec)
+   passed  48/91  ebp-test-forget-pairing (0.001254 sec)
+   passed  49/91  ebp-test-granted-gate-refuses-ungranted-sends (0.000744 sec)
+   passed  50/91  ebp-test-handshake-params-match-contract (0.000600 sec)
+ebp: overloaded (inbound-backlog); closing
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+ebp: overloaded (dispatch-depth); closing
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  51/91  ebp-test-inbound-exhaustion-1401-then-close (1.251496 sec)
+ebp: pre-auth notification state.changed dropped
+ebp: pre-auth notification state.changed dropped
+ebp: pre-auth notification state.changed dropped
+ebp: pre-auth notification state.changed dropped
+   passed  52/91  ebp-test-inbound-fails-closed-before-auth (0.000878 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  53/91  ebp-test-inbound-flood-bounded-in-order (0.622925 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  54/91  ebp-test-inbound-pause-resume-and-in-send-guard (0.625770 sec)
+[jsonrpc] Server exited with status 256
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  55/91  ebp-test-initially-unavailable-listener-redials-to-ready (0.785216 sec)
+   passed  56/91  ebp-test-jsonrpc-warn-redaction-is-scoped (0.000078 sec)
+   passed  57/91  ebp-test-jsonrpc-warn-redacts-frame-bodies (0.625854 sec)
+   passed  58/91  ebp-test-kat-proofs (0.000207 sec)
+   passed  59/91  ebp-test-legacy-receipt-file-migrates-on-create (0.001272 sec)
+[jsonrpc] (warning) Sentinel for ebp-coding-client still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp-coding-client still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  60/91  ebp-test-live-socket-carries-non-ascii (2.118636 sec)
+   passed  61/91  ebp-test-live-store-query-failure-maps-to-1500 (0.275413 sec)
+   passed  62/91  ebp-test-method-capability-table-matches-contract (0.000456 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  63/91  ebp-test-negative-revision-seen-is-invalid (0.662853 sec)
+   passed  64/91  ebp-test-nonce-generation (0.001325 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  65/91  ebp-test-ordered-stream-flood-in-order (0.618336 sec)
+   passed  66/91  ebp-test-over-deep-body-is-parse-error (0.000520 sec)
+   passed  67/91  ebp-test-receipt-store-opens-zero-byte-file (0.000892 sec)
+   passed  68/91  ebp-test-receipts-are-partitioned-by-pairing (0.001341 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  69/91  ebp-test-replay-retry-until-drained (0.766039 sec)
+   passed  70/91  ebp-test-request-id-grammar (0.000041 sec)
+   passed  71/91  ebp-test-request-id-integer (0.000028 sec)
+ebp: state.changed for reset app:main/title discarded
+   passed  72/91  ebp-test-reset-history-precedes-the-send (0.001014 sec)
+[jsonrpc] Server exited with status 0
+   passed  73/91  ebp-test-sender-ceiling-close-fails-locally (0.014934 sec)
+   passed  74/91  ebp-test-sender-ceiling-refuses-and-recovers (0.020219 sec)
+   passed  75/91  ebp-test-sender-ceiling-rolls-back-a-signalling-send (0.001835 sec)
+   passed  76/91  ebp-test-session-superseded-stops-automatic-redial (0.000755 sec)
+   passed  77/91  ebp-test-session-transitions (0.000027 sec)
+ebp: state.changed for reset app:main/title discarded
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  78/91  ebp-test-state-changed-adopt-and-reset (0.666488 sec)
+   passed  79/91  ebp-test-store-failure-mid-session-maps-to-1500 (0.001074 sec)
+   passed  80/91  ebp-test-theme-set-live-sentinels (0.000705 sec)
+[jsonrpc] Server exited with status 0
+   passed  81/91  ebp-test-transport-coding-is-pinned (1.517281 sec)
+[jsonrpc] (warning) Sentinel for ebp still hasn't run, deleting it!
+Warning (jsonrpc): Sentinel for ebp still hasn't run, deleting it!
+[jsonrpc] Server exited with status 0
+   passed  82/91  ebp-test-transport-loopback-unix-handshakes-to-ready (0.652524 sec)
+   passed  83/91  ebp-test-transport-loopback-unix-refuses-foreign-owner (0.767209 sec)
+[jsonrpc] Server exited with status 256
+   passed  84/91  ebp-test-transport-network-tls-pin-gates-the-hello (2.196241 sec)
+   passed  85/91  ebp-test-triggers-set-when-gate (0.000812 sec)
+   passed  86/91  ebp-test-unknown-method-still-dispatches-correctly (0.615061 sec)
+   passed  87/91  ebp-test-unpaired-client-uses-synthetic-partition (0.001051 sec)
+Warning (ebp): request timeout 10s is below SPEC 7.1's 60 s floor for user-paced methods; using 60
+Warning (ebp): request timeout 0.5s is below SPEC 7.1's 60 s floor for user-paced methods; using 60
+   passed  88/91  ebp-test-user-paced-timeout-floor (0.000055 sec)
+   passed  89/91  ebp-test-utf8-byte-count-fixture (0.000065 sec)
+   passed  90/91  ebp-test-welcome-surface-profile-shape (0.000126 sec)
+   passed  91/91  ebp-test-wire-goldens (0.055568 sec)
+
+Ran 91 tests, 91 results as expected, 0 unexpected (2026-09-22 13:14:32-0600, 29.284564 sec)
+
+Running 24 tests (2026-09-22 13:14:32-0600, selector ‘t’)
+   passed   1/24  ebp-sqlite-admission-is-idempotent-across-reopen (0.001377 sec)
+   passed   2/24  ebp-sqlite-admit-completed-is-prunable (0.000774 sec)
+   passed   3/24  ebp-sqlite-admit-completed-records-receipt-without-work (0.001039 sec)
+   passed   4/24  ebp-sqlite-admit-completed-rolls-back-without-commit (0.355327 sec)
+   passed   5/24  ebp-sqlite-admit-completed-validates-arguments (0.000672 sec)
+   passed   6/24  ebp-sqlite-checkpoint-is-atomic-and-lease-checked (0.001552 sec)
+   passed   7/24  ebp-sqlite-claims-in-admission-order-and-can-scope-pairing (0.001179 sec)
+   passed   8/24  ebp-sqlite-close-is-idempotent-and-fails-closed-afterward (0.000664 sec)
+   passed   9/24  ebp-sqlite-completion-is-atomic-and-erases-work-payload (0.001288 sec)
+   passed  10/24  ebp-sqlite-creates-and-verifies-versioned-schema (0.000782 sec)
+   passed  11/24  ebp-sqlite-fails-closed-when-sqlite-is-unavailable (0.261001 sec)
+   passed  12/24  ebp-sqlite-known-p-and-list-work-map-sqlite-errors (0.239834 sec)
+   passed  13/24  ebp-sqlite-legacy-migration-rolls-back-atomically (0.001550 sec)
+   passed  14/24  ebp-sqlite-migrates-legacy-receipts-in-place (0.001218 sec)
+   passed  15/24  ebp-sqlite-never-accepts-a-false-commit-result (0.001025 sec)
+   passed  16/24  ebp-sqlite-open-rejects-invalid-legacy-pairing-id (0.000028 sec)
+   passed  17/24  ebp-sqlite-opens-zero-byte-file-as-new-store (0.000573 sec)
+   passed  18/24  ebp-sqlite-partitions-identical-event-ids-by-pairing (0.001317 sec)
+   passed  19/24  ebp-sqlite-prunes-only-old-completed-receipts (0.001114 sec)
+   passed  20/24  ebp-sqlite-recovers-expired-leases-and-retains-blocked-work (0.002193 sec)
+   passed  21/24  ebp-sqlite-refuses-legacy-receipts-with-malformed-rows (0.002070 sec)
+   passed  22/24  ebp-sqlite-refuses-legacy-receipts-without-pairing-id (0.000684 sec)
+   passed  23/24  ebp-sqlite-refuses-unknown-or-unversioned-existing-schema (0.001661 sec)
+   passed  24/24  ebp-sqlite-rolls-back-partial-admission (0.001049 sec)
+
+Ran 24 tests, 24 results as expected, 0 unexpected (2026-09-22 13:14:33-0600, 0.880631 sec)
+
+Running 11 tests (2026-09-22 13:14:33-0600, selector ‘t’)
+   passed   1/11  ebp-revision-absorb-failure-closes-the-client (0.001096 sec)
+   passed   2/11  ebp-revision-absorb-never-lowers-and-persists (0.001444 sec)
+   passed   3/11  ebp-revision-forget-pairing-erases-floors (0.000784 sec)
+   passed   4/11  ebp-revision-persistence-failure-sends-nothing (0.000993 sec)
+   passed   5/11  ebp-revision-raise-floor-never-lowers (0.000916 sec)
+   passed   6/11  ebp-revision-raise-floor-persists-across-reopen (0.000888 sec)
+   passed   7/11  ebp-revision-raise-floor-validates-arguments (0.000687 sec)
+   passed   8/11  ebp-revision-reservation-commits-before-send (0.000756 sec)
+   passed   9/11  ebp-revision-survives-death-before-send (0.001664 sec)
+   passed  10/11  ebp-revision-v1-file-upgrades-in-place (0.001419 sec)
+   passed  11/11  ebp-revision-welcome-floors-rise-through-absorb (0.001278 sec)
+
+Ran 11 tests, 11 results as expected, 0 unexpected (2026-09-22 13:14:33-0600, 0.012269 sec)
+
+Running 45 tests (2026-09-22 13:14:33-0600, selector ‘t’)
+   passed   1/45  ebp-sync-a-foreign-edit-outside-the-region-does-not-escape (0.001735 sec)
+   passed   2/45  ebp-sync-applied-result-advances-and-drains (0.000834 sec)
+   passed   3/45  ebp-sync-astral-edit-counts-scalars (0.000809 sec)
+   passed   4/45  ebp-sync-attach-adopts-mirror-text (0.000726 sec)
+   passed   5/45  ebp-sync-attach-compares-the-whole-document (0.000769 sec)
+   passed   6/45  ebp-sync-attach-over-an-agreeing-buffer-leaves-it-unmodified (0.000755 sec)
+   passed   7/45  ebp-sync-attached-buffer-clientless-lookup (0.000040 sec)
+   passed   8/45  ebp-sync-caret-answers-at-the-absolute-position (0.000780 sec)
+   passed   9/45  ebp-sync-close-detaches (0.000800 sec)
+   passed  10/45  ebp-sync-detach-is-idempotent (0.000694 sec)
+   passed  11/45  ebp-sync-diagnostics-shape-dedupe-and-seq-restamp (0.000768 sec)
+Can’t guess python-indent-offset, using defaults: 4
+Can’t guess python-indent-offset, using defaults: 4
+   passed  12/45  ebp-sync-eglot-connects-directly-and-throttles (0.033870 sec)
+Can’t guess python-indent-offset, using defaults: 4
+Can’t guess python-indent-offset, using defaults: 4
+   passed  13/45  ebp-sync-eglot-gate-refuses (0.002461 sec)
+   passed  14/45  ebp-sync-eldoc-caret-gates-on-selection-and-toggle (0.000821 sec)
+   passed  15/45  ebp-sync-eldoc-clears-on-empty (0.000739 sec)
+   passed  16/45  ebp-sync-eldoc-format-caps-at-200-columns (0.000035 sec)
+   passed  17/45  ebp-sync-eldoc-push-shape-dedupe-and-seq-restamp (0.000748 sec)
+   passed  18/45  ebp-sync-eldoc-runs-every-backend-and-formats (0.000801 sec)
+   passed  19/45  ebp-sync-elisp-backend-swap-and-restore (0.001320 sec)
+   passed  20/45  ebp-sync-face-role-resolution (0.000037 sec)
+   passed  21/45  ebp-sync-flymake-elisp-parens-and-warnings (0.006001 sec)
+   passed  22/45  ebp-sync-flymake-elisp-repl-cookie-shifts-positions (0.000681 sec)
+   passed  23/45  ebp-sync-flymake-elisp-untrusted-degrades (0.000029 sec)
+   passed  24/45  ebp-sync-flymake-elisp-widens (0.000733 sec)
+   passed  25/45  ebp-sync-fontify-push-dedupe-and-cap (0.000810 sec)
+   passed  26/45  ebp-sync-fontify-runs-are-sorted-roles (0.000156 sec)
+   passed  27/45  ebp-sync-fontify-runs-cover-the-whole-document (0.000130 sec)
+   passed  28/45  ebp-sync-inbound-splice-lands-at-an-absolute-position (0.000884 sec)
+   passed  29/45  ebp-sync-inbound-splice-lands-in-buffer (0.000825 sec)
+   passed  30/45  ebp-sync-local-edit-becomes-one-apply (0.000834 sec)
+   passed  31/45  ebp-sync-local-edit-reports-whole-document-offsets (0.000831 sec)
+   passed  32/45  ebp-sync-narrowed-session-survives-a-delta-outside-it (0.001049 sec)
+Can’t guess python-indent-offset, using defaults: 4
+ebp-sync: eglot connect failed (file-missing)
+   passed  33/45  ebp-sync-publish-hook-collects-soon (0.120987 sec)
+   passed  34/45  ebp-sync-race-drops-local-and-resyncs (0.000996 sec)
+   passed  35/45  ebp-sync-refused-apply-resyncs-once (0.001017 sec)
+   passed  36/45  ebp-sync-reseed-adopts-and-does-not-echo (0.000837 sec)
+   passed  37/45  ebp-sync-reseed-identical-leaves-buffer-unmodified (0.000872 sec)
+   passed  38/45  ebp-sync-reseed-refuses-a-write-protected-buffer (0.000852 sec)
+   passed  39/45  ebp-sync-reseed-replaces-the-whole-document (0.000813 sec)
+   passed  40/45  ebp-sync-resync-result-reseeds-the-attached-buffer (0.000951 sec)
+   passed  41/45  ebp-sync-second-attach-on-a-key-detaches-the-first (0.000842 sec)
+   passed  42/45  ebp-sync-settle-kicks-flymake-start (0.002451 sec)
+   passed  43/45  ebp-sync-severity-mapping (0.000054 sec)
+   passed  44/45  ebp-sync-splice-restores-the-restriction-and-point (0.001016 sec)
+   passed  45/45  ebp-sync-write-protected-reseed-restores-the-whole-document (0.000956 sec)
+
+Ran 45 tests, 45 results as expected, 0 unexpected (2026-09-22 13:14:33-0600, 0.196141 sec)
+
+Running 30 tests (2026-09-22 13:14:33-0600, selector ‘t’)
+   passed   1/30  ebp-complete-accept-ambiguous-shape-never-fires (0.202316 sec)
+   passed   2/30  ebp-complete-accept-mismatch-clears-the-offer (0.201455 sec)
+ebp-complete: harvest failed (args-out-of-range)
+   passed   3/30  ebp-complete-accept-offer-lifecycle-claims (0.001121 sec)
+   passed   4/30  ebp-complete-accept-rearm-on-latch (0.000036 sec)
+   passed   5/30  ebp-complete-accept-runs-the-exit-function (0.021265 sec)
+   passed   6/30  ebp-complete-annotation-insert-and-no-kind (0.000141 sec)
+   passed   7/30  ebp-complete-cap-and-sole-candidate (0.000150 sec)
+   passed   8/30  ebp-complete-doc-provider-aligns-with-the-shipped-list (0.001054 sec)
+   passed   9/30  ebp-complete-doc-provider-degrades (0.051121 sec)
+   passed  10/30  ebp-complete-doc-provider-resets-across-arms (0.001130 sec)
+   passed  11/30  ebp-complete-doc-provider-serves-from-the-harvest-buffer (0.000944 sec)
+   passed  12/30  ebp-complete-empty-prefix-small-table-kept (0.000065 sec)
+   passed  13/30  ebp-complete-empty-splice-extends-by-zero (0.021151 sec)
+   passed  14/30  ebp-complete-harvests-the-buffer-capf (0.003274 sec)
+   passed  15/30  ebp-complete-kind-emitted-when-registered (0.000090 sec)
+   passed  16/30  ebp-complete-kind-omitted-by-default (0.000060 sec)
+   passed  17/30  ebp-complete-kind-vocabulary-matches-the-contract (0.006908 sec)
+   passed  18/30  ebp-complete-live-arm-divergence-falls-back (0.000875 sec)
+   passed  19/30  ebp-complete-live-arm-empty-falls-through-to-shadow (0.000901 sec)
+   passed  20/30  ebp-complete-live-arm-is-not-reentrant (0.000796 sec)
+   passed  21/30  ebp-complete-live-arm-timeout-falls-back (0.050941 sec)
+   passed  22/30  ebp-complete-live-buffer-arm (0.001090 sec)
+   passed  23/30  ebp-complete-marked-accept-empty-insert (0.021219 sec)
+   passed  24/30  ebp-complete-marked-accept-spans-the-extension (0.021191 sec)
+   passed  25/30  ebp-complete-marked-accept-validates-by-membership (0.223992 sec)
+   passed  26/30  ebp-complete-obarray-blowout-guard (0.001339 sec)
+   passed  27/30  ebp-complete-override-beats-the-client-wide-default (0.000961 sec)
+   passed  28/30  ebp-complete-seam-through-real-ebp-handler (0.001588 sec)
+Can’t guess python-indent-offset, using defaults: 4
+   passed  29/30  ebp-complete-shadow-mode-and-reuse (0.034978 sec)
+   passed  30/30  ebp-complete-word-fallback (0.000118 sec)
+
+Ran 30 tests, 30 results as expected, 0 unexpected (2026-09-22 13:14:34-0600, 0.873096 sec)
+
+Running 15 tests (2026-09-22 13:14:34-0600, selector ‘t’)
+   passed   1/15  ebp-websocket-test-backpressure-pauses-the-socket (0.038995 sec)
+ebp-websocket: closing connection (binary-message)
+   passed   2/15  ebp-websocket-test-binary-message-closes (0.085846 sec)
+   passed   3/15  ebp-websocket-test-close-tears-down-the-listener (0.048249 sec)
+   passed   4/15  ebp-websocket-test-decode-isolation-and-unknown-method (0.066711 sec)
+   passed   5/15  ebp-websocket-test-failed-candidate-leaves-the-session-alone (0.071007 sec)
+   passed   6/15  ebp-websocket-test-fragmented-messages-reassemble (0.209427 sec)
+   passed   7/15  ebp-websocket-test-handshake-to-ready (0.026673 sec)
+Websocket client connection: Upgrade: websocket not found
+   passed   8/15  ebp-websocket-test-malformed-upgrade-is-quiet (0.072366 sec)
+   passed   9/15  ebp-websocket-test-message-bound-keeps-the-connection (0.065759 sec)
+   passed  10/15  ebp-websocket-test-newest-authenticated-connection-supersedes (0.075013 sec)
+   passed  11/15  ebp-websocket-test-origin-gates-the-upgrade (0.234733 sec)
+   passed  12/15  ebp-websocket-test-preauth-pool-bound-and-deadline (1.752444 sec)
+   passed  13/15  ebp-websocket-test-receiver-strictness (0.124096 sec)
+   passed  14/15  ebp-websocket-test-sender-bound (0.056708 sec)
+   passed  15/15  ebp-websocket-test-transport-loss-waits-without-redial (0.062668 sec)
+
+Ran 15 tests, 15 results as expected, 0 unexpected (2026-09-22 13:14:37-0600, 2.991333 sec)
+
+Running 13 tests (2026-09-22 13:14:37-0600, selector ‘t’)
+   passed   1/13  ebp-unix-test-close-tears-down-listener-and-unlinks (0.070389 sec)
+   passed   2/13  ebp-unix-test-decode-isolation-and-unknown-method (0.024199 sec)
+   passed   3/13  ebp-unix-test-failed-candidate-leaves-the-session-alone (0.074077 sec)
+ebp: closing connection (malformed header line)
+ebp: closing connection (oversized body declaration)
+ebp: closing connection (header section too large)
+   passed   4/13  ebp-unix-test-framing-fault-closes-the-connection (0.202172 sec)
+   passed   5/13  ebp-unix-test-handshake-to-ready (0.013552 sec)
+   passed   6/13  ebp-unix-test-live-socket-is-refused-never-unlinked (0.054830 sec)
+   passed   7/13  ebp-unix-test-newest-authenticated-connection-supersedes (0.085276 sec)
+   passed   8/13  ebp-unix-test-preauth-pool-bound-and-deadline (1.649546 sec)
+   passed   9/13  ebp-unix-test-receiver-strictness (0.025701 sec)
+   passed  10/13  ebp-unix-test-socket-and-directory-modes (0.001582 sec)
+   passed  11/13  ebp-unix-test-stale-socket-is-unlinked-and-rebound (0.032609 sec)
+   passed  12/13  ebp-unix-test-transport-loss-waits-without-redial (0.076189 sec)
+   passed  13/13  ebp-unix-test-unsafe-directory-is-refused (0.000694 sec)
+
+Ran 13 tests, 13 results as expected, 0 unexpected (2026-09-22 13:14:40-0600, 2.311268 sec)
+
+exit=0

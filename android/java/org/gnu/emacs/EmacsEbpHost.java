@@ -86,6 +86,23 @@ public final class EmacsEbpHost
 
   private EmacsEbpHost () {}
 
+  /* Start the `:agent' Companion (EmacsEbpAgentService) and return the
+     SPEC 5.3 socket path Emacs dials, or null when no service context
+     exists yet.  The agent has its own pairing identity; Lisp reads its
+     credentials from `agent-credentials' beside the socket.  */
+
+  public static String
+  agentStart ()
+  {
+    Context context = EmacsService.SERVICE;
+
+    if (context == null)
+      return null;
+
+    EmacsEbpAgentService.start (context);
+    return EbpAgentHost.socketPath (context).getPath ();
+  }
+
   /* Post PAYLOAD (ASCII) to Lisp through the jetpacs event route,
      from the main thread.  */
 

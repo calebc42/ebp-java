@@ -21,5 +21,7 @@ cp src/main/java/com/calebc42/ebp/companion/host/LoopbackServer.java \
    src/main/java/com/calebc42/ebp/companion/host/PreauthPool.java \
    src/main/java/com/calebc42/ebp/companion/host/PairingFile.java "$DEST/host/"
 cp android/java/com/calebc42/ebp/companion/android/*.java "$DEST/android/"
-cp android/java/org/gnu/emacs/EmacsEbpHost.java "$EMACS/java/org/gnu/emacs/EmacsEbpHost.java"
+# The org.gnu.emacs hosts: the in-process EmacsEbpHost, the :agent
+# EbpAgentHost with its EmacsEbpAgentService, and the EmacsWakeService.
+cp android/java/org/gnu/emacs/*.java "$EMACS/java/org/gnu/emacs/"
 find "$DEST" -name '*.java' | wc -l | sed 's/^/vendored java files: /'
