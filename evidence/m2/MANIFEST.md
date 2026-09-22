@@ -11,8 +11,20 @@ not claimed.  Design record: `ebp/slop-docs/EMACS-UNIX-AGENT-kit.md`
 |---|---|
 | `ebp` | `1ef9858` spec: amendment #191 (on top of `7ede3b4`, the #188–#190 checkpoint) |
 | `ebp.el` | `f65bfb1` emacs-unix binder over a shared binder pool (on top of `be8cc23`, the transport checkpoint) |
-| `ebp-java` | `deadd95` host transports, plus the agent commit that carries this manifest |
-| `emacs/emacs` (jetpacs-native) | `df6f1fc4902` M1 host checkpoint, plus the agent commit |
+| `ebp-java` | `deadd95` host transports; `0b11da6` the :agent host, services, and this manifest |
+| `emacs/emacs` (jetpacs-native) | `df6f1fc4902` M1 host checkpoint; `b601c92e7c8` the :agent service, wake service, and `android-ebp-agent-start` |
+
+## APK
+
+`java/emacs-32.0.50-30-arm64-v8a.apk`, built 2026-09-22 with
+`jetpacs-native/env.sh` (`make all`, exit 0, only the `--release 7`
+obsolescence notes as warnings), SHA-256
+`f3a1b22d948319400015470d8e1c83eccc44a1031a7bb65d14da6ad9eefd4a88`.
+`aapt dump xmltree` shows `EmacsEbpAgentService` with `process=":agent"`
+and `exported=false`, and `EmacsWakeService` with `exported=false`;
+`dexdump` shows `EbpAgentHost`, `EmacsEbpAgentService`, `EmacsWakeService`,
+`LocalSocketServer`, `PreauthPool`, and `StreamSession` survived R8; the
+packaged `libemacs.so` carries `android-ebp-agent-start`.
 
 ## Host gates
 
