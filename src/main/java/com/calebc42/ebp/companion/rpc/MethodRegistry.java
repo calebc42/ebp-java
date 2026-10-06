@@ -43,6 +43,8 @@ public final class MethodRegistry {
         reg("surface.update", Sender.EMACS, true, SR);
         reg("surface.remove", Sender.EMACS, true, SR);
         reg("surface.release", Sender.EMACS, true, R);
+        // SPEC 13.8.4 (#194): a data patch; this Companion never grants data.model.
+        reg("surface.data", Sender.EMACS, true, SR);
         reg("queue.replay", Sender.EMACS, true, SR);
         reg("event.action", Sender.COMPANION, true, SR);
         reg("state.changed", Sender.COMPANION, false, R);
