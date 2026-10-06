@@ -34,7 +34,7 @@ public final class Vocabulary {
     /** SPEC 16.5: members that MAY appear on any node. */
     public static final Set<String> UNIVERSAL_NODE_ATTRIBUTES = setOf("key", "id", "scroll_here", "padding", "pad", "width", "height", "min_width", "max_width", "min_height", "max_height", "fill_fraction", "aspect_ratio", "weight", "bg", "corner", "border", "alpha", "clip", "align_self", "semantics");
     /** SPEC 17.1: members whose value is an ActionDescriptor. */
-    public static final Set<String> ACTION_HOOK_KEYS = setOf("on_tap", "on_change", "on_submit", "on_save", "on_enter", "on_pick", "on_reorder", "on_refresh", "on_sheet_change", "on_expand_change", "on_long_tap", "on_add_row", "on_add_col", "on_day_tap", "on_month_change", "on_point_tap", "on_trigger", "header_action");
+    public static final Set<String> ACTION_HOOK_KEYS = setOf("on_tap", "on_change", "on_submit", "on_save", "on_enter", "on_pick", "on_reorder", "on_refresh", "on_sheet_change", "on_expand_change", "on_long_tap", "on_add_row", "on_add_col", "on_day_tap", "on_month_change", "on_point_tap", "on_trigger", "on_search", "on_action", "header_action");
     public static final Set<String> OFFLINE_POLICIES = setOf("drop", "queue", "wake");
     public static final String OFFLINE_DEFAULT = "drop";
     public static final Set<String> DESCRIPTOR_FIELDS = setOf("action", "builtin", "args", "when_offline", "dedupe", "ttl_s", "confirm", "capture_fields", "open_surface");
@@ -347,6 +347,7 @@ public final class Vocabulary {
         types.put("dropdown.value", "option-value");
         types.put("segmented_button.value", "option-value-or-array");
         types.put("scaffold.floating_toolbar_fab", "node");
+        types.put("date_stamp.month", "string");
         types.put("pad", "pad-object");
         types.put("min_width", "number");
         types.put("max_width", "number");
