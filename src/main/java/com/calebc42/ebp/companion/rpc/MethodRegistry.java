@@ -49,6 +49,8 @@ public final class MethodRegistry {
         reg("event.action", Sender.COMPANION, true, SR);
         reg("state.changed", Sender.COMPANION, false, R);
         reg("window.changed", Sender.COMPANION, false, SR);
+        // SPEC 20.1.2 (#197): device locale advice, mirrored in the welcome.
+        reg("locale.changed", Sender.COMPANION, false, SR);
         reg("dialog.show", Sender.EMACS, true, R);
         reg("snackbar.show", Sender.EMACS, true, R);
         reg("toast.show", Sender.EMACS, false, R);

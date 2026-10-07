@@ -423,6 +423,7 @@ public final class Vocabulary {
         enums.put("button.shape_role", setOf("leading", "middle", "trailing", "top", "bottom"));
         enums.put("theme.layout_direction", setOf("ltr", "rtl"));
         enums.put("window.size_class", setOf("compact", "medium", "expanded"));
+        enums.put("locale.hour_cycle", setOf("h12", "h23"));
         enums.put("snackbar.result", setOf("dismissed", "action"));
         ENUMS = Collections.unmodifiableMap(enums);
         Map<String, Set<String>> injections = new HashMap<String, Set<String>>();
@@ -495,6 +496,7 @@ public final class Vocabulary {
         methods.put("log.error", "either|notification|SYNCING,READY");
         methods.put("rpc.cancel", "either|notification|SYNCING,READY");
         methods.put("window.changed", "companion|notification|SYNCING,READY");
+        methods.put("locale.changed", "companion|notification|SYNCING,READY");
         methods.put("snackbar.show", "emacs|request|READY");
         METHOD_TABLE = Collections.unmodifiableMap(methods);
         Map<String, Long> limits = new HashMap<String, Long>();
