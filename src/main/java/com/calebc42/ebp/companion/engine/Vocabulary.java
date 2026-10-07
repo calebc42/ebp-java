@@ -32,7 +32,7 @@ public final class Vocabulary {
     /** SPEC 16.2: the Core Node Set every conforming Companion implements. */
     public static final Set<String> CORE_NODE_SET = setOf("text", "row", "column", "box", "spacer", "divider", "button", "text_input");
     /** SPEC 16.5: members that MAY appear on any node. */
-    public static final Set<String> UNIVERSAL_NODE_ATTRIBUTES = setOf("key", "id", "scroll_here", "padding", "pad", "width", "height", "min_width", "max_width", "min_height", "max_height", "fill_fraction", "aspect_ratio", "weight", "bg", "corner", "border", "alpha", "clip", "align_self", "semantics", "bind");
+    public static final Set<String> UNIVERSAL_NODE_ATTRIBUTES = setOf("key", "id", "scroll_here", "padding", "pad", "width", "height", "min_width", "max_width", "min_height", "max_height", "fill_fraction", "aspect_ratio", "weight", "bg", "corner", "border", "alpha", "clip", "align_self", "semantics", "bind", "template");
     /** SPEC 17.1: members whose value is an ActionDescriptor. */
     public static final Set<String> ACTION_HOOK_KEYS = setOf("on_tap", "on_change", "on_submit", "on_save", "on_enter", "on_pick", "on_reorder", "on_refresh", "on_sheet_change", "on_expand_change", "on_long_tap", "on_add_row", "on_add_col", "on_day_tap", "on_month_change", "on_point_tap", "on_trigger", "on_search", "on_action", "header_action");
     public static final Set<String> OFFLINE_POLICIES = setOf("drop", "queue", "wake");
@@ -144,6 +144,7 @@ public final class Vocabulary {
         types.put("key", "identifier");
         types.put("semantics", "semantics-object");
         types.put("bind", "bind-object");
+        types.put("template", "node");
         types.put("document", "identifier");
         types.put("keyboard", "enum");
         types.put("children", "node-array");
@@ -521,6 +522,7 @@ public final class Vocabulary {
         limits.put("max_pointer_segments", Long.valueOf(32L));
         limits.put("max_bindings_per_snapshot", Long.valueOf(10000L));
         limits.put("max_data_ops", Long.valueOf(1000L));
+        limits.put("max_template_items", Long.valueOf(10000L));
         LIMITS_FIXED = Collections.unmodifiableMap(limits);
     }
 }
