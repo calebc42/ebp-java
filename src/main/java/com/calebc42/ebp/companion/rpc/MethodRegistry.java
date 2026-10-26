@@ -51,6 +51,8 @@ public final class MethodRegistry {
         reg("window.changed", Sender.COMPANION, false, SR);
         // SPEC 20.1.2 (#197): device locale advice, mirrored in the welcome.
         reg("locale.changed", Sender.COMPANION, false, SR);
+        // SPEC 20.1.3 (#205): the device's color scheme, mirrored in the welcome.
+        reg("colors.changed", Sender.COMPANION, false, SR);
         reg("dialog.show", Sender.EMACS, true, R);
         reg("snackbar.show", Sender.EMACS, true, R);
         reg("toast.show", Sender.EMACS, false, R);
