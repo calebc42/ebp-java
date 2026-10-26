@@ -92,7 +92,7 @@ public final class Vocabulary {
         nodes.put("chip", new Row(setOf("label"), setOf("on_tap", "selected", "icon", "enabled", "variant", "trailing_icon", "avatar", "content_spacing")));
         nodes.put("menu", new Row(setOf(), setOf("items", "groups", "footer", "icon", "enabled", "initial_scroll")));
         nodes.put("text_input", new Row(setOf("id"), setOf("value", "hint", "label", "on_change", "on_submit", "single_line", "min_lines", "max_lines", "monospace", "syntax", "password", "keyboard", "autofocus", "clear_on_submit", "enabled", "variant", "is_error", "supporting_text", "prefix", "suffix", "leading_icon", "trailing_icon", "max_length", "selection", "hide_keyboard_on_submit", "content_padding", "mask", "filter", "suggestions")));
-        nodes.put("editor", new Row(setOf("id"), setOf("document", "value", "on_save", "on_enter", "single_line", "min_lines", "max_lines", "read_only", "syntax", "line_numbers", "complete", "chromeless", "publish_state", "autofocus", "toolbar", "enabled")));
+        nodes.put("editor", new Row(setOf("id"), setOf("document", "value", "hint", "on_save", "on_enter", "single_line", "min_lines", "max_lines", "read_only", "syntax", "line_numbers", "complete", "chromeless", "publish_state", "autofocus", "toolbar", "enabled")));
         nodes.put("checkbox", new Row(setOf("id"), setOf("checked", "state", "stroke", "label", "on_change", "enabled")));
         nodes.put("switch", new Row(setOf("id"), setOf("checked", "label", "on_change", "enabled", "thumb_icon")));
         nodes.put("enum_list", new Row(setOf("id", "options"), setOf("value", "multi_select", "allow_add", "on_change", "enabled", "variant", "children")));
