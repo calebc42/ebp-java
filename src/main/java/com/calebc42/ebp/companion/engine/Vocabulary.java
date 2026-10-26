@@ -91,7 +91,7 @@ public final class Vocabulary {
         nodes.put("icon_button", new Row(setOf("icon", "on_tap"), setOf("content_description", "badge", "enabled", "variant", "checked", "on_change", "checked_icon", "size", "shape", "width_mode", "color")));
         nodes.put("chip", new Row(setOf("label"), setOf("on_tap", "selected", "icon", "enabled", "variant", "trailing_icon", "avatar", "content_spacing")));
         nodes.put("menu", new Row(setOf(), setOf("items", "groups", "footer", "icon", "enabled", "initial_scroll")));
-        nodes.put("text_input", new Row(setOf("id"), setOf("value", "hint", "label", "on_change", "on_submit", "single_line", "min_lines", "max_lines", "monospace", "syntax", "password", "keyboard", "autofocus", "clear_on_submit", "enabled", "variant", "is_error", "supporting_text", "prefix", "suffix", "leading_icon", "trailing_icon", "max_length", "selection", "hide_keyboard_on_submit", "content_padding", "mask", "filter")));
+        nodes.put("text_input", new Row(setOf("id"), setOf("value", "hint", "label", "on_change", "on_submit", "single_line", "min_lines", "max_lines", "monospace", "syntax", "password", "keyboard", "autofocus", "clear_on_submit", "enabled", "variant", "is_error", "supporting_text", "prefix", "suffix", "leading_icon", "trailing_icon", "max_length", "selection", "hide_keyboard_on_submit", "content_padding", "mask", "filter", "suggestions")));
         nodes.put("editor", new Row(setOf("id"), setOf("document", "value", "on_save", "on_enter", "single_line", "min_lines", "max_lines", "read_only", "syntax", "line_numbers", "complete", "chromeless", "publish_state", "autofocus", "toolbar", "enabled")));
         nodes.put("checkbox", new Row(setOf("id"), setOf("checked", "state", "stroke", "label", "on_change", "enabled")));
         nodes.put("switch", new Row(setOf("id"), setOf("checked", "label", "on_change", "enabled", "thumb_icon")));
@@ -243,6 +243,7 @@ public final class Vocabulary {
         types.put("mode", "string");
         types.put("display_mode", "string");
         types.put("checked_icon", "identifier");
+        types.put("unchecked_icon", "identifier");
         types.put("caret", "boolean");
         types.put("rich", "boolean");
         types.put("shown", "boolean");
@@ -274,6 +275,7 @@ public final class Vocabulary {
         types.put("hide_keyboard_on_submit", "boolean");
         types.put("mask", "string");
         types.put("filter", "string");
+        types.put("suggestions", "string-array");
         types.put("variant", "string");
         types.put("caret_width", "dp");
         types.put("caret_height", "dp");
