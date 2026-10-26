@@ -428,6 +428,7 @@ public final class Vocabulary {
         enums.put("window.size_class", setOf("compact", "medium", "expanded"));
         enums.put("locale.hour_cycle", setOf("h12", "h23"));
         enums.put("colors.polarity", setOf("light", "dark"));
+        enums.put("swipe.presentation", setOf("reveal", "popup"));
         enums.put("visible.op", setOf("present", "absent", "empty", "non_empty", "eq", "neq", "lt", "lte", "gt", "gte"));
         enums.put("snackbar.result", setOf("dismissed", "action"));
         ENUMS = Collections.unmodifiableMap(enums);
