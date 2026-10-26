@@ -120,6 +120,7 @@ public final class Vocabulary {
         actions.put("surface.open", new Row(setOf("builtin", "surface"), setOf()));
         actions.put("clipboard.copy", new Row(setOf("builtin", "text"), setOf()));
         actions.put("share.send", new Row(setOf("builtin", "text"), setOf("title")));
+        actions.put("uri.open", new Row(setOf("builtin", "uri"), setOf()));
         actions.put("companion.settings.open", new Row(setOf("builtin"), setOf()));
         actions.put("trigger.fire", new Row(setOf("builtin", "id"), setOf()));
         actions.put("dialog.submit", new Row(setOf("builtin"), setOf("value", "capture_fields")));
@@ -429,6 +430,7 @@ public final class Vocabulary {
         enums.put("locale.hour_cycle", setOf("h12", "h23"));
         enums.put("colors.polarity", setOf("light", "dark"));
         enums.put("swipe.presentation", setOf("reveal", "popup"));
+        enums.put("uri.scheme", setOf("http", "https", "mailto", "tel", "voicemail", "geo", "sms", "smsto", "mms", "mmsto"));
         enums.put("visible.op", setOf("present", "absent", "empty", "non_empty", "eq", "neq", "lt", "lte", "gt", "gte"));
         enums.put("snackbar.result", setOf("dismissed", "action"));
         ENUMS = Collections.unmodifiableMap(enums);

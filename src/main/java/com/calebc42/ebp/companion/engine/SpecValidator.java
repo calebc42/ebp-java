@@ -661,6 +661,10 @@ public final class SpecValidator {
                 String id = obj.string("id");
                 if (id == null || !Envelope.isBoundedIdentifier(id))
                     throw new ContentInvalid(path + ".id", "must be an identifier");
+            } else if (name.equals("uri.open")) {
+                String uri = obj.string("uri");
+                if (uri == null || !validUriOpenTarget(uri))
+                    throw new ContentInvalid(path + ".uri", "must be a URI in enums.uri.scheme");
             } else if (name.equals("clipboard.copy") || name.equals("share.send")) {
                 if (obj.string("text") == null) throw new ContentInvalid(path + ".text", "must be a string");
                 if (obj.has("title") && obj.string("title") == null)
@@ -707,5 +711,32 @@ public final class SpecValidator {
             if (face.has(m) && face.string(m) == null) throw new ContentInvalid(path + "." + m, "must be a string");
         if (face.has("icon") && !Envelope.isBoundedIdentifier(face.string("icon")))
             throw new ContentInvalid(path + ".icon", "must be an identifier");
+    }
+
+    /** Amendment #208: a uri.open target — an absolute URI of at most 2048
+     *  octets in the closed uri.scheme set, with no user information. */
+    static boolean validUriOpenTarget(String uri) {
+        if (uri.getBytes(java.nio.charset.StandardCharsets.UTF_8).length > 2048) return false;
+        int colon = uri.indexOf(':');
+        if (colon <= 0) return false;
+        String scheme = uri.substring(0, colon);
+        if (!Character.isLetter(scheme.charAt(0))) return false;
+        for (char ch : scheme.toCharArray())
+            if (!(Character.isLetterOrDigit(ch) || ch == '+' || ch == '.' || ch == '-')) return false;
+        switch (scheme.toLowerCase(java.util.Locale.ROOT)) {
+            case "http": case "https": case "mailto": case "tel": case "voicemail": case "geo":
+            case "sms": case "smsto": case "mms": case "mmsto": break;
+            default: return false;
+        }
+        String rest = uri.substring(colon + 1);
+        if (rest.startsWith("//")) {
+            String authority = rest.substring(2);
+            for (char stop : new char[] {'/', '?', '#'}) {
+                int at = authority.indexOf(stop);
+                if (at >= 0) authority = authority.substring(0, at);
+            }
+            if (authority.indexOf('@') >= 0) return false;
+        }
+        return true;
     }
 }
